@@ -20,6 +20,8 @@ The core theme of the lecture is summarized by a quote from G.K. Chesterton: =="
 
 - **Effector Noise:** The robot's physical movement is also uncertain . Errors accumulate because the floor might be sloped, the wheels might slip, a human might push the robot, or the wheels might have slightly unequal diameters .
 
+See more on the types of noises [[Cognitive Science/Expanded Explanations/Lecture 3#Sensor Uncertainty\|here]]
+
 # **Part 2: Odometric Error Model** (مش علينا)
 
 When a robot moves, it uses "odometry" to estimate its position using internal sensors (like measuring how many times its wheels have turned). The position is tracked using $x$ and $y$ coordinates, along with its orientation angle $\theta$.
@@ -52,6 +54,8 @@ The robot navigates by continuously looping a perception rule based on Bayes' Th
 3. As the robot moves 1 or 2 cells to the right and takes new color readings, the math dynamically shifts the highest probability mass to the robot's true location .
 
 **The 2D Grid Example:** This same logic applies to a 2D map. If a robot is dropped into a 16-cell (4x4) room, its initial state is totally unknown, meaning every single cell has a $1/16$ probability of containing the robot . As the robot moves and senses walls, it overlays probability matrices (Prediction, Correction, and Correlation steps) to filter out impossible cells until it finds itself .
+
+See the numerical examples solution [[Cognitive Science/Expanded Explanations/Lecture 3#Numerical Examples\|here]]
 
 # **Part 5: Algorithm Summary**
 
