@@ -84,7 +84,7 @@ Right now, the total sum of these probabilities is $0.36$ ($0.04 + 0.12 + 0.12 +
 - **Door 4:** $0.04 / 0.36 = 1/9 \approx 11.11\%$
 - **Door 5:** $0.04 / 0.36 = 1/9 \approx 11.11\%$
 
-![Pasted image 20260223235733.png](/img/user/Pasted%20image%2020260223235733.png)
+![Pasted image 20260223235733.png](/img/user/imgs/Pasted%20image%2020260223235733.png)
 
 At this point, the robot is equally torn between Door 2 and Door 3. It knows it is highly likely to be at a Red door, but because there are two of them adjacent to each other, a single sensor reading suffers from **sensor aliasing**. It cannot mathematically distinguish between Door 2 and Door 3 yet.
 
@@ -100,7 +100,7 @@ Now, imagine the robot takes a second reading and senses **"Red"** again.
 
 It will repeat the math, but this time, the updated belief map is the _new_ prior. When it multiplies the likelihoods, Door 3 (which is Red and currently holds $33.33\%$ probability) will receive a massive mathematical boost ($0.3333 \times 0.6$). Door 2 (which is Red, but currently only holds $11.11\%$ probability because the robot moved away from the first spot) will get a much smaller boost ($0.1111 \times 0.6$).
 
-![Pasted image 20260224000109.png](/img/user/Pasted%20image%2020260224000109.png)
+![Pasted image 20260224000109.png](/img/user/imgs/Pasted%20image%2020260224000109.png)
 
 After normalizing this second round, the probability will spike drastically on Door 3, allowing the robot to confidently "localize" itself and break the aliasing illusion!
 
@@ -128,7 +128,7 @@ Because of effector noise (like wheel slip), the slide introduces a 3x3 **"Odome
 
 Instead of the robot knowing it definitely moved one cell left, this Odometry model diffuses its belief across a small cluster of cells.
 
-![Pasted image 20260224002414.png](/img/user/Pasted%20image%2020260224002414.png)
+![Pasted image 20260224002414.png](/img/user/imgs/Pasted%20image%2020260224002414.png)
 ### **3. The Sense Step (Correction)**
 
 The robot then takes a reading with its external sensors. The slides provide a 4x4 likelihood matrix (the table containing values like $0.02$, $0.05$, and $0.18$). This grid represents the mathematical likelihood of receiving that exact sensor reading for every specific cell in the room. Notice how some cells have a higher likelihood ($0.18$), indicating the sensor reading strongly matches the physical features of those specific map coordinates.
