@@ -22,9 +22,10 @@
 	- [x] Lecture 2 - Predicate and Resolution
 
 - [ ] [[Image Processing/All Lectures Notes - Image Processing\|Image Processing]]
-	- [x] Lecture 1 - Intro
-	- [x] Lecture 2 - Digital Images fundamentals
-	- [ ] Lecture 3 - Intensity Transformation and Spatial Filtering
+	- [x] Lecture 1 - Intro - Ch1
+	- [x] Lecture 2 - Digital Images fundamentals - Ch2
+	- [x] Lecture 3 - Intensity Transformation and Spatial Filtering - Part1 - Ch3
+	- [x] Lecture 4 - Intensity Transformation and Spatial Filtering - Part2 - Ch3
 
 - [ ] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro
