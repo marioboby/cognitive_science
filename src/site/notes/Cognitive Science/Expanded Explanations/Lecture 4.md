@@ -341,6 +341,8 @@ To find the probability of the sprinkler being on given this Markov Blanket—wr
 - Score formula: $P(S=f|C=t) \times P(W=t|S=f, R=t)$.
 <br>
 - Using the network's tables: $0.90 \times 0.90 = 0.810$.
+
+> Dependence on the Spouse "Raining given cloudy", is missing, we need the whole blanket.
 <br>
 
 **3. Normalization** These raw scores ($0.099$ and $0.810$) do not add up to 1. To convert them into true probabilities, we must normalize them by dividing the target score by the sum of all possible scores.
