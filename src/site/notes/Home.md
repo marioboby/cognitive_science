@@ -15,8 +15,9 @@
 	- [x] Bayesian Networks
 
 - [ ] Supervised
-	- [ ] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
+	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
 	- [ ] Lecture 2 - Naive Bayes, Dimensionality reduction, PCA, and feature selection
+	- [ ] Lecture 3 - Ensemble Learning
 
 - [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
 	- [x] Lecture 1 - Intro
@@ -32,3 +33,5 @@
 	- [x] Lecture 1 - Intro
 	- [ ] Lecture 2 - Agents and Envs - Part1
 	- [ ] Lecture 3 - Agents and Envs - Part2
+
+- [ ] Theory of Mind
