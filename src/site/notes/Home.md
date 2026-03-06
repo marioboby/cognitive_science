@@ -14,7 +14,7 @@
 	- [x] Mobile Robot Localization
 	- [x] Bayesian Networks
 
-- [ ] Supervised
+- [ ] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
 	- [ ] Lecture 2 - Naive Bayes, Dimensionality reduction, PCA, and feature selection
 	- [ ] Lecture 3 - Ensemble Learning
