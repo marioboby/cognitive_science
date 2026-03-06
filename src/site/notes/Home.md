@@ -28,6 +28,7 @@
 	- [x] Lecture 2 - Digital Images fundamentals - Ch2
 	- [x] Lecture 3 - Intensity Transformation and Spatial Filtering - Part1 - Ch3
 	- [x] Lecture 4 - Intensity Transformation and Spatial Filtering - Part2 - Ch3
+	- [x] Lecture 5 - Intensity Transformation and Spatial Filtering - Part3 - Ch3
 
 - [ ] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro
