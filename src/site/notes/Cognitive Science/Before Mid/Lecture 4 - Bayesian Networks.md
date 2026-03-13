@@ -55,6 +55,17 @@ The network visually encodes two types of independence:
 <br>
 2. **Conditional Independence:** "Toothache" and "Catch" are independent _only if_ the state of "Cavity" is known. Mathematically, this is written as $P(T|Catch,C)=P(T|C)$.
 
+### Dependency Shifts (Conditional Independence)
+
+The flow of information in a network changes dynamically based on what you _know_ (your observed evidence). This dictates whether variables are dependent or independent.
+
+- **Common Cause (Fork Structure):** $X \leftarrow Y \rightarrow Z$.
+    
+    If you don't know $Y$, then $X$ and $Z$ are dependent. However, if you _observe_ the parent $Y$, the path is blocked. $X$ and $Z$ become **conditionally independent**. (e.g., If you know a cavity is present, a toothache doesn't give you any _new_ information about the likelihood of a dental catch).
+    <br>
+- **Common Effect (Collider Structure):** $X \rightarrow Y \leftarrow Z$.
+    
+    Here, the parent variables $X$ and $Z$ are initially independent. But if you observe their shared child $Y$ (or any descendant of $Y$), the parents suddenly become **dependent**. This is known as "explaining away." If an alarm sounds, an earthquake and a burglary are suddenly competing explanations; confirming an earthquake drastically reduces the probability that a burglary is simultaneously happening.
 ## Joint Probability Distribution & Efficiency
 
 For the mathematical power of the network. Instead of calculating a massive, unmanageable table for every possible combination of events, the network's structure allows you to factor the joint probability into smaller, manageable pieces.

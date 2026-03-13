@@ -11,13 +11,14 @@
 [[Cognitive Science/Before Mid/Lecture 2 - The Problem of Induction, Bayesian Inference, and Hypothesis Space\|Lecture 2 - The Problem of Induction, Bayesian Inference, and Hypothesis Space]]
 [[Cognitive Science/Before Mid/Lecture 3 - Mobile Robot Localization\|Lecture 3 - Mobile Robot Localization]]
 [[Cognitive Science/Before Mid/Lecture 4 - Bayesian Networks\|Lecture 4 - Bayesian Networks]]
-[[Lecture 5\|Lecture 5]]
-[[Lecture 6\|Lecture 6]]
+[[Cognitive Science/Before Mid/Lecture 4.2 - Markovian Networks (Markov Random Field)\|Lecture 4.2 - Markovian Networks (Markov Random Field)]]
+[[Cognitive Science/Before Mid/Lecture 5 - Knowledge Representation, Spaces and Features\|Lecture 5 - Knowledge Representation, Spaces and Features]]
 
 ## Expanded Explanations
 [[Cognitive Science/Expanded Explanations/Lecture 1\|Lecture 1]]
 [[Cognitive Science/Expanded Explanations/Lecture 2\|Lecture 2]]
 [[Cognitive Science/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Cognitive Science/Expanded Explanations/Lecture 4\|Lecture 4]]
+[[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
 
 
