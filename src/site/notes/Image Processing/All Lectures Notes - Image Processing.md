@@ -16,6 +16,8 @@
 [[Image Processing/Before Mid/Lecture 5 - Intensity Transformation and Spatial Filtering - Part3\|Lecture 5 - Intensity Transformation and Spatial Filtering - Part3]]
 [[Image Processing/Before Mid/Intensity Transformation and Spatial Filtering - Summary\|Intensity Transformation and Spatial Filtering - Summary]]
 [[Image Processing/Before Mid/Lecture 6 - Filtering in the Frequency Domain - Ch4\|Lecture 6 - Filtering in the Frequency Domain - Ch4]]
+[[Image Processing/Before Mid/Lecture 7 - Filtering in the Frequency Domain - Ch4 - Part2\|Lecture 7 - Filtering in the Frequency Domain - Ch4 - Part2]]
 ## Expanded Explanations
 
 [[Image Processing/Expanded Explanations/Lecture 3\|Lecture 3]]
+[[Image Processing/Expanded Explanations/Lecture 7\|Lecture 7]]
