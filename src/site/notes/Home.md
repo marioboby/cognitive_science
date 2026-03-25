@@ -2,6 +2,12 @@
 {"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
 ---
 
+# This is my notes for FCAI AI Department Third Year - Second Term Curriculum, hope it benefits you
+
+# by: Mario Saber 
+
+# For each course, you'll find a note corresponding to each lectures, along with expanded explanations for some topics mentions in said lecture, hope this digital garden wouldn't just benefit my colleagues, but anyone who takes these courses
+
 # Outline
 
 [[Home#Progress so far\|Progress]]
@@ -23,11 +29,12 @@
 	- [ ] Lecture 4 - Optimization Algos
 	- [ ] Lecture 5 - CNN
 
-- [ ] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
+- [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
 	- [x] Lecture 1 - Intro
 	- [x] Lecture 2 - Predicate and Resolution
 	- [x] Lecture 3 - Production Systems
-	- [ ] Lecture 4 - Examples on Backward and Forward Chaining
+	- [x] Lecture 4 - Examples on Backward and Forward Chaining
+	- [x] Lecture 5 - Introduction to Fuzzy Logic
 
 - [x] [[Image Processing/All Lectures Notes - Image Processing\|Image Processing]]
 	- [x] Lecture 1 - Intro - Ch1
@@ -42,6 +49,7 @@
 	- [ ] Lecture 2 - Agents and Envs - Part1
 	- [ ] Lecture 3 - Agents and Envs - Part2
 	- [ ] Lecture 4 - ...
+	- [ ] Lecture 5 - ...
 
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
