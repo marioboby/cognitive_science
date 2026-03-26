@@ -46,12 +46,12 @@
 	- [x] Lecture 7 - Filtering in the Frequency Domain - Part2 - Ch4
 	- [x] Lecture 8 - Image Restoration and Reconstruction - Ch5
 
-- [ ] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
+- [x] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro
-	- [ ] Lecture 2 - Agents and Envs - Part1
-	- [ ] Lecture 3 - Agents and Envs - Part2
-	- [ ] Lecture 4 - ...
-	- [ ] Lecture 5 - ...
+	- [x] Lecture 2 - Agents and Envs - Part1
+	- [x] Lecture 3 - Types of Agents
+	- [x] Lecture 4 - Solving by Searching
+	- [x] Lecture 5 - Example and Midterm 
 
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
