@@ -43,6 +43,8 @@
 	- [x] Lecture 4 - Intensity Transformation and Spatial Filtering - Part2 - Ch3
 	- [x] Lecture 5 - Intensity Transformation and Spatial Filtering - Part3 - Ch3
 	- [x] Lecture 6 - Filtering in the Frequency Domain - Ch4
+	- [x] Lecture 7 - Filtering in the Frequency Domain - Part2 - Ch4
+	- [x] Lecture 8 - Image Restoration and Reconstruction - Ch5
 
 - [ ] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro
