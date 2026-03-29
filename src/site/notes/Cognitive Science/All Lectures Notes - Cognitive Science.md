@@ -13,6 +13,7 @@
 [[Cognitive Science/Before Mid/Lecture 4 - Bayesian Networks\|Lecture 4 - Bayesian Networks]]
 [[Cognitive Science/Before Mid/Lecture 4.2 - Markovian Networks (Markov Random Field)\|Lecture 4.2 - Markovian Networks (Markov Random Field)]]
 [[Cognitive Science/Before Mid/Lecture 5 - Knowledge Representation, Spaces and Features\|Lecture 5 - Knowledge Representation, Spaces and Features]]
+[[Cognitive Science/Before Mid/Lecture 6 - Local Probabilistic\|Lecture 6 - Local Probabilistic]]
 
 ## Expanded Explanations
 [[Cognitive Science/Expanded Explanations/Lecture 1\|Lecture 1]]
@@ -20,5 +21,6 @@
 [[Cognitive Science/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Cognitive Science/Expanded Explanations/Lecture 4\|Lecture 4]]
 [[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
+[[Cognitive Science/Expanded Explanations/Lecture 6\|Lecture 6]]
 
 

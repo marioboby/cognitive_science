@@ -21,6 +21,7 @@
 	- [x] Bayesian Networks
 	- [x] Knowledge Representation
 	- [x] Markovian Networks
+	- [x] Local Probabilistic
 
 - [ ] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
@@ -28,6 +29,7 @@
 	- [ ] Lecture 3 - Ensemble Learning
 	- [ ] Lecture 4 - Optimization Algos
 	- [ ] Lecture 5 - CNN
+	- [ ] Lecture 6 - CNN Cont
 
 - [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
 	- [x] Lecture 1 - Intro
