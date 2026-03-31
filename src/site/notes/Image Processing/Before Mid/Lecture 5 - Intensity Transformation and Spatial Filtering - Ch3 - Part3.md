@@ -49,6 +49,7 @@ These filters replace the value of every pixel with the average of the intensity
         
     - **Weighted Average Filter:** Pixels closer to the center of the mask are given higher weight (importance) than those further away, which helps reduce blurring compared to a standard box filter.
         
+![Pasted image 20260331023035.png](/img/user/imgs/Pasted%20image%2020260331023035.png)
 
 ### B. Order-Statistic Filters (Nonlinear)
 

@@ -4,9 +4,24 @@
 
 # This is my notes for FCAI AI Department Third Year - Second Term Curriculum, hope it benefits you
 
+---
 # by: Mario Saber 
 
+---
 # For each course, you'll find a note corresponding to each lectures, along with expanded explanations for some topics mentions in said lecture, hope this digital garden wouldn't just benefit my colleagues, but anyone who takes these courses
+
+---
+
+## Normal Notes
+
+هي الزتونة, اللي تذاكر منها كملخص في ليلة امتحان او مراجعة سريعة "ساعات بيبقي فيها شرح زيادة لتوضيح سطر او حتة مبهمة متوضحتش في السلايدز"
+
+## Expanded Explanations
+
+هنا هتلاقي الأمثلة بتاعت السلايدز أو امثلة من برا, المقارنات, توضيحات زيادة ممكن متكونش متوضحة او مذكورة في السلايدز, دي تقدر تعتمد عليها في مذاكرتك المحاضرة لاول مرة او لو في كونسبت او سواء مفهمتش او نسيت جه منين.
+
+---
+# Main sources for these notes: Slides, Gemini Pro, Sheets
 
 # Outline
 
@@ -25,10 +40,10 @@
 
 - [ ] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
-	- [ ] Lecture 2 - Naive Bayes, Dimensionality reduction, PCA, and feature selection
-	- [ ] Lecture 3 - Ensemble Learning
-	- [ ] Lecture 4 - Optimization Algos
-	- [ ] Lecture 5 - CNN
+	- [x] Lecture 2 - Naive Bayes, Dimensionality reduction, PCA, and feature selection
+	- [x] Lecture 3 - Ensemble Learning
+	- [x] Lecture 4 - Optimization Algos
+	- [x] Lecture 5 - CNN
 	- [ ] Lecture 6 - CNN Cont
 
 - [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
