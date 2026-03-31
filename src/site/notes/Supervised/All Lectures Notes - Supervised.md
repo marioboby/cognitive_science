@@ -10,6 +10,7 @@
 [[Supervised/Before Mid/Lecture 3 - Ensemble Learning\|Lecture 3 - Ensemble Learning]]
 [[Supervised/Before Mid/Lecture 4 - Optimizers, Hyperparameter Tuning\|Lecture 4 - Optimizers, Hyperparameter Tuning]]
 [[Supervised/Before Mid/Lecture 5 - CNN\|Lecture 5 - CNN]]
+[[Supervised/Before Mid/Lecture 6 - CNN Cont\|Lecture 6 - CNN Cont]]
 # Expanded Explanations
 
 [[Supervised/Expanded Explanations/Lecture 1 Examples\|Lecture 1 Examples]]

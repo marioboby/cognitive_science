@@ -38,13 +38,13 @@
 	- [x] Markovian Networks
 	- [x] Local Probabilistic
 
-- [ ] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
+- [x] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
 	- [x] Lecture 2 - Naive Bayes, Dimensionality reduction, PCA, and feature selection
 	- [x] Lecture 3 - Ensemble Learning
 	- [x] Lecture 4 - Optimization Algos
 	- [x] Lecture 5 - CNN
-	- [ ] Lecture 6 - CNN Cont
+	- [x] Lecture 6 - CNN Cont
 
 - [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
 	- [x] Lecture 1 - Intro
