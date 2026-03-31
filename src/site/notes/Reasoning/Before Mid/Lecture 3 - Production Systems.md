@@ -86,6 +86,8 @@ Forward chaining is a "data-driven" approach. It starts with the known facts and
 - **Database (Facts):** A, B, C, D, E.
     
 - **Rules:** 1-5 .
+
+![Pasted image 20260331212923.png](/img/user/imgs/Pasted%20image%2020260331212923.png)
     
 - **Goal:** Prove Z.
     

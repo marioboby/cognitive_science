@@ -28,10 +28,20 @@ This section explains how raw facts are transformed into deep understanding.
 ---
 ### 2. Categories and Types of Knowledge
 
-Knowledge is fundamentally divided into two major categories:
+Knowledge is broadly categorized into two major types: **Tacit** and **Explicit**.
 
-- **Tacit Knowledge:** This is informal or implicit knowledge.
-- **Explicit Knowledge:** This refers to formal types of knowledge.
+- **Explicit Knowledge** "مكتسبة"
+    - This is considered **formal** knowledge.
+    - It emerges from the interpretation or evaluation of information.
+    - This knowledge provides answers as to "**how**" relationships among patterns are identified and understood (e.g., "If the humidity is very high and the temperature drops, then atmosphere is unlikely to hold the moisture, so it rains.").
+    - It is the stage that follows information, which is established relationships among disconnected facts (answering "who," "what," "where," and "when").
+  <br>
+- **Tacit Knowledge** "فطرية"
+    - This is categorized as **informal** or **implicit** knowledge.
+    - It relates to the highest level of understanding, which is **Wisdom**.
+    - Wisdom is the "pinnacle of understanding" that uncovers the underlying principles and encompassing understanding of all interactions, providing answers as to "**why**".
+
+![Pasted image 20260331195634.png](/img/user/imgs/Pasted%20image%2020260331195634.png)
 
 Furthermore, cognitive psychologists classify knowledge into specific types:
 

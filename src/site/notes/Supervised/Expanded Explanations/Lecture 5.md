@@ -2,6 +2,10 @@
 {"dg-publish":true,"permalink":"/supervised/expanded-explanations/lecture-5/"}
 ---
 
+[[Supervised/Expanded Explanations/Lecture 5#How and Why CNNs work\|#How and Why CNNs work]]
+[[Supervised/Expanded Explanations/Lecture 5#Recap How Neural Network make Classifications and Update weights\|#Recap How Neural Network make Classifications and Update weights]]
+
+## How and Why CNNs work
 
 To really grasp Convolutional Neural Networks (CNNs), you have to step away from the math for a second and look at the physical intuition. The architecture of a CNN is actually heavily inspired by how the human visual cortex works.
 
@@ -80,3 +84,86 @@ This list is handed over to the Fully Connected layer, which acts like a jury in
     
 
 The neurons in the Fully Connected layer are trained to weigh this specific combination of evidence and cast their vote. Based on the weights, the jury decides: **"Given these features, we classify this image as a Car with 94% probability."**
+
+---
+
+## Recap: How Neural Network make Classifications and Update weights
+
+This is a quick, high-yield revision of how a Neural Network actually learns.
+
+The simplest analogy: **Forward propagation is the student taking the exam and making a guess. Backward propagation is the teacher grading the exam, showing the student where they went wrong, and the student adjusting their knowledge for the next test.**
+
+---
+
+### 1. Forward Propagation (The Prediction Phase)
+
+In forward propagation, information flows strictly from left to right (from the input layer, through the hidden layers, to the output layer). The network is essentially making its best mathematical guess based on its current weights.
+
+**The Process (for a specific layer $l$):**
+
+1. **Linear Transformation:** The layer takes the activations ($A$) from the previous layer, multiplies them by its own weight matrix ($W$), and adds a bias ($b$).
+    
+    $$Z^{[l]} = W^{[l]}A^{[l-1]} + b^{[l]}$$
+    
+2. **Non-Linear Activation:** The raw output ($Z$) is passed through an activation function $g$ (like ReLU, Sigmoid, or Tanh) to introduce non-linearity, producing the activation for the current layer.
+    
+    $$A^{[l]} = g(Z^{[l]})$$
+    
+    _(Note: For the very first hidden layer, the input $A^{[l-1]}$ is just your raw data $X$.)_
+    
+3. **The Loss Calculation:** Once the signal reaches the final output layer, it produces a prediction ($\hat{y}$ or $A^{[L]}$). The network then compares this prediction to the true label ($Y$) using a Loss Function (like Mean Squared Error or Cross-Entropy) to calculate the total error.
+    
+
+**Crucial detail:** During forward propagation, the network _must_ cache (save) the $Z$ and $A$ values at every single layer. It will need these specific numbers later to calculate the gradients during backprop.
+
+---
+
+### 2. Backward Propagation (The Learning Phase)
+
+![neural network backward propagation, AI generated](https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSWEiaMU8zmK9C3KyIwL3elU9kgwrw4BP6JXoWDHQ8BEwgcBNJaZ19cDxrCh065sfeN41019Gter7-Zor5pPRE3qXXCj-qe83Qul-lrmEdo0KN8NgI)
+
+This is where the actual "learning" happens. Information flows from right to left (from the output layer back to the input layer). The goal is to figure out exactly how much each specific weight and bias contributed to the final error, so we know how to fix them.
+
+**The Core Engine: The Chain Rule of Calculus**
+
+Because a neural network is just a massive composite math function ($f(g(h(x)))$), backprop uses the chain rule to calculate the partial derivatives (gradients) of the Loss function with respect to every single weight ($W$) and bias ($b$).
+
+**The Process (moving backwards from layer $l$ to $l-1$):**
+
+1. **Calculate the Error at the Current Layer ($dZ$):** How much was the raw output $Z$ responsible for the error? This relies on the derivative of the activation function $g'$.
+    
+    $$dZ^{[l]} = dA^{[l]} * g'(Z^{[l]})$$
+    
+2. **Calculate the Gradients for Weights and Biases:** Now that we know the error at this layer, we determine how much to change $W$ and $b$. (Here, $m$ is the number of examples in the batch).
+    
+    $$dW^{[l]} = \frac{1}{m} dZ^{[l]} A^{[l-1]T}$$
+    
+    $$db^{[l]} = \frac{1}{m} \sum dZ^{[l]}$$
+    
+3. **Pass the Error Backwards ($dA$):** We calculate the error that needs to be passed back to the previous layer so the cycle can continue.
+    
+    $$dA^{[l-1]} = W^{[l]T} dZ^{[l]}$$
+    
+
+![Deep_Learning_Eq.jpeg](/img/user/imgs/Deep_Learning_Eq.jpeg)
+
+By: Ibrahim Reda
+
+---
+
+### 3. The Weight Update (The Optimization)
+
+Once backpropagation reaches the very first layer, the network has successfully computed the gradients ($dW$ and $db$) for every single parameter in the entire model.
+
+Now, the network hands these gradients over to an **Optimizer** (like standard Gradient Descent, RMSProp, or Adam—which we covered in Module 4). The optimizer updates the weights to minimize the loss for the next epoch.
+
+Using standard Gradient Descent with a learning rate of $\alpha$:
+
+$$W^{[l]} = W^{[l]} - \alpha \cdot dW^{[l]}$$
+
+$$b^{[l]} = b^{[l]} - \alpha \cdot db^{[l]}$$
+
+After this update, the network grabs the next batch of data, and the entire Forward $\rightarrow$ Loss $\rightarrow$ Backward $\rightarrow$ Update cycle repeats until the model converges!
+
+
+

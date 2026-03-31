@@ -78,6 +78,7 @@
     - IF it's Sunny AND Warm, drive Fast (Sunny(Cover) $\land$ Warm(Temp) $\Rightarrow$ Fast(Speed)).
     - IF it's Cloudy AND Cool, drive Slow (Cloudy(Cover) $\land$ Cool(Temp) $\Rightarrow$ Slow(Speed)).
 
+![Pasted image 20260331214730.png](/img/user/imgs/Pasted%20image%2020260331214730.png)
 ## **Fuzzification and Rule Evaluation Example**
 
 - **Scenario:** Input is 65 F° and 25% Cloud Cover.
