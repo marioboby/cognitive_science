@@ -9,6 +9,15 @@
 
 [[Image Processing/Before Mid/Lecture 5 - Intensity Transformation and Spatial Filtering - Ch3 - Part3#A. Linear Smoothing Filters (Averaging)\|the image is what matters here]]
 
+---
+
+حابب أشارك معاكم strategy note عملتها لل2D Convolution، علشان لاحظت اني لما بحاول أعمل 2D Convolution بإيدي على ورقة بتوه جدًا وسط الأرقام، إن شاء الله تفيد حد =)
+[Performing 2D Convolution](https://asserknowledgespace.vercel.app/strategies/performing-2d-convolution)
+
+By: Asser Ahmed
+
+---
+
 ### 1. Machine Learning vs. Deep Learning
 
 Deep Learning (DL) is a highly effective subfield of Machine Learning (ML) that uses multiple layers to learn data representations and find complex patterns.
