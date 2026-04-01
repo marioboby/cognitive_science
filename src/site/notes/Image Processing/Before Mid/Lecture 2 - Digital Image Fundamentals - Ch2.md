@@ -6,7 +6,7 @@
 
 Understanding how images form in the eye helps inform how we process digital images.
 
-- **Anatomy & Image Formation:** * The lens focuses light from objects directly onto the retina.
+- **Anatomy & Image Formation:** The lens focuses light from objects directly onto the retina.
     
     - Unlike a standard camera that achieves focus by varying the distance between the lens and the image plane, the human eye focuses by using muscles to change the physical shape of the lens.
     

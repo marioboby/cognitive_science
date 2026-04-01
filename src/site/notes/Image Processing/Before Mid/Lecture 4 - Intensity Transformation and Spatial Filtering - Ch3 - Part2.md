@@ -75,6 +75,8 @@ $$S_k = T(r_k) = (L-1)\sum_{j=0}^{k}p_r(r_j)$$
 
 Suppose we have a 3-bit image ($L=8$) with a total of 4096 pixels ($MN=4096$).
 
+![Pasted image 20260401223128.png](/img/user/imgs/Pasted%20image%2020260401223128.png)
+
 1. **Find Probabilities**: Divide the count of pixels for each level ($n_k$) by the total pixels ($4096$) to get $p_r(r_k)$.
     
     - For $r_0=0$: $790 / 4096 = 0.19$.

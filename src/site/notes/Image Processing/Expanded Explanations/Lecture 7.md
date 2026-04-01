@@ -42,11 +42,6 @@ Imagine looking at a 1-D cross-section (a side profile) of the filter. Here is w
     This creates an immediate, vertical drop-off at $D_0$. The filter abruptly snaps from 1 to 0. This is the exact definition of the **Ideal filter**, which creates severe ringing artifacts.
 
 
-<iframe src="D:\FCAI\ملخصات\Cognitive Science\FCAI_Third-Year_Second-Term\Image Processing\Expanded Explanations\visualizer.html" width="100%" height="600px" style="border:none;"></iframe>
-
-
-
-
 
 
 

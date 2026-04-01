@@ -95,6 +95,10 @@ Unlike Gaussian noise which alters pixels by a random continuous amount, impulse
 | **Erlang (Gamma)**  | Right-skewed curve      | Similar visual degradation to Rayleigh, but mathematically distinct.                  |
 | **Exponential**     | Decaying slope          | Noise heavily concentrated at a specific low value, fading out at higher intensities. |
 
+![Pasted image 20260402011441.png](/img/user/Pasted%20image%2020260402011441.png)
+
+example on how to apply noise models here
+
 ---
 
 ### **Comparison 1: Spatial Domain Filters (For Random Noise)**
@@ -105,12 +109,12 @@ When an image is degraded _only_ by random additive noise, we use Spatial Filter
 
 These filters calculate a specific mathematical average of the pixels within a neighborhood window.
 
-|**Filter Type**|**How it Works**|**Best Used For**|**Drawbacks**|
-|---|---|---|---|
-|**Arithmetic Mean**|Computes the standard average of pixels in the window.|General smoothing and reducing general noise.|Blurs the image and loses sharp details.|
-|**Geometric Mean**|Multiplies pixels together, then takes the $mn$-th root.|General smoothing.|Performs similarly to arithmetic mean but retains slightly more detail.|
-|**Harmonic Mean**|Divides the total number of pixels by the sum of their reciprocals.|Works well for Gaussian noise and "salt" noise (white pixels).|**Fails completely** for "pepper" noise (black pixels).|
-|**Contraharmonic Mean**|Uses a fractional formula controlled by an order parameter, $Q$.|Excellent for Salt-and-Pepper noise. Use $Q > 0$ to eliminate pepper noise, or $Q < 0$ to eliminate salt noise.|Choosing the wrong sign for $Q$ drastically worsens the image.|
+| **Filter Type**         | **How it Works**                                                    | **Best Used For**                                                                                                                                                           | **Drawbacks**                                                           | **Mathematical Equation**                                                                        |
+| ----------------------- | ------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| **Arithmetic Mean**     | Computes the standard average of pixels in the window.              | General smoothing and reducing general noise.                                                                                                                               | Blurs the image and loses sharp details.                                | $$\hat{f}(x,y) = \frac{1}{mn} \sum_{(s,t) \in S_{xy}} g(s,t)$$                                   |
+| **Geometric Mean**      | Multiplies pixels together, then takes the $mn$-th root.            | General smoothing.                                                                                                                                                          | Performs similarly to arithmetic mean but retains slightly more detail. | $$\hat{f}(x,y) = \left[ \prod_{(s,t) \in S_{xy}} g(s,t) \right]^{\frac{1}{mn}}$$                 |
+| **Harmonic Mean**       | Divides the total number of pixels by the sum of their reciprocals. | Works well for Gaussian noise and "salt" noise (white pixels).                                                                                                              | **Fails completely** for "pepper" noise (black pixels).                 | $$\hat{f}(x,y) = \frac{mn}{\sum_{(s,t) \in S_{xy}} \frac{1}{g(s,t)}}$$                           |
+| **Contraharmonic Mean** | Uses a fractional formula controlled by an order parameter, $Q$.    | Excellent for Salt-and-Pepper noise. Use $Q > 0$ to eliminate pepper noise, or $Q < 0$ to eliminate salt noise<br>(Q = 0, -1 maps to Arithmetic and Harmonic respectively). | Choosing the wrong sign for $Q$ drastically worsens the image.          | $$\hat{f}(x,y) = \frac{\sum_{(s,t) \in S_{xy}} g(s,t)^{Q+1}}{\sum_{(s,t) \in S_{xy}} g(s,t)^Q}$$ |
 
 #### **B. Order Statistics Filters (Sorting)**
 
@@ -133,6 +137,8 @@ Unlike the filters above which blindly apply the exact same rule to every pixel,
 - **Result**: It can handle heavily dense salt-and-pepper noise while preserving much sharper details than a standard median filter.
     
 
+![Pasted image 20260402013452.png](/img/user/Pasted%20image%2020260402013452.png)
+
 ---
 
 ### **Comparison 2: Frequency Domain Filters (For Periodic Noise)**
@@ -144,3 +150,5 @@ While Spatial Filters are great for random noise, Frequency Domain Filters are r
 |**Band Reject**|Removes a specific "ring" or band of frequencies ($D_1$ to $D_h$) while leaving lower and higher frequencies intact.|Highly effective at removing broad periodic noise patterns.|
 |**Band Pass**|The exact opposite of Band Reject. It only _allows_ a specific band of frequencies to pass through.|Used to isolate a specific frequency range for analysis. $H_{bp}(u,v) = 1 - H_{br}(u,v)$.|
 |**Notch Reject**|Instead of removing a whole ring, it removes highly specific, pinpoint frequency components (appearing in symmetric pairs around the origin).|Perfect for removing a clearly defined interference pattern caused by an electrical disturbance (like the interference grid in a satellite photo).|
+
+![Pasted image 20260402013721.png](/img/user/Pasted%20image%2020260402013721.png)

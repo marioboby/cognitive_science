@@ -21,6 +21,7 @@ The complete filtering pipeline involves five steps:
     
 5. **Post-processing**: Un-center the image by multiplying it again by $(-1)^{x+y}$ to get the final enhanced image $g(x,y)$.
     
+![Pasted image 20260402005015.png](/img/user/Pasted%20image%2020260402005015.png)
 
 ---
 
@@ -52,10 +53,18 @@ Whether you are smoothing (Lowpass) or sharpening (Highpass), there are three pr
 
 Here is a complete comparison of the three methods:
 
-| **Feature**                           | **Ideal Filter (ILPF / IHPF)**                                                                               | **Butterworth Filter (BLPF / BHPF)**                                                                                                   | **Gaussian Filter (GLPF / GHPF)**                                                                                |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Cutoff Style**                      | Extremely sharp, abrupt cutoff at distance $D_0$.                                                            | Smooth transition, controlled by an order parameter $n$. more on it [[Image Processing/Expanded Explanations/Lecture 7\|here]]                                                | Very smooth, gradual exponential decay.                                                                          |
-| **Mathematical Definition (Lowpass)** | $$H(u,v) = \begin{cases} 1 & \text{if } D(u,v) \le D_0 \\ 0 & \text{if } D(u,v) > D_0 \end{cases}$$          | $$H(u,v) = \frac{1}{1 + [D(u,v)/D_0]^{2n}}$$                                                                                           | $$H(u,v) = e^{-D^2(u,v) / 2D_0^2}$$                                                                              |
-| **Ringing Effect**                    | **Severe.** The sharp cutoff creates distinct, visible ripples (ringing) around edges in the filtered image. | **Variable.** Ringing depends on order $n$. It approaches the Ideal filter at high orders, and the Gaussian filter at low orders.      | **None.** The smooth transition guarantees that absolutely no ringing artifacts will appear.                     |
-| **Practical Usage**                   | Rarely used in practical applications due to the severe ringing artifacts.                                   | Highly versatile. An order of $n=2$ is considered the best compromise, offering effective filtering with almost imperceptible ringing. | Highly practical, especially when any form of artifacting (ringing) is unacceptable, such as in medical imaging. |
-| **Visual Result**                     | Heavy blurring/sharpening but with noticeable, distracting "echoes" around sharp objects.                    | Balanced blurring/sharpening. Edges remain relatively clean without excessive echoing.                                                 | Very smooth blurring/sharpening, but requires a lower $D_0$ to ac                                                |
+| **Feature**                           | **Ideal Filter (ILPF / IHPF)**                                                                               | **Butterworth Filter (BLPF / BHPF)**                                                                                                   | **Gaussian Filter (GLPF / GHPF)**                                                                                       |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Cutoff Style**                      | Extremely sharp, abrupt cutoff at distance $D_0$.                                                            | Smooth transition, controlled by an order parameter $n$. more on it [[Image Processing/Expanded Explanations/Lecture 7\|here]]                                                | Very smooth, gradual exponential decay.                                                                                 |
+| **Mathematical Definition (Lowpass)** | $$H(u,v) = \begin{cases} 1 & \text{if } D(u,v) \le D_0 \\ 0 & \text{if } D(u,v) > D_0 \end{cases}$$          | $$H(u,v) = \frac{1}{1 + [D(u,v)/D_0]^{2n}}$$                                                                                           | $$H(u,v) = e^{-D^2(u,v) / 2D_0^2}$$                                                                                     |
+| **Ringing Effect**                    | **Severe.** The sharp cutoff creates distinct, visible ripples (ringing) around edges in the filtered image. | **Variable.** Ringing depends on order $n$. It approaches the Ideal filter at high orders, and the Gaussian filter at low orders.      | **None.** The smooth transition guarantees that absolutely no ringing artifacts will appear.                            |
+| **Practical Usage**                   | Rarely used in practical applications due to the severe ringing artifacts.                                   | Highly versatile. An order of $n=2$ is considered the best compromise, offering effective filtering with almost imperceptible ringing. | Highly practical, especially when any form of artifacting (ringing) is unacceptable, such as in medical imaging.        |
+| **Visual Result**                     | Heavy blurring/sharpening but with noticeable, distracting "echoes" around sharp objects.                    | Balanced blurring/sharpening. Edges remain relatively clean without excessive echoing.                                                 | Very smooth blurring/sharpening, but requires a lower $D_0$ to achieve the same level of sharpness/blur as Butterworth. |
+
+For Highpass, just 1 - Lowpass, and for Butterworth just flip the ratio
+
+
+
+![Pasted image 20260402005701.png](/img/user/Pasted%20image%2020260402005701.png)
+
+![Pasted image 20260402010404.png](/img/user/Pasted%20image%2020260402010404.png)

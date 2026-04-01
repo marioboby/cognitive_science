@@ -17,7 +17,9 @@
   - and "Conation" (proactive motivation and behavioral systems).
     <br>
 - The definition also includes the structural and functional physical components that these mental processes rely on.
-    
+  
+- The term “Mind”, however, is also used more narrowly to denote only cognitive activities and functions
+
 
 ### **Deep Dive into "Conation"**
 

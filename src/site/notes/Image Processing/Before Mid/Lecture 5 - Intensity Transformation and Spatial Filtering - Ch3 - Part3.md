@@ -14,6 +14,7 @@ While point processing (intensity transformation) operates on a $1 \times 1$ nei
     2. **Nonlinear Spatial Filtering:** Operates based on ranking or ordering pixel values within the neighborhood.
     
 
+![Pasted image 20260401230549.png](/img/user/imgs/Pasted%20image%2020260401230549.png)
 ### Convolution Output Size Formula
 
 When applying a filter, the spatial dimensions of the output image can be calculated using the following formula:
@@ -30,6 +31,16 @@ $$O = \frac{W - K + 2P}{S} + 1$$
     
 - $S$: Stride (step size of the filter)
     
+![Pasted image 20260401230312.png](/img/user/imgs/Pasted%20image%2020260401230312.png)
+
+### What Happens at the Borders?
+
+- The mask falls outside the edge!
+  
+- Solutions?
+	- **Ignore the edges:** The resultant image is smaller than the original
+	- **Pad with zeros:** Introducing unwanted artifacts
+	- **Repeat rows and columns**: Pad with adjacent rows and columns 
 
 ---
 
@@ -42,6 +53,10 @@ Smoothing filters are used for blurring (a preprocessing step to remove small de
 These filters replace the value of every pixel with the average of the intensity levels in its neighborhood.
 
 - **Effect:** Reduces "sharp" transitions in intensities. Because random noise typically consists of sharp transitions, averaging effectively reduces noise. However, edges are also sharp transitions, so this causes undesirable edge blurring.
+
+- **Characteristics**: 
+	1. The elements of the mask must be positive.
+	2. Sum of mask elements is 1 
     
 - **Types of Masks:**
     
@@ -70,6 +85,9 @@ These filters replace the center pixel based on the ordering (ranking) of the pi
 
 The objective of sharpening is to highlight transitions in intensity (edges, boundaries). Because smoothing is achieved by spatial averaging (integration), sharpening is achieved by **spatial differentiation**.
 
+- Characteristics:
+	- The elements of the mask contain both positive and negative weights.
+	- Sum of the mask weights is 0
 ### A. The Laplacian (Second Derivative)
 
 The Laplacian is an isotropic (rotation-invariant) operator that calculates the second derivative of the image to find rapid changes in intensity.
@@ -88,7 +106,9 @@ Because the Laplacian highlights edges but zeroes out flat areas (losing the bac
 
 $$g(x,y) = f(x,y) + c[\nabla^2 f(x,y)]$$
 
-_(Where $c$ depends on the center coefficient of the mask)._
+_(Where $c$ depends on the center coefficient of the mask, negative center corresponds to c = 1, and vice versa)._
+
+![Screenshot 2026-03-30 172816.png](/img/user/imgs/Screenshot%202026-03-30%20172816.png)
 
 ### B. Unsharp Masking & Highboost Filtering
 
@@ -109,7 +129,7 @@ This is a classic technique used in the publishing industry, consisting of three
     
 - **$k > 1$:** Highboost filtering (increases the contribution of the edges).
     
-
+![Pasted image 20260401233437.png](/img/user/imgs/Pasted%20image%2020260401233437.png)
 ### C. The Gradient (First Derivative)
 
 First derivatives are primarily used to extract edges (rather than just enhance the whole image). The gradient of an image $f$ at $(x,y)$ is a vector:
@@ -127,3 +147,5 @@ $$M(x,y) \approx |G_x| + |G_y|$$
 - **Roberts Cross-Gradient:** Uses $2 \times 2$ masks to compute diagonal differences.
     
 - **Sobel Operators:** Uses $3 \times 3$ masks. They compute $G_x$ (horizontal changes) and $G_y$ (vertical changes). Using a $3 \times 3$ neighborhood provides a slight smoothing effect, making the Sobel operators less sensitive to noise than the Roberts operators.
+  
+Too see full comparison and summary for Ch3, [[Image Processing/Before Mid/Intensity Transformation and Spatial Filtering - Summary\|here]]
