@@ -45,3 +45,11 @@ The Resolution by Refutation Algorithm includes the following steps:-
 ***In step 3,9: Standardation means to replace any repeated variable names for each quantifier, as for each quantifier, same name $\ne$ same variable***
 
 See Examples in Slides
+
+|**Feature**|**Forward Resolution**|**Backward Resolution**|**Resolution Refutation**|
+|---|---|---|---|
+|**Starting Point**|The initial premises/facts|The target goal|The negated target goal|
+|**Direction**|Facts $\rightarrow$ Goal|Goal $\rightarrow$ Facts|Negated Goal $\rightarrow$ Contradiction|
+|**Goal Negated?**|No|Usually Yes (via Refutation)|**Yes**|
+|**Stopping Condition**|You derive the exact goal clause|You resolve down to nothing (empty clause)|You derive a contradiction (empty clause)|
+|**Analogy**|Building a bridge from your house, hoping it eventually reaches an island.|Standing on the island and building a bridge back to your house.|Assuming the island doesn't exist, and proving that assumption breaks the laws of physics.|

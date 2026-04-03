@@ -131,11 +131,11 @@ Backward chaining is the exact opposite. It starts with a hypothesized goal and 
     
 - **Resolving:** Because X is proven, Rule 4 can fire, proving Y. Because Y is proven, Rule 5 can fire, successfully proving the original goal Z.
 
-|**Feature**|**Forward Chaining**|**Backward Chaining**|
-|---|---|---|
-|**Fundamental Approach**|**Data-Driven:** It moves from the bottom up.|**Goal-Driven:** It moves from the top down.|
-|**Starting Point**|Starts with the **initial facts** (the data currently in the working memory).|Starts with a **hypothesis or goal** (what you want to prove).|
-|**Ending Point**|Stops when a **goal is reached** or when no more rules can be fired.|Stops when all **sub-goals are proven true** by the initial facts.|
-|**Rule Matching**|Matches the current facts against the **IF part** (antecedent/premise) of the rules.|Matches the current goal/sub-goal against the **THEN part** (consequent/conclusion) of the rules.|
-|**Action Taken**|If a rule fires, it extracts the conclusion and **adds it as a new fact** to the database.|If a rule matches, it extracts the premises and **sets them as new sub-goals** to be proven.|
-|**Analogy**|Like an investigator piecing together clues at a crime scene to figure out what happened and who did it.|Like a doctor starting with a suspected diagnosis (e.g., "flu") and checking if the patient has the specific symptoms to prove it.|
+| **Feature**              | **Forward Chaining**                                                                                     | **Backward Chaining**                                                                                                              |
+| ------------------------ | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Fundamental Approach** | **Data-Driven:** It moves from the bottom up.                                                            | **Goal-Driven:** It moves from the top down.                                                                                       |
+| **Starting Point**       | Starts with the **initial facts** (the data currently in the working memory).                            | Starts with a **hypothesis or goal** (what you want to prove).                                                                     |
+| **Ending Point**         | Stops when a **goal is reached** or when no more rules can be fired.                                     | Stops when all **sub-goals are proven true** by the initial facts.                                                                 |
+| **Rule Matching**        | Matches the current facts against the **IF part** (antecedent/premise) of the rules.                     | Matches the current goal/sub-goal against the **THEN part** (consequent/conclusion) of the rules.                                  |
+| **Action Taken**         | If a rule fires, it extracts the conclusion and **adds it as a new fact** to the database.               | If a rule matches, it extracts the premises and **sets them as new sub-goals** to be proven.                                       |
+| **Analogy**              | Like an investigator piecing together clues at a crime scene to figure out what happened and who did it. | Like a doctor starting with a suspected diagnosis (e.g., "flu") and checking if the patient has the specific symptoms to prove it. |
