@@ -21,3 +21,9 @@
 
 [[Reasoning/Mids Sol/Mid 2025 Sol\|Mid 2025 Sol]]
 [[Reasoning/Mids Sol/Mid 2022 Sol\|Mid 2022 Sol]]
+
+---
+
+# Finals Sol
+
+[[Reasoning/Finals Sol/Final 25 Sol\|Final 25 Sol]]
