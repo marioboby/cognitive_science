@@ -21,7 +21,7 @@ The complete filtering pipeline involves five steps:
     
 5. **Post-processing**: Un-center the image by multiplying it again by $(-1)^{x+y}$ to get the final enhanced image $g(x,y)$.
     
-![Pasted image 20260402005015.png](/img/user/Pasted%20image%2020260402005015.png)
+![Pasted image 20260402005015.png](/img/user/imgs/Pasted%20image%2020260402005015.png)
 
 ---
 
@@ -65,6 +65,6 @@ For Highpass, just 1 - Lowpass, and for Butterworth just flip the ratio
 
 
 
-![Pasted image 20260402005701.png](/img/user/Pasted%20image%2020260402005701.png)
+![Pasted image 20260402005701.png](/img/user/imgs/Pasted%20image%2020260402005701.png)
 
-![Pasted image 20260402010404.png](/img/user/Pasted%20image%2020260402010404.png)
+![Pasted image 20260402010404.png](/img/user/imgs/Pasted%20image%2020260402010404.png)

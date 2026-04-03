@@ -36,7 +36,7 @@ Which further expands to:
 
 $P(X \cap Y \cap Z) = P(X | Y \cap Z) \times P(Y | Z) \times P(Z)$
 
-To get the formula you provided, we apply this exact same expanding chain to all 5 variables, peeling them off one by one from left to right:
+To get the formula in slides, we apply this exact same expanding chain to all 5 variables, peeling them off one by one from left to right:
 
 1. **Start with the full sequence:** $P(j \cap m \cap a \cap \neg b \cap \neg e)$
 <br>

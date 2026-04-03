@@ -124,8 +124,8 @@ This is the most critical case for Digital Image Processing. It applies to 2-D m
     
 - **Example Application:** Processing a digital photograph. Imagine a tiny $2 \times 2$ pixel image matrix. To find $F(1,1)$, you must loop through all four pixels ($x,y$ coordinates: 0,0; 0,1; 1,0; 1,1), multiplying each pixel's intensity by the complex exponential, and summing the results.
   
-  ![Pasted image 20260402003438.png](/img/user/Pasted%20image%2020260402003438.png)
-  ![Pasted image 20260402003601.png](/img/user/Pasted%20image%2020260402003601.png)
+  ![Pasted image 20260402003438.png](/img/user/imgs/Pasted%20image%2020260402003438.png)
+  ![Pasted image 20260402003601.png](/img/user/imgs/Pasted%20image%2020260402003601.png)
 ---
 
 ### **Image Spectra and The Filtering Pipeline (Slides 29-36)**

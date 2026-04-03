@@ -95,7 +95,7 @@ Unlike Gaussian noise which alters pixels by a random continuous amount, impulse
 | **Erlang (Gamma)**  | Right-skewed curve      | Similar visual degradation to Rayleigh, but mathematically distinct.                  |
 | **Exponential**     | Decaying slope          | Noise heavily concentrated at a specific low value, fading out at higher intensities. |
 
-![Pasted image 20260402011441.png](/img/user/Pasted%20image%2020260402011441.png)
+![Pasted image 20260402011441.png](/img/user/imgs/Pasted%20image%2020260402011441.png)
 
 example on how to apply noise models here
 
@@ -137,7 +137,7 @@ Unlike the filters above which blindly apply the exact same rule to every pixel,
 - **Result**: It can handle heavily dense salt-and-pepper noise while preserving much sharper details than a standard median filter.
     
 
-![Pasted image 20260402013452.png](/img/user/Pasted%20image%2020260402013452.png)
+![Pasted image 20260402013452.png](/img/user/imgs/Pasted%20image%2020260402013452.png)
 
 ---
 
@@ -151,4 +151,4 @@ While Spatial Filters are great for random noise, Frequency Domain Filters are r
 |**Band Pass**|The exact opposite of Band Reject. It only _allows_ a specific band of frequencies to pass through.|Used to isolate a specific frequency range for analysis. $H_{bp}(u,v) = 1 - H_{br}(u,v)$.|
 |**Notch Reject**|Instead of removing a whole ring, it removes highly specific, pinpoint frequency components (appearing in symmetric pairs around the origin).|Perfect for removing a clearly defined interference pattern caused by an electrical disturbance (like the interference grid in a satellite photo).|
 
-![Pasted image 20260402013721.png](/img/user/Pasted%20image%2020260402013721.png)
+![Pasted image 20260402013721.png](/img/user/imgs/Pasted%20image%2020260402013721.png)

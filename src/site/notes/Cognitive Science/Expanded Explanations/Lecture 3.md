@@ -92,7 +92,7 @@ At this point, the robot is equally torn between Door 2 and Door 3. It knows it 
 
 To break the tie, the robot rolls forward by one door. Assuming its odometry is perfect and the wheels don't slip, the probabilities perfectly shift one slot to the right.
 
-- **New Belief Map:** `[Unknown, 11.11%, 33.33%, 33.33%, 11.11%]`
+- **New Belief Map:** `[11.11%, 11.11%, 33.33%, 33.33%, 11.11%]` (assuming looped)
 
 **The Tie-Breaker (Next Loop)**
 
@@ -103,6 +103,94 @@ It will repeat the math, but this time, the updated belief map is the _new_ prio
 ![Pasted image 20260224000109.png](/img/user/imgs/Pasted%20image%2020260224000109.png)
 
 After normalizing this second round, the probability will spike drastically on Door 3, allowing the robot to confidently "localize" itself and break the aliasing illusion!
+
+---
+
+> Slide 18 from the lecture contains several massive arithmetic errors: the professor's multiplication terms do not match the doors, the sum is calculated incorrectly (writing **0.426** instead of **0.33** or **0.506**), and the final probabilities on the slide only add up to roughly **77.5%** instead of **100%**.
+
+### **The Initial Setup**
+
+
+- **Cell 0 (Green):** 1/9 (**11.1%**)
+    
+- **Cell 1 (Red):** 3/9 (**33.3%**)
+    
+- **Cell 2 (Red):** 3/9 (**33.3%**)
+    
+- **Cell 3 (Green):** 1/9 (**11.1%**)
+    
+- **Cell 4 (Green):** 1/9 (**11.1%**)
+    
+
+---
+
+### **Step 1: The Move Step (Prediction)**
+
+You asked what happens if the robot moves from Cell 1 to Cell 3. This is a movement of **2 steps to the right**. (0 index)
+
+Assuming perfect odometry (the wheels don't slip), we simply take the entire probability distribution and shift it 2 slots to the right. In a standard continuous loop, the probabilities falling off the right side wrap around to the left:
+
+- **Cell 0 (Green)** gets Cell 3's old probability: 1/9 (**11.1%**)
+    
+- **Cell 1 (Red)** gets Cell 4's old probability: 1/9 (**11.1%**)
+    
+- **Cell 2 (Red)** gets Cell 0's old probability: 1/9 (**11.1%**)
+    
+- **Cell 3 (Green)** gets Cell 1's old probability: 3/9 (**33.3%**)
+    
+- **Cell 4 (Green)** gets Cell 2's old probability: 3/9 (**33.3%**)
+    
+
+**New Belief Map after moving:** `[11.1%, 11.1%, 11.1%, 33.3%, 33.3%]`
+
+---
+
+### **Step 2: The Sense Step (Correction)**
+
+To follow the exact scenario on Slide 18, we now assume the robot takes a reading and senses **"Green"**.
+
+Based on the lecture's flawed sensor model, the likelihoods are:
+
+- Sensing Green at a Green Door = **0.6**
+    
+- Sensing Green at a Red Door = **0.2**
+    
+
+We multiply the new shifted belief by the likelihood of sensing green for each specific door:
+
+- **Cell 0 (Green):** $(1/9) \times 0.6 = 0.0667$
+    
+- **Cell 1 (Red):** $(1/9) \times 0.2 = 0.0222$
+    
+- **Cell 2 (Red):** $(1/9) \times 0.2 = 0.0222$
+    
+- **Cell 3 (Green):** $(3/9) \times 0.6 = 0.2000$
+    
+- **Cell 4 (Green):** $(3/9) \times 0.6 = 0.2000$
+    
+
+_(Note: If you look closely at these numbers, you will see why the lecture slide is broken. Dr. Shiple's slide lists three **0.022**s and only one **0.198**. He lost track of his own doors while writing the slide!)_
+
+---
+
+### **Step 3: Normalization**
+
+Right now, our raw numbers add up to **0.5111** ($0.0667 + 0.0222 + 0.0222 + 0.2000 + 0.2000$).
+
+Because a probability distribution must always equal exactly **100%**, we divide each individual number by the total sum (**0.5111**) to get the final, mathematically correct answer:
+
+- **Cell 0 (Green):** $0.0667 / 0.5111 =$ **13.0%**
+    
+- **Cell 1 (Red):** $0.0222 / 0.5111 =$ **4.3%**
+    
+- **Cell 2 (Red):** $0.0222 / 0.5111 =$ **4.3%**
+    
+- **Cell 3 (Green):** $0.2000 / 0.5111 =$ **39.2%**
+    
+- **Cell 4 (Green):** $0.2000 / 0.5111 =$ **39.2%**
+    
+
+The robot is now heavily torn between Cell 3 and Cell 4, which makes perfect logical sense: it shifted its high probability mass over to those cells, and because both of those cells are Green doors, sensing "Green" heavily reinforced that belief!
 
 ## 2D Grid
 

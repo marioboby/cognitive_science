@@ -82,3 +82,5 @@
 |**The Mind**|All intellectual and psychological phenomena, processes, and the physical components they rely on.|The overarching system. It contains three main branches: Cognition, Affect (feelings), and Conation (motivation/behavior).|
 |**Consciousness**|The subjective perception of what is happening inside the mind.|Described as "how it feels like to be me or you". It is the active awareness of the mind's three branches.|
 |**Cognition**|All forms of awareness and knowing.|A specific sub-function of the mind. It includes concrete processes like memory, thinking, problem-solving, and language skills.|
+
+more on the differences [[Theory of Mind/Expanded Explanations/Lecture 1\|here]]

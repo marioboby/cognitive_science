@@ -20,7 +20,7 @@
 [[Cognitive Science/Expanded Explanations/Lecture 2\|Lecture 2]]
 [[Cognitive Science/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Cognitive Science/Expanded Explanations/Lecture 4\|Lecture 4]]
-[[Cognitive Science/Expanded Explanations/Lecture 5\|Cognitive Science/Expanded Explanations/Lecture 5]]
+[[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
 [[Cognitive Science/Expanded Explanations/Lecture 6\|Lecture 6]]
 
 
