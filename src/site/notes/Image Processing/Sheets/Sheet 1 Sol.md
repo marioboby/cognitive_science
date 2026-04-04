@@ -308,7 +308,7 @@ Got it! Thank you for the clarification. In some textbooks and courses, the "com
 
 We'll calculate using the composite 4-neighbour $3 \times 3$ kernel:
 
-$$\text{Composite Laplacian Kernel} = \begin{bmatrix} 0 & 1 & 0 \\ 1 & \mathbf{-5} & 1 \\ 0 & 1 & 0 \end{bmatrix}$$
+$$\text{Composite Laplacian Kernel} = \begin{bmatrix} 0 & -1 & 0 \\ -1 & \mathbf{5} & -1 \\ 0 & -1 & 0 \end{bmatrix}$$
 
 ---
 
@@ -329,11 +329,13 @@ For the pixel at row 1, column 1, we look at its immediate top, bottom, left, an
 
 **Calculation:**
 
-Sum of the 4 neighbors: $6 + 6 + 1 + 7 = 20$
-
-Center multiplied by -5: $5 \times (-5) = -25$
-
-**Output:** $20 - 25 =$ **-5**
+- Sum of the 4 neighbors: $6 + 6 + 1 + 7 = 20$
+    
+- Multiply neighbors by $-1$: $-20$
+    
+- Center multiplied by $5$: $5 \times 5 = 25$
+    
+- **True Output:** $25 - 20 =$ **5**
 
 ---
 
@@ -356,6 +358,8 @@ For the pixel at row 1, column 2, we again look at its immediate 4-connected nei
 
 Sum of the 4 neighbors: $6 + 6 + 5 + 5 = 22$
 
-Center multiplied by -5: $7 \times (-5) = -35$
+Negate the sum: $-22$
 
-**Output:** $22 - 35 =$ **-13**
+Center multiplied by 5: $7 \times (5) = 35$
+
+**Output:** $35 - 22 =$ **13**

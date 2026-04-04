@@ -73,5 +73,5 @@
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
 	- [x] Lecture 2 - Perception
-	- [ ] Lecture 3 - 
+	- [x] Lecture 3 - Epistemology & Human Learning vs AI Types
 	- [ ] Lecture 4 - 
