@@ -23,3 +23,7 @@
 [[Image Processing/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Image Processing/Expanded Explanations/Lecture 7\|Lecture 7]]
 [[Image Processing/Expanded Explanations/Lecture 8\|Lecture 8]]
+
+# Solves 
+
+[[Image Processing/Sheets/Sheet 1 Sol\|Sheet 1 Sol]]
