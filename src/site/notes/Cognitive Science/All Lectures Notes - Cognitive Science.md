@@ -16,11 +16,16 @@
 [[Cognitive Science/Before Mid/Lecture 6 - Local Probabilistic\|Lecture 6 - Local Probabilistic]]
 
 ## Expanded Explanations
+
 [[Cognitive Science/Expanded Explanations/Lecture 1\|Lecture 1]]
 [[Cognitive Science/Expanded Explanations/Lecture 2\|Lecture 2]]
 [[Cognitive Science/Expanded Explanations/Lecture 3\|Lecture 3]]
+[[Cognitive Science/Expanded Explanations/Markov Localization Steps\|Markov Localization Steps]]
 [[Cognitive Science/Expanded Explanations/Lecture 4\|Lecture 4]]
 [[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
 [[Cognitive Science/Expanded Explanations/Lecture 6\|Lecture 6]]
 
+# Sheets
+
+[[Cognitive Science/Sheets/Sheet 1\|Sheet 1]]
 
