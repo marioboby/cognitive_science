@@ -76,3 +76,8 @@
     - It is scientifically easier to test than "Human" approaches. We can mathematically measure if an agent achieved a goal (Rationality), but it is subjective to measure if it "thought like a human."
         <br>
 - **Slide Status:** This is the definition of **Computational Intelligence** used in the course. The agent simply uses its sensors and effectors to maximize its performance measure.
+
+|                               | **Humanly (Like People)**                                    | **Rationally (Ideally/Logically)**                                   |
+| ----------------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------- |
+| **Thinking**<br><br>(Process) | **Cognitive Science**<br><br>_"Does it think like a brain?"_ | **Laws of Thought**<br><br>_"Does it follow strict logic?"_          |
+| **Acting**<br><br>(Behavior)  | **Turing Test**<br><br>_"Can it fool a person?"_             | **Rational Agent (This Course)**<br><br>_"Did it achieve the goal?"_ |

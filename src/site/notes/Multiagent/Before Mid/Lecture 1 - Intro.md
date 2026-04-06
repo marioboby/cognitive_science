@@ -59,6 +59,6 @@ AI systems are fundamentally divided by their true capacity for understanding an
 
 ### Weak AI
 
-- **Concept**: Machines that _appear_ intelligent and can automate complex tasks (like natural language processing or image recognition), but lack real intelligence, reasoning, or self-awareness.
+- **Concept**: Machines that _appear_ intelligent and can automate complex tasks (like natural language processing or image recognition), but lack real intelligence, reasoning, or self-awareness, where intelligent machines cannot really reason and solve problems..
     <br>
 - **Current Status**: Classifies as "Thinking like human beings" (e.g., IBM Watson, AlphaGo) or "Acting like human beings" (e.g., Boston Dynamics' Atlas, humanoid robots).
