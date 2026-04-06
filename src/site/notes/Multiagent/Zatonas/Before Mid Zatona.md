@@ -310,3 +310,80 @@ An agent is fundamentally composed of two parts:
 |---|---|
 |**State Space Graph**|In this graph, each state occurs only _once_. It is rarely built fully in memory because it is usually too large.|
 |**Search Tree**|Built on demand. A single node in a search tree represents an _entire path_ (plan) mapped out in the state space graph. Because different paths can lead to the same state, there is lots of repeated structure in the tree.|
+
+---
+
+# Lecture 5
+
+### **1. Fundamental Definitions**
+
+- **Search Space:** The set of objects among which we search for the solution.
+    
+- **Goal Condition:** Characteristics of the object we want to find in the search space.
+    
+- **Solution:** A sequence of actions to move from the start state to the goal state.
+    
+- **Optimal Solution:** The solution that has the lowest path cost among all possible solutions.
+    
+- **Completeness:** Whether an algorithm is guaranteed to find a solution when one exists and correctly report failure when there is none.
+    
+- **Optimality:** Whether a strategy finds the optimal solution (lowest path cost).
+    
+- **Time Complexity:** How long it takes to find a solution (measured in seconds, states, or actions).
+    
+- **Space Complexity:** How much memory is needed to perform the search.
+    
+
+---
+
+### **2. "Consists Of" & Core Frameworks**
+
+**A Search Problem consists of:**
+
+1. **A state space:** Configurations of the world.
+    
+2. **A successor function:** World dynamics (with actions and costs).
+    
+3. **A start state**
+    
+4. **A goal test:** Characteristics to find.
+    
+
+**A Tree Node consists of (Infrastructure for Search Algorithms):**
+
+- **STATE:** The state in the state space to which the node corresponds.
+    
+- **PARENT:** The node in the search tree that generated this node.
+    
+- **ACTION:** The action that was applied to the parent to generate the node.
+    
+- **PATH-COST:** The cost ($g(n)$) of the path from the initial state to the node, as indicated by the parent line.
+    
+
+**Tree Complexity Parameters consist of:**
+
+- **b:** Maximum branching factor.
+    
+- **d:** Depth of the optimal solution.
+    
+- **m:** Maximum depth of the state space.
+    
+
+---
+
+### **3. Key Comparisons**
+
+**Table 1: State Space Graph vs. Search Tree (Revisited for this Lecture)**
+
+| Feature                 | State Space Graph                                               | Search Tree                                   |
+| :---------------------- | :-------------------------------------------------------------- | :-------------------------------------------- |
+| **Usage**               | Can be used directly by developing a suitable search technique. | Often easier to build first before searching. |
+| **Nodes represent**     | Abstracted world configurations (states).                       | Plans for reaching states.                    |
+| **Cost representation** | Arcs represent actions and costs.                               | Plans have costs (the sum of action costs).   |
+
+**Table 2: Search Strategy Types**
+
+| Strategy Type | Characteristics |
+| :--- | :--- |
+| **Uninformed (Blind)** | Uses only the information available in the problem definition. |
+| **Informed** | Uses domain-specific knowledge beyond the problem definition (heuristics, metaheuristics). |
