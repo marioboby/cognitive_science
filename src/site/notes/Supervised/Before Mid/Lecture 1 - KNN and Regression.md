@@ -4,11 +4,6 @@
 
 # Intro to ML and Supervised Learning
 
-Let’s break down this FCAI lecture on Supervised Learning. When architecting an `sklearn`-like machine learning library from scratch, mastering both the mathematical theory and the step-by-step algorithmic logic presented here is exactly what you need to translate these concepts into clean, functional code.
-
-Here is a detailed explanation of the core modules covered in the slides.
-
----
 
 ### 1. Introduction to Supervised Learning
 
