@@ -46,8 +46,15 @@
 - The lecture shifts to comparing the human mind to a computer using the **IPO (Input-Processing-Output)** model.
     
 - **Example (Calculator):** Input = pressing 6 and 5. Processing = Addition. Output = Displaying 11 on the screen.
-    
-- **Example (Human Learning):** A baby receives raw audio (Input). The brain uses "unsupervised learning" to deduce grammar and vocabulary (Processing). The baby eventually says "Mama" (Output).
+
+* IPO Stands for:
+	* **Input: A “requirement from the environment”**
+	* **Processing**: A “computation” 1 based on the input information
+	* **Output: A “provision for the environment”**
+<br>
+- **Example (Human Learning):** A baby receives raw audio (Input). The brain uses "unsupervised learning" to deduce grammar and vocabulary (Processing). The baby eventually says "Mama" (Output), Later the growing baby also learns using 
+	- Supervised Learning (e.g. told that this is a ”banana”) and
+	- Reinforcement learning (e.g. when it learns that making certain funny sounds make ”Mama” smile.
     
 
 ### **Part 6: Android Epistemology & The Chinese Room**

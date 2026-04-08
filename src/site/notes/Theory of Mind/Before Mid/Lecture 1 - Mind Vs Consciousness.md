@@ -9,7 +9,7 @@
     <br>
 - It provides a formal definition of the "Mind" (العقل) sourced from the American Psychological Association (APA).
     <br>
-- The mind is described as encompassing all intellectual and psychological phenomena and processes of an organism.
+- The mind is described as encompassing a==ll intellectual and psychological phenomena and processes of an organism==.
     <br>
 - These processes are broken down into three main categories: 
   - "Cognition" (such as thinking and perceptual systems) , 
@@ -58,7 +58,11 @@
 
 - The presentation outlines a "bottom-up" approach to neuroscience, aiming to understand the brain starting from its smallest electrical building units up to the larger functions of the mind.
     <br>
-- To illustrate the brain's massive complexity, the  state that t==here are approximately 86 billion neurons (brain cells) in the human brain. * These 86 billion neurons form an estimated 100 trillion connections with one another.== * To put this immense scale into perspective, the presentation compares it to the atomic level, noting that there are approximately 99 billion billion atoms in a single cubic millimeter of water.
+- To illustrate the brain's massive complexity, the  state that t==here are approximately 86 billion neurons (brain cells) in the human brain. 
+
+* ==These 86 billion neurons form an estimated 100 trillion connections with one another.== 
+
+* To put this immense scale into perspective, the presentation compares it to the atomic level, noting that there are approximately 99 billion billion atoms in a single cubic millimeter of water.
     
 
 ### **The Mind and Artificial Intelligence**
