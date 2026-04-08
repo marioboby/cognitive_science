@@ -22,3 +22,4 @@
 # Mid Sols
 
 [[Supervised/Mids Sols/Sample Exam 1 Sol\|Sample Exam 1 Sol]]
+[[Supervised/Mids Sols/Sample Exam 2 Sol\|Sample Exam 2 Sol]]

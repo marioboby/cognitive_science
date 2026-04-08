@@ -74,4 +74,4 @@
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
 	- [x] Lecture 2 - Perception
 	- [x] Lecture 3 - Epistemology & Human Learning vs AI Types
-	- [ ] Lecture 4 - 
+	- [x] Lecture 4 - Panpsychism, Big Bang, Sub Atomic
