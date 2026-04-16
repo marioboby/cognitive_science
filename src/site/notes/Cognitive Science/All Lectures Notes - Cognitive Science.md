@@ -15,6 +15,13 @@
 [[Cognitive Science/Before Mid/Lecture 5 - Knowledge Representation, Spaces and Features\|Lecture 5 - Knowledge Representation, Spaces and Features]]
 [[Cognitive Science/Before Mid/Lecture 6 - Local Probabilistic\|Lecture 6 - Local Probabilistic]]
 
+---
+## After Mid
+
+[[Cognitive Science/After Mid/Lecture 7 - Template-Based Representations\|Lecture 7 - Template-Based Representations]]
+[[Cognitive Science/After Mid/Lecture 8 - Kalman Filter\|Lecture 8 - Kalman Filter]]
+
+---
 ## Expanded Explanations
 
 [[Cognitive Science/Expanded Explanations/Lecture 1\|Lecture 1]]
@@ -24,7 +31,9 @@
 [[Cognitive Science/Expanded Explanations/Lecture 4\|Cognitive Science/Expanded Explanations/Lecture 4]]
 [[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
 [[Cognitive Science/Expanded Explanations/Lecture 6\|Lecture 6]]
+[[Cognitive Science/Expanded Explanations/Lecture 7\|Lecture 7]]
 
+---
 # Sheets
 
 [[Cognitive Science/Sheets/Sheet 1\|Sheet 1]]

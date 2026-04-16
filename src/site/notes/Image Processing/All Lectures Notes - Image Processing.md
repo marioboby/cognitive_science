@@ -18,12 +18,20 @@
 [[Image Processing/Before Mid/Lecture 6 - Filtering in the Frequency Domain - Ch4\|Lecture 6 - Filtering in the Frequency Domain - Ch4]]
 [[Image Processing/Before Mid/Lecture 7 - Filtering in the Frequency Domain - Ch4 - Part2\|Lecture 7 - Filtering in the Frequency Domain - Ch4 - Part2]]
 [[Image Processing/Before Mid/Lecture 8 - Image Restoration and Reconstruction - Ch5\|Lecture 8 - Image Restoration and Reconstruction - Ch5]]
+
+---
+## After Mid
+
+[[Image Processing/After Mid/Lecture 9 - Image Segmentation - Ch10\|Lecture 9 - Image Segmentation - Ch10]]
+
+---
 ## Expanded Explanations
 
 [[Image Processing/Expanded Explanations/Lecture 3\|Lecture 3]]
-[[Image Processing/Expanded Explanations/Lecture 7\|Lecture 7]]
+[[Image Processing/Expanded Explanations/Lecture 7\|Image Processing/Expanded Explanations/Lecture 7]]
 [[Image Processing/Expanded Explanations/Lecture 8\|Lecture 8]]
 
+---
 # Solves 
 
 [[Image Processing/Sheets/Sheet 1 Sol\|Sheet 1 Sol]]

@@ -11,6 +11,13 @@
 [[Supervised/Before Mid/Lecture 4 - Optimizers, Hyperparameter Tuning\|Lecture 4 - Optimizers, Hyperparameter Tuning]]
 [[Supervised/Before Mid/Lecture 5 - CNN\|Lecture 5 - CNN]]
 [[Supervised/Before Mid/Lecture 6 - CNN Cont\|Lecture 6 - CNN Cont]]
+
+---
+## After Mid
+
+[[Supervised/After Mid/Lecture 7 - Transfer Learning & Auto Encoders\|Lecture 7 - Transfer Learning & Auto Encoders]]
+
+---
 ## Expanded Explanations
 
 [[Supervised/Expanded Explanations/Lecture 1 Examples\|Lecture 1 Examples]]
@@ -18,7 +25,9 @@
 [[Supervised/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Supervised/Expanded Explanations/Lecture 4 Examples\|Lecture 4 Examples]]
 [[Supervised/Expanded Explanations/Lecture 5\|Lecture 5]]
+[[Supervised/Expanded Explanations/Week 7\|Week 7]]
 
+---
 # Mid Sols
 
 [[Supervised/Mids Sols/Sample Exam 1 Sol\|Sample Exam 1 Sol]]

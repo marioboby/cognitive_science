@@ -37,6 +37,8 @@
 	- [x] Knowledge Representation
 	- [x] Markovian Networks
 	- [x] Local Probabilistic
+	- [x] Template-Based Representations
+	- [x] Kalman Filter
 
 - [x] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
@@ -45,6 +47,7 @@
 	- [x] Lecture 4 - Optimization Algos
 	- [x] Lecture 5 - CNN
 	- [x] Lecture 6 - CNN Cont
+	- [x] Lecture 7 - Lecture 7 - Transfer Learning & Auto Encoders
 
 - [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
 	- [x] Lecture 1 - Intro
@@ -62,6 +65,8 @@
 	- [x] Lecture 6 - Filtering in the Frequency Domain - Ch4
 	- [x] Lecture 7 - Filtering in the Frequency Domain - Part2 - Ch4
 	- [x] Lecture 8 - Image Restoration and Reconstruction - Ch5
+	- [x] Lecture 9 - Image Segmentation - Part1 - Ch10
+	- [ ] Lecture 10 - Image Segmentation - Part2 - Ch10
 
 - [x] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro
@@ -69,9 +74,11 @@
 	- [x] Lecture 3 - Types of Agents
 	- [x] Lecture 4 - Solving by Searching
 	- [x] Lecture 5 - Example and Midterm 
+	- [ ] Lecture 6 - Uninformed (Blind) Search Strategies
 
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
 	- [x] Lecture 2 - Perception
 	- [x] Lecture 3 - Epistemology & Human Learning vs AI Types
 	- [x] Lecture 4 - Panpsychism, Big Bang, Sub Atomic
+	- [ ] Lecture 5 - Sub-atomic 
