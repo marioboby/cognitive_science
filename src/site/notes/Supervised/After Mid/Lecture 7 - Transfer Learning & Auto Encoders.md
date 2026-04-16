@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/supervised/after-mid/lecture-7-transfer-learning-and-auto-encoders/"}
 ---
 
+# This note covers the content of Week 7 slides, to see more on topics mentioned in class like YOLO and ResNet, [[Supervised/Expanded Explanations/Week 7\|here]]
 
 At its core, **transfer learning** is a machine learning technique where a model developed for one task is reused as the starting point for a model on a second, related task.
 
