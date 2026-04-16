@@ -74,7 +74,7 @@
 	- [x] Lecture 3 - Types of Agents
 	- [x] Lecture 4 - Solving by Searching
 	- [x] Lecture 5 - Example and Midterm 
-	- [ ] Lecture 6 - Uninformed (Blind) Search Strategies
+	- [x] Lecture 6 - Uninformed (Blind) Search Strategies
 
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”

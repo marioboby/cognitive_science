@@ -13,9 +13,17 @@
 [[Multiagent/Before Mid/Lecture 4 - Solving problems by searching\|Lecture 4 - Solving problems by searching]]
 [[Multiagent/Before Mid/Lecture 5 - Example - State-space Graph For The Two-cell Vacuum World\|Lecture 5 - Example - State-space Graph For The Two-cell Vacuum World]]
 [[Multiagent/Zatonas/Before Mid Zatona\|Before Mid Zatona]]
+
+---
+# After Mid
+
+[[Multiagent/After Mid/Lecture 6 - Uninformed (Blind) Search Strategies\|Lecture 6 - Uninformed (Blind) Search Strategies]]
+
+---
 ## Expanded Explanations
 
 [[Multiagent/Expanded Explanations/Lecture 1\|Lecture 1]]
 
+---
 # Mids Sol
 [[Multiagent/Mids Sol/Mid 2022 Retake Sol\|Mid 2022 Retake Sol]]
