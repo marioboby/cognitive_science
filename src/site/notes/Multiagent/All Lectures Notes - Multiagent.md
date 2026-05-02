@@ -18,6 +18,8 @@
 # After Mid
 
 [[Multiagent/After Mid/Lecture 6 - Uninformed (Blind) Search Strategies\|Lecture 6 - Uninformed (Blind) Search Strategies]]
+[[Multiagent/After Mid/Lecture 7 - Informed Search Strategies\|Lecture 7 - Informed Search Strategies]]
+[[Multiagent/After Mid/Lecture 8 - Local Search algorithms\|Lecture 8 - Local Search algorithms]]
 
 ---
 ## Expanded Explanations

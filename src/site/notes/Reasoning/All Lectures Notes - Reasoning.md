@@ -17,6 +17,13 @@
 
 ---
 
+# After Mid
+
+[[Reasoning/After Mid/Lecture 6 - Neuro - Fuzzy System - Mamdani Approach\|Lecture 6 - Neuro - Fuzzy System - Mamdani Approach]]
+[[Reasoning/After Mid/Lecture 7 - Neuro- Fuzzy System - Takagi and Sugeno’s approach\|Lecture 7 - Neuro- Fuzzy System - Takagi and Sugeno’s approach]]
+
+---
+
 # Midterms Sol
 
 [[Reasoning/Mids Sol/Mid 2025 Sol\|Mid 2025 Sol]]

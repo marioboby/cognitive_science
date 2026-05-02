@@ -2,6 +2,8 @@
 {"dg-publish":true,"permalink":"/cognitive-science/before-mid/lecture-4-2-markovian-networks-markov-random-field/"}
 ---
 
+[Message Passing in Markov Networks](https://knowledgespace.asser.md/concepts/message-passing-in-markov-networks)
+By: Asser Ahmed
 
 ### **Motivation: Why Markov Networks?**
 

@@ -25,6 +25,40 @@ BFS explores the search space tier by tier.
 	- **Optimal:** Yes, but _only_ if every step costs exactly 1.
 	
 
+#### Example with Code "Cannibals and Missionaries Problem"
+
+```python
+def breadth_first_search(start_state, goal_state):
+
+    # Fringe managed as a FIFO queue: stores tuples of (current_state,                   path_history)
+    fringe = [(start_state, [])]
+
+    # Visited set prevents infinite loops and redundant exploration
+    explored = set([start_state])
+
+    nodes_expanded = 0
+
+    while fringe:
+
+        # Pop from the shallowest end of the queue
+        current_state, path = fringe.pop(0)
+
+        # Goal test
+        if current_state == goal_state:
+            print(f"Goal found! Nodes expanded: {nodes_expanded}")
+            return path + [(current_state, "Goal Reached")]
+
+        nodes_expanded += 1
+
+        # Expand node
+        for next_state, action in get_successors(current_state):
+
+            if next_state not in explored:
+                explored.add(next_state)
+                # Append to the back of the queue (FIFO)
+                fringe.append((next_state, path + [(current_state, action)]))
+    return None
+```
 ### 3. Depth-First Search (DFS)
 
 DFS dives as deep as possible down a single path before backtracking.
@@ -71,14 +105,6 @@ DFS plunges as deeply as possible down a single path before backtracking. Its pr
     
 
 ---
-
-### Interactive Comparison
-
-The best way to understand these performance differences is to watch them explore the same space. Use the interactive grid below to see how the location of the goal drastically changes which algorithm is more efficient. Try setting the target to "Close" and watch BFS excel, then set it to "Far" to see DFS plunge forward.
-
-Did this visual help you understand the answer better?
-
-YesNo
 
 ### 4. Iterative Deepening
 

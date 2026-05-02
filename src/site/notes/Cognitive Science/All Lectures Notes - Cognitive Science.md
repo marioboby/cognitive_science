@@ -20,6 +20,7 @@
 
 [[Cognitive Science/After Mid/Lecture 7 - Template-Based Representations\|Lecture 7 - Template-Based Representations]]
 [[Cognitive Science/After Mid/Lecture 8 - Kalman Filter\|Lecture 8 - Kalman Filter]]
+[[Cognitive Science/After Mid/Lecture 9 - Exact Inference - Variable Elimination\|Lecture 9 - Exact Inference - Variable Elimination]]
 
 ---
 ## Expanded Explanations
@@ -28,10 +29,11 @@
 [[Cognitive Science/Expanded Explanations/Lecture 2\|Lecture 2]]
 [[Cognitive Science/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Cognitive Science/Expanded Explanations/Markov Localization Steps\|Markov Localization Steps]]
-[[Cognitive Science/Expanded Explanations/Lecture 4\|Cognitive Science/Expanded Explanations/Lecture 4]]
+[[Cognitive Science/Expanded Explanations/Lecture 4\|Lecture 4]]
 [[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
 [[Cognitive Science/Expanded Explanations/Lecture 6\|Lecture 6]]
 [[Cognitive Science/Expanded Explanations/Lecture 7\|Lecture 7]]
+[[Cognitive Science/Expanded Explanations/Lecture 9\|Lecture 9]]
 
 ---
 # Sheets
