@@ -49,7 +49,7 @@
 	- [x] Lecture 4 - Optimization Algos
 	- [x] Lecture 5 - CNN
 	- [x] Lecture 6 - CNN Cont
-	- [x] Lecture 7 - Lecture 7 - Transfer Learning & Auto Encoders
+	- [x] Lecture 7 - Transfer Learning & Auto Encoders
 	- [ ] Lecture 8 - Learning With Memory 
 
 - [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
