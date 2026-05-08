@@ -29,7 +29,7 @@
 
 [[Image Processing/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Image Processing/Expanded Explanations/Lecture 7\|Image Processing/Expanded Explanations/Lecture 7]]
-[[Image Processing/Expanded Explanations/Lecture 8\|Lecture 8]]
+[[Image Processing/Expanded Explanations/Lecture 8\|Image Processing/Expanded Explanations/Lecture 8]]
 
 ---
 # Solves 

@@ -29,7 +29,7 @@
 
 # Progress so far
 
-- [x] [[Cognitive Science/All Lectures Notes - Cognitive Science\|Cognitive Science]]
+- [x] [[Cognitive Science/All Lectures Notes - Cognitive Science\|Cognitive Science]] (المنهج خلص)
 	- [x] Lecture 1
 	- [x] Lecture 2
 	- [x] Mobile Robot Localization
@@ -41,6 +41,7 @@
 	- [x] Kalman Filter
 	- [x] Exact Inference: Variable Elimination
 	- [ ] Hardware (مراجعة أركي)
+	- [ ] Last Lecture 
 
 - [x] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
@@ -50,9 +51,9 @@
 	- [x] Lecture 5 - CNN
 	- [x] Lecture 6 - CNN Cont
 	- [x] Lecture 7 - Transfer Learning & Auto Encoders
-	- [ ] Lecture 8 - Learning With Memory 
+	- [x] Lecture 8 - Learning With Memory 
 
-- [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] 
+- [x] [[Reasoning/All Lectures Notes - Reasoning\|Reasoning]] (المنهج خلص)
 	- [x] Lecture 1 - Intro
 	- [x] Lecture 2 - Predicate and Resolution
 	- [x] Lecture 3 - Production Systems
@@ -60,8 +61,9 @@
 	- [x] Lecture 5 - Introduction to Fuzzy Logic
 	- [x] Lecture 6 - Neuro - Fuzzy System - Mamdani Approach
 	- [x] Lecture 7 - Neuro - Fuzzy System - Takagi and Sugeno’s Approach
+	- [ ] Lecture 8 - Uncertainty
 
-- [x] [[Image Processing/All Lectures Notes - Image Processing\|Image Processing]]
+- [x] [[Image Processing/All Lectures Notes - Image Processing\|Image Processing]] (المنهج خلص)
 	- [x] Lecture 1 - Intro - Ch1
 	- [x] Lecture 2 - Digital Images fundamentals - Ch2
 	- [x] Lecture 3 - Intensity Transformation and Spatial Filtering - Part1 - Ch3
@@ -73,6 +75,7 @@
 	- [x] Lecture 9 - Image Segmentation - Part1 - Ch10
 	- [ ] Lecture 10 - Image Segmentation - Part2 - Ch10
 	- [ ] Lecture 11 - Morphological Operations - Ch9
+	- [ ] Lecture 12 - Image Classification - Ch 12
 
 - [x] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro
@@ -83,6 +86,7 @@
 	- [x] Lecture 6 - Uninformed (Blind) Search Strategies
 	- [x] Lecture 7 - Informed Search Strategies
 	- [x] Lecture 8 - Meta Heuristic Search Strategies  
+	- [ ] Lecture 9 - 
 
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”

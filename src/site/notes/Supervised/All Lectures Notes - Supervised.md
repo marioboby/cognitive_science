@@ -16,6 +16,7 @@
 ## After Mid
 
 [[Supervised/After Mid/Lecture 7 - Transfer Learning & Auto Encoders\|Lecture 7 - Transfer Learning & Auto Encoders]]
+[[Supervised/After Mid/Lecture 8 - Speech and RNNs\|Lecture 8 - Speech and RNNs]]
 
 ---
 ## Expanded Explanations
@@ -25,7 +26,7 @@
 [[Supervised/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Supervised/Expanded Explanations/Lecture 4 Examples\|Lecture 4 Examples]]
 [[Supervised/Expanded Explanations/Lecture 5\|Lecture 5]]
-[[Supervised/Expanded Explanations/Week 7\|Week 7]]
+[[Supervised/Expanded Explanations/Lecture 7\|Supervised/Expanded Explanations/Lecture 7]]
 
 ---
 # Mid Sols
