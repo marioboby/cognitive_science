@@ -72,6 +72,8 @@ Using the colored Rule Base grid from the slides, we map the 4 activated combina
 3.  If $I_1$ is FR AND $I_2$ is SM $\rightarrow$ **$O$ is H** (Strength: 0.272727)
 4.  If $I_1$ is FR AND $I_2$ is M $\rightarrow$ **$O$ is H** (Strength: 0.727272)
 
+![Pasted image 20260511210449.png](/img/user/imgs/Pasted%20image%2020260511210449.png)
+
 #### **Layer 5 (Defuzzification)**
 We now have four "fired" fuzzy shapes. Because the strengths act as a ceiling, the triangular output shapes are cut off (truncated) at their respective strength levels, turning them into trapezoids (or smaller shapes). 
 

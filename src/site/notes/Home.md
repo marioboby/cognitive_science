@@ -61,7 +61,7 @@
 	- [x] Lecture 5 - Introduction to Fuzzy Logic
 	- [x] Lecture 6 - Neuro - Fuzzy System - Mamdani Approach
 	- [x] Lecture 7 - Neuro - Fuzzy System - Takagi and Sugeno’s Approach
-	- [ ] Lecture 8 - Uncertainty
+	- [x] Lecture 8 - Uncertainty
 
 - [x] [[Image Processing/All Lectures Notes - Image Processing\|Image Processing]] (المنهج خلص)
 	- [x] Lecture 1 - Intro - Ch1

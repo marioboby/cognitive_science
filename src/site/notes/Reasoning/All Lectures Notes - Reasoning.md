@@ -21,6 +21,7 @@
 
 [[Reasoning/After Mid/Lecture 6 - Neuro - Fuzzy System - Mamdani Approach\|Lecture 6 - Neuro - Fuzzy System - Mamdani Approach]]
 [[Reasoning/After Mid/Lecture 7 - Neuro- Fuzzy System - Takagi and Sugeno’s approach\|Lecture 7 - Neuro- Fuzzy System - Takagi and Sugeno’s approach]]
+[[Reasoning/After Mid/Lecture 8 - Uncertainty\|Lecture 8 - Uncertainty]]
 
 ---
 
