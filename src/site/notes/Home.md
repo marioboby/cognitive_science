@@ -41,7 +41,7 @@
 	- [x] Kalman Filter
 	- [x] Exact Inference: Variable Elimination
 	- [ ] Hardware (مراجعة أركي)
-	- [ ] Last Lecture 
+	- [ ] Tour in Robotics Lab 
 
 - [x] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
@@ -73,9 +73,9 @@
 	- [x] Lecture 7 - Filtering in the Frequency Domain - Part2 - Ch4
 	- [x] Lecture 8 - Image Restoration and Reconstruction - Ch5
 	- [x] Lecture 9 - Image Segmentation - Part1 - Ch10
-	- [ ] Lecture 10 - Image Segmentation - Part2 - Ch10
-	- [ ] Lecture 11 - Morphological Operations - Ch9
-	- [ ] Lecture 12 - Image Classification - Ch 12
+	- [x] Lecture 10 - Image Segmentation - Part2 - Ch10
+	- [x] Lecture 11 - Morphological Operations - Ch9
+	- [x] Lecture 12 - Image Classification - Ch 12
 
 - [x] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
 	- [x] Lecture 1 - Intro

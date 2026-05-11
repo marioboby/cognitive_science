@@ -23,6 +23,9 @@
 ## After Mid
 
 [[Image Processing/After Mid/Lecture 9 - Image Segmentation - Ch10\|Lecture 9 - Image Segmentation - Ch10]]
+[[Image Processing/After Mid/Lecture 10 - Image Segmentation - Ch10 - Part2\|Lecture 10 - Image Segmentation - Ch10 - Part2]]
+[[Image Processing/After Mid/Lecture 11 - Morphological Image Processing\|Lecture 11 - Morphological Image Processing]]
+[[Image Processing/After Mid/Lecture 12 - Image Classification\|Lecture 12 - Image Classification]]
 
 ---
 ## Expanded Explanations
