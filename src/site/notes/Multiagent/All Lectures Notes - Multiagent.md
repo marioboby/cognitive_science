@@ -20,6 +20,7 @@
 [[Multiagent/After Mid/Lecture 6 - Uninformed (Blind) Search Strategies\|Lecture 6 - Uninformed (Blind) Search Strategies]]
 [[Multiagent/After Mid/Lecture 7 - Informed Search Strategies\|Lecture 7 - Informed Search Strategies]]
 [[Multiagent/After Mid/Lecture 8 - Local Search algorithms\|Lecture 8 - Local Search algorithms]]
+[[Multiagent/After Mid/Lecture 9 - Searching with nondeterministic actions\|Lecture 9 - Searching with nondeterministic actions]]
 
 ---
 ## Expanded Explanations

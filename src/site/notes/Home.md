@@ -86,7 +86,7 @@
 	- [x] Lecture 6 - Uninformed (Blind) Search Strategies
 	- [x] Lecture 7 - Informed Search Strategies
 	- [x] Lecture 8 - Meta Heuristic Search Strategies  
-	- [ ] Lecture 9 - 
+	- [x] Lecture 9 - Searching with nondeterministic actions
 
 - [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
