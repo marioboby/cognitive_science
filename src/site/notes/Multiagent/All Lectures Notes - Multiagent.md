@@ -21,6 +21,7 @@
 [[Multiagent/After Mid/Lecture 7 - Informed Search Strategies\|Lecture 7 - Informed Search Strategies]]
 [[Multiagent/After Mid/Lecture 8 - Local Search algorithms\|Lecture 8 - Local Search algorithms]]
 [[Multiagent/After Mid/Lecture 9 - Searching with nondeterministic actions\|Lecture 9 - Searching with nondeterministic actions]]
+[[Multiagent/After Mid/Lecture 10 - Multi-Agent systems and Game Theory\|Lecture 10 - Multi-Agent systems and Game Theory]]
 
 ---
 ## Expanded Explanations

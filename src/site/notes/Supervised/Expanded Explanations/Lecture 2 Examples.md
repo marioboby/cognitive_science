@@ -3,7 +3,7 @@
 ---
 
 
-[[Supervised/Expanded Explanations/Lecture 2 Examples#1. Categorical Naïve Bayes (Play Tennis Dataset)\|Lecture 2 Examples#1. Categorical Naïve Bayes (Play Tennis Dataset)]]
+[[Supervised/Expanded Explanations/Lecture 2 Examples#1. Categorical Naïve Bayes (Play Tennis Dataset)\|#1. Categorical Naïve Bayes (Play Tennis Dataset)]]
 [[Supervised/Expanded Explanations/Lecture 2 Examples#2. Gaussian Naïve Bayes (Numerical Data)\|#2. Gaussian Naïve Bayes (Numerical Data)]]
 [[Supervised/Expanded Explanations/Lecture 2 Examples#3. Principal Component Analysis (PCA)\|#3. Principal Component Analysis (PCA)]]
 [[Supervised/Expanded Explanations/Lecture 2 Examples#More On Naive Bayes\|#More On Naive Bayes]]

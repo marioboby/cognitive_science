@@ -2,6 +2,7 @@
 {"dg-publish":true,"permalink":"/home/","tags":["gardenEntry"]}
 ---
 
+
 # This is my notes for FCAI AI Department Third Year - Second Term Curriculum, hope it benefits you
 
 ---
@@ -40,8 +41,8 @@
 	- [x] Template-Based Representations
 	- [x] Kalman Filter
 	- [x] Exact Inference: Variable Elimination
-	- [ ] Hardware (مراجعة أركي)
-	- [ ] Tour in Robotics Lab 
+	- [ ] Hardware (مراجعة أركي) - not included in exam
+	- [ ] Tour in Robotics Lab - not included in exam
 
 - [x] [[Supervised/All Lectures Notes - Supervised\|Supervised Learning]]
 	- [x] Lecture 1 - Intro, KNN, Logistic and Linear Regression 
@@ -77,7 +78,7 @@
 	- [x] Lecture 11 - Morphological Operations - Ch9
 	- [x] Lecture 12 - Image Classification - Ch 12
 
-- [x] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]]
+- [x] [[Multiagent/All Lectures Notes - Multiagent\|Multiagent]] (المنهج خلص)
 	- [x] Lecture 1 - Intro
 	- [x] Lecture 2 - Agents and Envs - Part1
 	- [x] Lecture 3 - Types of Agents
@@ -87,8 +88,9 @@
 	- [x] Lecture 7 - Informed Search Strategies
 	- [x] Lecture 8 - Meta Heuristic Search Strategies  
 	- [x] Lecture 9 - Searching with nondeterministic actions
+	- [x] Lecture 10 - Multi-Agent systems and Game Theory
 
-- [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]]
+- [x] [[Theory of Mind/All Lecture Notes - Theory\|Theory of Mind]] (المنهج خلص)
 	- [x] Lecture 1 - “Mind” vs “Conation” vs “Consciousness”
 	- [x] Lecture 2 - Perception
 	- [x] Lecture 3 - Epistemology & Human Learning vs AI Types

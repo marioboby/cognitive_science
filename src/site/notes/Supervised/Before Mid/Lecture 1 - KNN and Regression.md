@@ -5,6 +5,7 @@
 # Intro to ML and Supervised Learning
 
 
+
 ### 1. Introduction to Supervised Learning
 
 Supervised learning requires a "teacher"—meaning the algorithm is trained on a dataset that already contains the desired output labels. The model processes input data, generates classifications, and corrects its errors based on the known labels until it learns the underlying pattern.
@@ -124,3 +125,5 @@ The slides distinguish between three gradient descent variations:
 - **Stochastic Gradient Descent (SGD):** Randomly selects a single sample to calculate the gradient, resulting in faster but noisier updates.
     
 - **Mini-Batch Gradient Descent (MBGD):** A middle ground that uses a small subset of $n$ samples per update.
+
+example on it [[Supervised/Expanded Explanations/Lecture 1 Examples#Part 2 Linear Regression\|here]]
