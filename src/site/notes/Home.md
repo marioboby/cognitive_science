@@ -3,7 +3,7 @@
 ---
 
 
-# This is my notes for FCAI AI Department Third Year - Second Term Curriculum, hope it benefits you
+# These are my notes for FCAI AI Department Third Year - Second Term Curriculum, hope it benefits you
 
 ---
 # by: Mario Saber 

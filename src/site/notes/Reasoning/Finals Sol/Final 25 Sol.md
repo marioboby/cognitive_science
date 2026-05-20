@@ -267,12 +267,12 @@ When multiple rules lead to the same conclusion and both CFs are positive, we co
 
 ## B) 
 
-![Pasted image 20260520221410.png](/img/user/Pasted%20image%2020260520221410.png)
+![Pasted image 20260520221410.png](/img/user/imgs/Pasted%20image%2020260520221410.png)
 
 
-![Pasted image 20260520222118.png](/img/user/Pasted%20image%2020260520222118.png)
+![Pasted image 20260520222118.png](/img/user/imgs/Pasted%20image%2020260520222118.png)
 
-![Pasted image 20260520224154.png](/img/user/Pasted%20image%2020260520224154.png)
+![Pasted image 20260520224154.png](/img/user/imgs/Pasted%20image%2020260520224154.png)
 ### **Rule 1: Output is Low ($LW$), Clipped at 0.25**
 
 Based on your handwritten sketch, we look at the falling slope from **x = 2** to **x = 7** (Total Base = 5).
@@ -286,7 +286,7 @@ Therefore, the clipped shape is split into:
 2. A Triangle from $x = 5.75$ to $7$
     
 
-![Pasted image 20260520224013.png](/img/user/Pasted%20image%2020260520224013.png)
+![Pasted image 20260520224013.png](/img/user/imgs/Pasted%20image%2020260520224013.png)
 
 **Shape 1: Rectangle**
 
@@ -321,7 +321,7 @@ Therefore, the clipped shape is split into:
 
 Because the High ($H$) shape is symmetrical (it forms an even trapezoid after being clipped), we can bypass the individual shape decomposition and apply the special rule directly to the entire base.
 
-![Pasted image 20260520230444.png](/img/user/Pasted%20image%2020260520230444.png)
+![Pasted image 20260520230444.png](/img/user/imgs/Pasted%20image%2020260520230444.png)
 
 - **Base:** $12 - 2 = \mathbf{10}$
     
