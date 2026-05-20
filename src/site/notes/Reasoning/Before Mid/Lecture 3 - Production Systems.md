@@ -104,6 +104,39 @@ Forward chaining is a "data-driven" approach. It starts with the known facts and
 - **Cycle 5:** Now that "Y" is a fact, Rule 5 matches. Rule 5 fires and adds "Z" to the database. "Z" is the goal, so the process successfully stops.
     
 
+```python
+    def forward_chaining(self, goal: str) -> None:
+
+        print("\n--- Starting Forward Chaining ---")
+        self.reset_facts()
+        cycle = 1
+
+        print(f"Initial Facts: {self.current_facts}")
+        if goal not in self.current_facts and all(goal != rule.consequent for rule in self.rules):
+
+            print(f"Goal '{goal}' cannot be achieved with the current knowledge base.")
+            return
+
+        new_fact_added = True
+
+        while goal not in self.current_facts and new_fact_added:
+            new_fact_added = False
+            for rule in self.rules: # First fit conflict resolution strategy
+                if rule.consequent not in self.current_facts:
+                    if all(self.evaluate_condition(antecedent) for antecedent in rule.antecedents):
+                        print(f"Applying Rule: {rule}")
+                        self.current_facts.add(rule.consequent)
+                        new_fact_added = True
+
+            print(f"Cycle {cycle}: Current Facts = {self.current_facts}")
+            cycle += 1
+
+        if goal in self.current_facts:
+            print(f"Success! Goal '{goal}' reached.")
+        else:
+            print(f"Failed. Goal '{goal}' could not be reached.")
+```
+
 ---
 
 ## 5. Backward Chaining Systems (Goal-Driven)

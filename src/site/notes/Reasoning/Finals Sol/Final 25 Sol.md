@@ -3,7 +3,7 @@
 ---
 
 
-# Q2
+# Q1
 ## **A) Use the Resolution Algorithm to prove that "Alice is accepted"**
 
 **1. Define Predicates and Constants:**
@@ -181,3 +181,170 @@ _(Note: Assuming we don't need a Predicate for Pet)._
  - c(X) is true for X=2 
 
 then Friend2(X) is true where X=2
+
+---
+
+# Q2
+
+## A) **Goal:** Determine the final Certainty Factor for both "tomorrow is rain" and "tomorrow is dry".
+
+**1. Identify Initial User Input Facts:**
+
+- $CF(\text{today is rain}) = 1$
+    
+- $CF(\text{rainfall is low}) = 0.8$
+    
+- $CF(\text{temperature is cold}) = 0.9$
+    
+- _(Note: Facts like "today is dry", "temperature is warm", and "sky is overcast" are not provided, so their CF is implicitly $0$, meaning rules 2, 5, and 6 will not fire)._
+    
+
+**2. Evaluate the Relevant Rules:**
+
+For rules with an `AND` premise, we take the minimum CF of the given facts. Then, we multiply the premise's CF by the Rule's CF to get the conclusion's CF.
+
+- **Rule 1: If today is rain $\rightarrow$ tomorrow is rain {CF = 0.5}**
+    
+    - Premise CF = $CF(\text{today is rain}) = 1$
+        
+    - Conclusion CF = $1 \times 0.5 = 0.5$
+        
+    - **Result 1:** $CF_1(\text{tomorrow is rain}) = 0.5$
+        
+- **Rule 3: If today is rain AND rainfall is low $\rightarrow$ tomorrow is dry {CF = 0.6}**
+    
+    - Premise CF = $\min(CF(\text{today is rain}), CF(\text{rainfall is low}))$
+        
+    - Premise CF = $\min(1, 0.8) = 0.8$
+        
+    - Conclusion CF = $0.8 \times 0.6 = 0.48$
+        
+    - **Result 2:** $CF_1(\text{tomorrow is dry}) = 0.48$
+        
+- **Rule 4: If today is rain AND rainfall is low AND temperature is cold $\rightarrow$ tomorrow is dry {CF = 0.7}**
+    
+    - Premise CF = $\min(CF(\text{today is rain}), CF(\text{rainfall is low}), CF(\text{temperature is cold}))$
+        
+    - Premise CF = $\min(1, 0.8, 0.9) = 0.8$
+        
+    - Conclusion CF = $0.8 \times 0.7 = 0.56$
+        
+    - **Result 3:** $CF_2(\text{tomorrow is dry}) = 0.56$
+        
+
+**3. Combine Certainty Factors for the Same Conclusions:**
+
+When multiple rules lead to the same conclusion and both CFs are positive, we combine them using the formula: $CF_{combine}(CF_1, CF_2) = CF_1 + CF_2 \times (1 - CF_1)$.
+
+- **For "tomorrow is rain":**
+    
+    - Only Rule 1 fired for this conclusion.
+        
+    - **Final $CF(\text{tomorrow is rain}) = 0.5$**
+        
+- **For "tomorrow is dry":**
+    
+    - Rules 3 and 4 both concluded "tomorrow is dry".
+        
+    - $CF_{combine}(0.48, 0.56) = 0.48 + 0.56 \times (1 - 0.48)$
+        
+    - $CF_{combine} = 0.48 + 0.56 \times (0.52)$
+        
+    - $CF_{combine} = 0.48 + 0.2912 = 0.7712$
+        
+    - **Final $CF(\text{tomorrow is dry}) = 0.7712$**
+        
+
+### **Final Answer:**
+
+- **CF for tomorrow is rain:** $0.5$
+    
+- **CF for tomorrow is dry:** $0.7712$
+    
+    _(Since $0.7712 > 0.5$, the expert system would strongly lean toward concluding that tomorrow is dry)._
+
+---
+
+## B) 
+
+![Pasted image 20260520221410.png](/img/user/Pasted%20image%2020260520221410.png)
+
+
+![Pasted image 20260520222118.png](/img/user/Pasted%20image%2020260520222118.png)
+
+![Pasted image 20260520224154.png](/img/user/Pasted%20image%2020260520224154.png)
+### **Rule 1: Output is Low ($LW$), Clipped at 0.25**
+
+Based on your handwritten sketch, we look at the falling slope from **x = 2** to **x = 7** (Total Base = 5).
+
+Using the similar triangles method: the tip of the triangle under the clip is $5 \times 0.25 = 1.25$.
+
+Therefore, the clipped shape is split into:
+
+1. A Rectangle from $x = 2$ to $5.75$
+    
+2. A Triangle from $x = 5.75$ to $7$
+    
+
+![Pasted image 20260520224013.png](/img/user/Pasted%20image%2020260520224013.png)
+
+**Shape 1: Rectangle**
+
+- Base = $3.75$ _(which is $5 - 1.25$)_
+    
+- Height = $0.25$
+    
+- Area = $3.75 \times 0.25 = \mathbf{0.9375}$
+    
+- Center = $(3.75 / 2) = \mathbf{1.875}$
+    
+
+**Shape 2: Triangle (The Tail)**
+
+- Base = $1.25$
+    
+- Height = $0.25$
+    
+- Area = $\frac{1}{2} \times 1.25 \times 0.25 = \mathbf{0.15625}$
+    
+- Center = $(1.25 / 3) \approx \mathbf{0.4167}$
+    
+
+**Rule 1 Totals:**
+
+- **Total Area 1:** $0.9375 + 0.15625 = \mathbf{1.09375}$
+    
+- **Total Moment 1 ($\frac{\sum Area \times Center}{\sum Area} + StartingPoint$):** $$COA_{LW} = \frac{(0.9375 \times 1.875) + (0.15625 \times 4.1667)}{1.09375} + 2 = \frac{2.4088}{1.09375} + 2 = 2.2023 + 2 = \mathbf{4.2023}$$
+    
+
+### **Rule 2: Output is High ($H$), Clipped at 0.5**
+
+Because the High ($H$) shape is symmetrical (it forms an even trapezoid after being clipped), we can bypass the individual shape decomposition and apply the special rule directly to the entire base.
+
+![Pasted image 20260520230444.png](/img/user/Pasted%20image%2020260520230444.png)
+
+- **Base:** $12 - 2 = \mathbf{10}$
+    
+- **Starting Point:** $\mathbf{2}$
+    
+- **Center H:** $(\frac{1}{2} \times Base) + Starting Point = (\frac{1}{2} \times 10) + 2 = 5 + 2 = \mathbf{7.0}$
+    
+- **Total Area H:** $\mathbf{3.75}$ _(Using trapezoid area: $\frac{10 + 5}{2} \times 0.5$)_
+    
+
+### **3. Complete COA**
+
+Now we apply the final aggregation formula using the areas and centers of both shapes:
+
+- **LW:** Area = $1.09375$, Center = $4.2023$
+    
+- **H:** Area = $3.75$, Center = $7.0$
+    
+
+$$COA = \frac{(Area_{LW} \times Center_{LW}) + (Area_H \times Center_H)}{Area_{LW} + Area_H}$$
+
+$$COA = \frac{(1.09375 \times 4.2023) + (3.75 \times 7.0)}{1.09375 + 3.75}$$
+
+$$COA = \frac{4.5963 + 26.25}{4.84375}$$
+
+$$COA = \frac{30.8463}{4.84375} \approx \mathbf{6.37}$$

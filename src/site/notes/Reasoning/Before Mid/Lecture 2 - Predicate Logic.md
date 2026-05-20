@@ -4,6 +4,7 @@
 
 
 # Outline
+
 [[Reasoning/Before Mid/Lecture 2 - Predicate Logic#Part 1 What is Predicate Logic\|Predicate Logic]]
 [[Reasoning/Before Mid/Lecture 2 - Predicate Logic#Part 2 Resolution\|Resolution]]
 

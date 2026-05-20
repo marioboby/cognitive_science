@@ -7,7 +7,7 @@
 
 The lecture begins by categorizing agents and detailing how advanced agents think.
 
-- **Four Basic Agent Types:** Simple reflex agents, reflex agents with state/model, goal-based agents, and utility-based agents "refer to prev lecture".
+- **Four Basic Agent Types:** Simple reflex agents, reflex agents with state/model, goal-based agents, and utility-based agents "[[Multiagent/Before Mid/Lecture 3 - Types of Agents\|refer to prev lecture]]".
     <br>
 - **Planning Agents:** These are advanced agents that ask "what if" before acting.
     <br>

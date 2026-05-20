@@ -44,6 +44,8 @@ From this matrix, we derive several critical formulas:
 
 ![Pasted image 20260331014652.png](/img/user/imgs/Pasted%20image%2020260331014652.png)
 
+example on it [[Supervised/Expanded Explanations/Lecture 4 Examples#Example On Confusion Matrix\|here]]
+
 ---
 
 ### 2. Hyperparameter Tuning

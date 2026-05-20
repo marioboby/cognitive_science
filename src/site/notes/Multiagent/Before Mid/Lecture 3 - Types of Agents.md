@@ -3,6 +3,7 @@
 ---
 
 
+
 ## Recap of Lecture 2
 ### **The Four Pillars of Rationality**
 

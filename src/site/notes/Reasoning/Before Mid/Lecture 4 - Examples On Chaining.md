@@ -2,6 +2,73 @@
 {"dg-publish":true,"permalink":"/reasoning/before-mid/lecture-4-examples-on-chaining/"}
 ---
 
+# Example 
+
+![Pasted image 20260520012732.png](/img/user/imgs/Pasted%20image%2020260520012732.png)
+
+**Start with the first goal friend1(X):
+
+ Matching friend1(X):
+
+R1: IF h is true THEN Friend1(X) is true    (false)
+
+R2: IF a is true AND b is true THEN Friend1(X) is true
+
+                        Matching a :
+
+                        R4: IF not(d) is true THEN a is true
+
+                                        Matching d 
+
+                                        R8: IF h1 is true  AND h2 is true THEN d is true
+
+                                        h1 is true and h2 is true then d is true then R8 is true
+
+                        Return to R4:
+
+                        R4: IF not(d) is true THEN a is true
+
+                       d is true then not(d) become false so a is false then R4 is false 
+
+ Return to R2:
+
+ a is false then Friend1(X) is **false.**
+
+---
+
+**The second goal friend2(X):
+
+ Matching friend2(X):
+
+R3: IF c(X) is true THEN Friend2(X) is true
+
+                        Matching c(X) :
+
+                        R7: IF not(e) is true THEN c(2) is true
+
+                                        Matching e 
+
+                                        R9: IF h2 is true  AND h3 is true THEN e is true
+
+                                        h2 is true and h3 is false then e is false then R9 is false
+
+                        Return to R7:
+
+                        R7: IF not(e) is true THEN c(2) is true
+
+                       e is false, then not(e) become true
+
+                       So, c(2) is true then R7 is true 
+
+Return to R3:
+
+R3: IF c(X) is true THEN Friend2(X) is true
+
+ c(X) is true for X=2 
+
+then **Friend2(X) is true where X=2.**
+
+---
 
 | Feature            | Forward Chaining                                                                                                                | Backward Chaining                                                                                                                         |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |

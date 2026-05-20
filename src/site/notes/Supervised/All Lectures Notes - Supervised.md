@@ -26,7 +26,7 @@
 [[Supervised/Expanded Explanations/Lecture 3\|Lecture 3]]
 [[Supervised/Expanded Explanations/Lecture 4 Examples\|Lecture 4 Examples]]
 [[Supervised/Expanded Explanations/Lecture 5\|Lecture 5]]
-[[Supervised/Expanded Explanations/Lecture 7\|Supervised/Expanded Explanations/Lecture 7]]
+[[Supervised/Expanded Explanations/Lecture 7\|Lecture 7]]
 
 ---
 # Mid Sols

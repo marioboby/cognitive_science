@@ -58,6 +58,8 @@ We determine where the inputs fall on the modified triangular membership graphs.
     * $\mu_{SM} = 0.272727$
     * $\mu_{M} = 0.727272$
 
+![Pasted image 20260520221807.png](/img/user/Pasted%20image%2020260520221807.png)
+
 #### **Layer 3 (AND Operation)**
 Because we have 2 non-zero states for $I_1$ and 2 non-zero states for $I_2$, there are 4 combinations (rules) that activate. We use the **minimum** value to find the strength of each combination:
 1.  **NR AND SM:** $\min(0.25, 0.272727) = \mathbf{0.25}$
