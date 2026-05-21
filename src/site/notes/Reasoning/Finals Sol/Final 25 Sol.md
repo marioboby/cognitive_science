@@ -314,7 +314,7 @@ Therefore, the clipped shape is split into:
 
 - **Total Area 1:** $0.9375 + 0.15625 = \mathbf{1.09375}$
     
-- **Total Moment 1 ($\frac{\sum Area \times Center}{\sum Area} + StartingPoint$):** $$COA_{LW} = \frac{(0.9375 \times 1.875) + (0.15625 \times 4.1667)}{1.09375} + 2 = \frac{2.4088}{1.09375} + 2 = 2.2023 + 2 = \mathbf{4.2023}$$
+- **Total Moment 1 ($\frac{\sum Area \times Center}{\sum Area} + StartingPoint$):** $$COA_{LW} = \frac{(0.9375 \times 1.875) + (0.15625 \times 0.4167)}{1.09375} + 2 = \frac{1.8229}{1.09375} + 2 = 1.66667 + 2 = \mathbf{3.66667}$$
     
 
 ### **Rule 2: Output is High ($H$), Clipped at 0.5**
@@ -343,8 +343,8 @@ Now we apply the final aggregation formula using the areas and centers of both s
 
 $$COA = \frac{(Area_{LW} \times Center_{LW}) + (Area_H \times Center_H)}{Area_{LW} + Area_H}$$
 
-$$COA = \frac{(1.09375 \times 4.2023) + (3.75 \times 7.0)}{1.09375 + 3.75}$$
+$$COA = \frac{(1.09375 \times 3.66667) + (3.75 \times 7.0)}{1.09375 + 3.75}$$
 
-$$COA = \frac{4.5963 + 26.25}{4.84375}$$
+$$COA = \frac{4.0104 + 26.25}{4.84375}$$
 
-$$COA = \frac{30.8463}{4.84375} \approx \mathbf{6.37}$$
+$$COA = \frac{30.2604}{4.84375} \approx \mathbf{6.247}$$
