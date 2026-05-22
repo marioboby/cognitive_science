@@ -126,5 +126,6 @@ A* is only mathematically guaranteed to be optimal if its heuristic ($h(n)$) fol
     <br>
 2. **Consistency / Monotonicity (For Graph Search):** A stronger condition is required if the algorithm tracks visited states (Graph Search). A heuristic is consistent if $h(n) \le c(n, a, n') + h(n')$. This means the estimated cost from node $n$ to the goal can never be greater than the actual step cost to its neighbor ($n'$) plus the neighbor's estimated cost to the goal.
     
+more on it [[Multiagent/Expanded Explanations/Lecture 7\|here]]
 
 ---

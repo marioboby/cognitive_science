@@ -151,6 +151,7 @@ The best way to solidify this is to step through it visually. Use the widget bel
 
 ![Pasted image 20260516195333.png](/img/user/imgs/Pasted%20image%2020260516195333.png)
 
+more on it [[Multiagent/Expanded Explanations/Lecture 10#Alpha-Beta Pruning Steps\|here]]
 ### 5. Real-World Constraints
 
 Even with Alpha-Beta pruning, searching to the absolute end of a game like chess is often too slow. The lecture highlights several ways AI adapts to reality:
