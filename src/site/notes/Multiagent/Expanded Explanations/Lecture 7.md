@@ -87,7 +87,7 @@ To check if a heuristic is consistent, apply the triangle inequality test to an 
 | **Core Concept**  | Never overestimates total cost.    | Satisfies the triangle inequality.       |
 | **How to Verify** | Prove it solves a relaxed problem. | Prove single-step drops $\le$ step cost. |
 
-# Example
+# Example on Checking both
 
 We will define a graph, calculate the true optimal costs, and then test two different heuristic functions: one that is perfectly valid (consistent and admissible) and one that is flawed (admissible but inconsistent).
 
@@ -323,3 +323,116 @@ Look at the $f$-values along the true optimal path using our inconsistent $h_2$:
     
 
 Because the heuristic value at A was artificially inflated compared to B, it created a "bump" in the $f$-costs. A* looked at A, saw an $f$-cost of 5, and incorrectly assumed that exploring the direct, suboptimal path to B (which also had an $f$-cost of 5) was a safe bet. It locked B into the Closed List before realizing A was hiding a shortcut.
+
+# How does consistency solve this
+
+Consistency fixes the problem by enforcing a strict mathematical rule: **the total estimated cost ($f$-value) can never decrease as you move along a path.**
+
+When $f$-values never drop, A* expands nodes in concentric "contours" of increasing cost. It guarantees that A* will never "skip" a cheaper path and come back to it later, because it always fully explores the cheap terrain before moving to the expensive terrain.
+
+Here is exactly how the math works and how it prevents the trap from our previous example.
+
+## The Math: Why $f$-values Never Drop
+
+Recall that A* prioritizes nodes based on $f(n) = g(n) + h(n)$, where $g$ is the exact cost so far, and $h$ is the estimated remaining cost.
+
+If a heuristic is consistent, it satisfies the triangle inequality:
+
+$$h(n) \le c(n, n') + h(n')$$
+
+Let's look at the $f$-value of a neighbor node ($n'$):
+
+1. **The $f$-cost formula:**
+    
+    $$f(n') = g(n') + h(n')$$
+    
+2. **Break down $g(n')$:** The exact cost to reach the neighbor is the cost to reach the current node plus the step cost. So, $g(n') = g(n) + c(n, n')$.
+    
+3. **Substitute that in:**
+    
+    $$f(n') = g(n) + c(n, n') + h(n')$$
+    
+4. **Apply the consistency rule:** Because $h(n)$ is less than or equal to $c(n, n') + h(n')$, we can replace that part of the equation to see the relationship:
+    
+    $$f(n') \ge g(n) + h(n)$$
+    
+    $$f(n') \ge f(n)$$
+    
+
+**The Result:** The $f$-value of a child node is always greater than or equal to the $f$-value of its parent. The cost curve is monotonically non-decreasing (hence the name).
+
+![Pasted image 20260523020608.png](/img/user/Pasted%20image%2020260523020608.png)
+
+## Replaying the Graph with a Consistent Heuristic
+
+Let's replay the exact same graph, but this time we will use the **consistent heuristic ($h_1$)** from earlier: $h_1(S)=4, h_1(A)=3, h_1(B)=1, h_1(G)=0$.
+
+Watch how the non-decreasing $f$-values force A* to process node A _before_ it can trap node B in the Closed List.
+
+### Step 1: Expand S
+
+A* begins at S and calculates the $f$-costs for neighbors A and B using $h_1$.
+
+- **Path S $\rightarrow$ A:**
+    
+    - $f(A) = g(A) + h_1(A) = 1 + 3 =$ **4**
+        
+- **Path S $\rightarrow$ B:**
+    
+    - $f(B) = g(B) + h_1(B) = 4 + 1 =$ **5**
+        
+
+**State:**
+
+- **Frontier:** A ($f=4$), B ($f=5$)
+    
+- **Closed List:** { S }
+    
+
+> **The Difference:** Look at the Frontier. Because $h_1$ is consistent, A's $f$-cost (4) is accurately lower than B's $f$-cost (5). There is no tie.
+
+### Step 2: Expanding A (Avoiding the Trap)
+
+A* must pick the lowest $f$-cost from the Frontier. It strictly chooses **A**.
+
+It expands A, moving it to the Closed List, and looks at A's neighbors (B and G).
+
+- **Path S $\rightarrow$ A $\rightarrow$ B:**
+    
+    - $g(B) = 1 + 2 =$ **3**
+        
+    - $f(B) = 3 + h_1(B) = 3 + 1 =$ **4**
+        
+
+**State:**
+
+- **Frontier:** B (via A, $f=4$), B (via S, $f=5$), G (via A, $f=9$)
+    
+- **Closed List:** { S, **A** }
+    
+
+> **The Fix:** A* found the shortcut to B _before_ B was ever put on the Closed List! It updates the Frontier, discarding the expensive direct route to B in favor of the cheaper route through A.
+
+### Step 3: Expanding B safely
+
+Now, A* looks at the Frontier and picks the cheapest node: the new, optimal path to **B** ($f=4$).
+
+It moves B to the Closed List and checks its neighbor G.
+
+- **Path S $\rightarrow$ A $\rightarrow$ B $\rightarrow$ G:**
+    
+    - $g(G) = 3 + 2 = 5$
+        
+    - $f(G) = 5 + 0 = 5$
+        
+
+**State:**
+
+- **Frontier:** G (via B, $f=5$)
+    
+- **Closed List:** { S, A, **B** }
+    
+
+At this point, B is safely in the Closed List, and we have mathematically guaranteed that its $g$-cost (3) is optimal.
+
+Consistency forces A* to behave like rising water. The water level ($f$-cost) starts at 4 and slowly rises to 5. It is physically impossible for the water to reach node B via the expensive path ($f=5$) before it floods through node A and reaches B via the cheap path ($f=4$).
