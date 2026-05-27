@@ -165,7 +165,7 @@ $W_{aa} = 0.8, W_{ya} = 1, \text{activation} = \tanh, \eta = 0.1$
 ---
 ## A- Forward
 
-![Pasted image 20260527195135.png](/img/user/Pasted%20image%2020260527195135.png)
+![Pasted image 20260527195135.png](/img/user/imgs/Pasted%20image%2020260527195135.png)
 
 ### **1- Time step $t=1$**
 

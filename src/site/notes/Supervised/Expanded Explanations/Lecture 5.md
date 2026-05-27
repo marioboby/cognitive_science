@@ -181,5 +181,7 @@ $$b^{[l]} = b^{[l]} - \alpha \cdot db^{[l]}$$
 
 After this update, the network grabs the next batch of data, and the entire Forward $\rightarrow$ Loss $\rightarrow$ Backward $\rightarrow$ Update cycle repeats until the model converges!
 
+---
 
+# CNN Forward + Backward Example (Look [[Supervised/Mids Sols/Mid 2026 Sol#**B-**\|Mid 2026 Example]])
 
