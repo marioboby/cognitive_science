@@ -2,7 +2,9 @@
 {"dg-publish":true,"permalink":"/supervised/expanded-explanations/lecture-8/"}
 ---
 
-
+[[Supervised/Expanded Explanations/Lecture 8#Sequence Topologies and Parameter number\|#Sequence Topologies and Parameter number]]
+[[Supervised/Expanded Explanations/Lecture 8#RNN Vs GRU Vs LSTM\|#RNN Vs GRU Vs LSTM]]
+[[Supervised/Expanded Explanations/Lecture 8#Example on RNN Forward and Backward\|#Example on RNN Forward and Backward]]
 # Sequence Topologies and Parameter number
 
 When structuring recurrent architectures for various processing tasks, understanding the underlying sequence topologies dictates how you shape your data tensors. Furthermore, grasping the exact parameter calculations is fundamental for optimizing the theoretical footprint of your models before training.
