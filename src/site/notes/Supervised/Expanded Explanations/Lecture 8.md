@@ -151,3 +151,162 @@ To solve this, the LSTM explicitly differentiates between the internal **Cell Me
 - Before the internal memory is passed to the next layer or the Softmax classifier, it is "squashed" using a hyperbolic tangent function.
     
 - This results in the final output equation: $a^{<t>} = \tanh(C^{<t>})$, ensuring the final visible output strictly remains within the $[-1, 1]$ range.
+
+---
+
+# Example on RNN Forward and Backward 
+
+$x_1 = 1, x_2 = 2, y_1 = 0.5, y_2 = 1, a_0 = 0, W_{ax} = 0.5$
+
+$W_{aa} = 0.8, W_{ya} = 1, \text{activation} = \tanh, \eta = 0.1$
+
+---
+## A- Forward
+
+![Pasted image 20260527195135.png](/img/user/Pasted%20image%2020260527195135.png)
+
+### **1- Time step $t=1$**
+
+$a_1 = \tanh(W_{ax} x_1 + W_{aa} a_0)$
+
+$= \tanh(0.5 \times 1 + 0.8 \times 0) = 0.462$
+
+$\hat{y}_1 = W_{ya} \times a_1 = 1 \times 0.462 = 0.462$
+
+$E_1 = \frac{1}{2}(\hat{y}_1 - y_1)^2 = 0.5(0.462 - 0.5)^2$
+
+$= 0.00072$
+
+---
+### **2- Time Step $t=2$**
+
+$a_2 = \tanh(W_{ax} x_2 + W_{aa} a_1)$
+
+$a_2 = \tanh(0.5 \times 2 + 0.8 \times 0.462) = 0.879$
+
+$\hat{y}_2 = W_{ya} a_2 = 1 \times 0.879 = 0.879$
+
+$E_2 = \frac{1}{2}(\hat{y}_2 - y_2)^2 = 0.0074$
+---
+### **3- Error Calc**
+
+$E_{total} = E_1 + E_2 = 0.0081$
+
+---
+## **B- Back Propagation**
+
+### **4.1 gradient of $W_{ya}$**
+
+$\frac{\delta E}{\delta W_{ya}}$
+
+$E = \frac{1}{2}\sum(\hat{y}_t - y_t)^2 = \sum(W_{ya} a_t - y_t) a_t$
+
+| **$t$** | **$y\hat​−y$** | **$a_t$​** | **product** |
+| ------- | -------------- | ---------- | ----------- |
+| **1**   | $-0.0379$      | $0.462$    | $-0.0175$   |
+| **2**   | $-0.1214$      | $0.879$    | $-0.1066$   |
+
+$$\frac{\delta E}{\delta W_{ya}} = -0.1241$$
+$W_{ya} (old) = 1 \quad \text{gradient} = -0.1241$
+
+$W_{ya} (new) = W_{ya} (old) - \eta * \text{gradient}$
+
+$= 1 - 0.1 \times -0.1241 = 1.0124$
+
+---
+## **4.2 gradient of Hidden**
+
+### gradient of $W_{ax}$
+
+$z_t = W_{ax} x_t + W_{aa} a_{t-1}$ 
+
+$a_t = \tanh(z_t)$
+
+$$\frac{\delta E}{\delta W_{ax}} = \frac{\delta E}{\delta a_t} \times \frac{\delta a_t}{\delta z_t} \times \frac{\delta z_t}{\delta W_{ax}}$$
+
+$$= ((\hat{y}_t - y_t)W_{ya} + \delta_{t+1} W_{aa}) \times (1 - a_t^2) \times x_t$$
+
+---
+### At $t=2$
+
+$\delta_2 = ((\hat{y}_2 - y_2)W_{ya} + \delta_{t+1} W_{aa}) (1 - a_t^2)$
+
+$= (\hat{y}_2 - y_2)W_{ya} (1 - a_2^2)$
+
+$= (-0.1214) \times 1 \times (1 - 0.879^2) = -0.0277$
+
+$$\frac{\delta E}{\delta W_{ax}}(t=2) = -0.0277 \times 2 = -0.0554$$
+---
+### $t=1$
+
+$\delta_1 = ((\hat{y}_1 - y_1)W_{ya} + \delta_2 W_{aa}) (1 - a_1^2)$
+
+$= ((-0.0379) \times 1 + (-0.0277) \times 0.8) \times (1 - 0.462^2) = -0.0472$
+
+$\frac{\delta E}{\delta W_{ax}}(t=1) = -0.0472 \times 1$
+
+$\frac{\delta E}{\delta W_{ax}}(total) = -0.0472 - 0.0554 = -0.1026$ 
+
+---
+
+$W_{ax} (new) = W_{ax} (old) - \eta \frac{\delta E}{\delta W_{ax}}$
+
+$= 0.5 - 0.1(-0.1026) = 0.5103$
+
+---
+
+### Gradient of $W_{aa}$
+
+$z_t = W_{ax} x_t + W_{aa} a_{t-1}$ 
+
+$\frac{\delta z_t}{\delta W_{aa}} = a_{t-1}$
+
+$a_t = \tanh(z_t)$
+
+$$\frac{\delta E}{\delta W_{aa}} = \frac{\delta E}{\delta a_t} \times \frac{\delta a_t}{\delta z_t} \times \frac{\delta z_t}{\delta W_{aa}}$$
+
+$$= ((\hat{y}_t - y_t)W_{ya} + \delta_{t+1} W_{aa}) \times (1 - a_t^2) \times a_{t-1}$$
+
+$$\frac{\delta E}{\delta W_{aa}} = \delta_t a_{t-1}$$
+
+### At $t=1$
+
+$\frac{\delta E}{\delta W_{aa}}(t=1) = \delta_1 a_0 = 0$
+
+### At $t=2$
+
+$\frac{\delta E}{\delta W_{aa}}(t=2) = \delta_2 a_1$
+
+$= -0.0277 \times 0.462 = -0.0128$
+
+$\frac{\delta E}{\delta W_{aa}}(total) = -0.0128$
+
+$W_{aa} (new) = W_{aa} (old) - \eta \frac{\delta E}{\delta W_{aa}}$
+
+$= 0.8 - 0.1(-0.0128)$
+
+$= 0.8013$
+
+---
+
+# Why the additional $\delta{t+1} W{aa}$
+
+That extra term comes from the fundamental difference between standard feedforward neural networks and Recurrent Neural Networks (RNNs): **time dependency**.
+
+To find the gradient of the error with respect to the hidden state, $\frac{\delta E}{\delta a_t}$, we have to use the multivariate chain rule. This rule states that if a variable influences the network's final output through multiple paths, you must sum the gradients from all of those paths.
+
+In an RNN, the hidden activation $a_t$ at time step $t$ splits and is used in **two distinct places**:
+
+1. **The current output ($\hat{y}_t$):** $a_t$ is multiplied by $W_{ya}$ to make the immediate prediction for the current time step. The error from this specific prediction flowing backward gives us the first half of the equation: $(\hat{y}_t - y_t)W_{ya}$.
+    
+2. **The next hidden state ($a_{t+1}$):** $a_t$ is also multiplied by the recurrent weight $W_{aa}$ to carry historical context into the _next_ time step. Because $a_t$ influenced step $t+1$, any error that happens at step $t+1$ (and all steps after it) is partially "blamed" on $a_t$.
+    
+
+The term $\delta_{t+1} W_{aa}$ represents this second path. It is the error gradient being passed backward from the future:
+
+- $\delta_{t+1}$ represents the accumulated error gradient at time step $t+1$.
+    
+- $W_{aa}$ is the weight connecting $a_t$ to the next step's pre-activation $z_{t+1}$. Since the forward pass is $z_{t+1} = W_{ax}x_{t+1} + W_{aa}a_t + b$, the derivative $\frac{\partial z_{t+1}}{\partial a_t}$ is simply $W_{aa}$.
+    
+
+If you dropped the $\delta_{t+1} W_{aa}$ term, you would only be calculating the error for a single, isolated moment in time, essentially ignoring the "recurrent" part of the network entirely. BPTT (Backpropagation Through Time) requires adding this term so the network learns how its current actions affect future outcomes.

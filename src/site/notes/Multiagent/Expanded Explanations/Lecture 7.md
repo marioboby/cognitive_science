@@ -361,7 +361,7 @@ Let's look at the $f$-value of a neighbor node ($n'$):
 
 **The Result:** The $f$-value of a child node is always greater than or equal to the $f$-value of its parent. The cost curve is monotonically non-decreasing (hence the name).
 
-![Pasted image 20260523020608.png](/img/user/Pasted%20image%2020260523020608.png)
+![Pasted image 20260523020608.png](/img/user/imgs/Pasted%20image%2020260523020608.png)
 
 ## Replaying the Graph with a Consistent Heuristic
 

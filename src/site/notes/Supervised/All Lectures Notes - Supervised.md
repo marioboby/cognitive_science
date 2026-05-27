@@ -27,6 +27,8 @@
 [[Supervised/Expanded Explanations/Lecture 4 Examples\|Lecture 4 Examples]]
 [[Supervised/Expanded Explanations/Lecture 5\|Lecture 5]]
 [[Supervised/Expanded Explanations/Lecture 7\|Lecture 7]]
+[more on YOLO](obsidian://open?vault=Weeks&file=Articles%2FAI%20%26%20ML%20Articles%2FYOLO%20in%20a%20Nutshell)
+[[Supervised/Expanded Explanations/Lecture 8\|Lecture 8]]
 
 ---
 # Mid Sols

@@ -50,9 +50,9 @@ Fine-tuning goes a step further. You still train your new classifier Head, but y
 ### Why is Transfer Learning a Game Changer?
 
 - **Requires Drastically Less Data:** Training a CNN from scratch requires thousands or millions of images to teach it basic concepts like edges and shapes. With transfer learning, the model already knows how to see; it just needs to learn what _your_ specific objects look like. You can often get great results with just a few hundred images per class.
-    
+    <br>
 - **Saves Massive Compute Time:** Training a deep network from scratch can take days or weeks on expensive GPUs. Transfer learning can often be completed in hours or even minutes.
-    
+    <br>
 - **Better Performance:** Because the model starts with a robust, generalized understanding of visual features, it often achieves a higher level of accuracy and is less prone to overfitting than a model trained from scratch on a small dataset.
 
 ### Transfer Learning Using VGG16
@@ -156,9 +156,9 @@ When you pass a new image of a dog through this compiled model, the frozen VGG16
 Image segmentation using neural networks has revolutionized computer vision because it automatically learns features from data, unlike traditional methods that require manual feature extraction. The lecture outlines three primary types of segmentation:
 
 - **Semantic Segmentation:** This method assigns a specific class label to every pixel in an image. However, it does not differentiate between multiple objects of the same class; for example, it will label all cars in an image simply as "car". DeeplabV3 is noted as an example model.
-    
+    <br>
 - **Instance Segmentation:** Building on semantic segmentation, this approach distinguishes between individual objects of the same class. It identifies multiple cars or people separately (e.g., Person 1, Person 2). Popular models for this include Mask R-CNN, YOLACT, and SOLO.
-    
+    <br>
 - **Panoptic Segmentation:** This is a hybrid approach that combines semantic and instance segmentation. It assigns both class labels and object instance IDs, allowing a model to distinguish individual cars while simultaneously segmenting background elements like roads and trees.
     
 
@@ -169,9 +169,9 @@ While basic classification uses a CNN and a Softmax layer to determine what an o
 For localization and classification, the network generates an output vector, $Y$, which includes the following parameters:
 
 - $P_c$: The probability that an object from one of the target classes actually exists in that space.
-    
+    <br>
 - $B_x, B_y, B_w, B_h$: The coordinates for the center of the bounding box ($B_x, B_y$) and its width and height ($B_w, B_h$). These are based on a normalized image width and height ranging from (0,0) to (1,1).
-    
+    <br>
 - $C_1, C_2, C_3$: The specific class labels of the object.
     
 
@@ -186,7 +186,7 @@ $$S = (Y_1 - \hat{Y}_1)^2 + (Y_2 - \hat{Y}_2)^2 + (Y_3 - \hat{Y}_3)^2 + ... + (Y
 Other loss functions that can be utilized include:
 
 - **Log Error Loss:** Used specifically for the Softmax output classes ($C_1, C_2, C_3$).
-    
+    <br>
 - **Logistic Regression Loss:** Used to evaluate the probability output ($P_c$).
     
 
@@ -195,7 +195,7 @@ Other loss functions that can be utilized include:
 The lecture introduces encoder-decoder architectures used heavily in segmentation tasks:
 
 - **Autoencoders:** These architectures process an input image through an "Encoder" to compress it into a Latent Space Representation (or "Code"), which is then reconstructed into an output image by a "Decoder".
-    
+    <br>
 - **U-Net:** The slides visually detail a specific convolutional encoder-decoder called U-Net. It uses a series of max pooling ($2\times2$) and convolutions ($3\times3$, ReLU) to encode the image, followed by up-convolutions ($2\times2$) and "copy and crop" connections to generate a precise output segmentation map.
     
 
@@ -204,9 +204,9 @@ The lecture introduces encoder-decoder architectures used heavily in segmentatio
 Landmark detection is the process of identifying highly specific coordinate points on a target.
 
 - **Face Landmarks:** A model can be trained to detect 32 specific landmarks on a human face, outputting coordinates from $L_{1x}, L_{1y}$ to $L_{32x}, L_{32y}$.
-    
+    <br>
 - **Pose Landmarks:** Similarly, 17 landmarks can be used to track human body pose.
-    
+    <br>
 - **Applications:** This technology is used for emotion detection, pose detection, and Augmented Reality applications (such as dynamically adding graphical objects like hats to a person's face).
     
 
@@ -229,9 +229,9 @@ The architecture of an autoencoder consists of three main components that form a
 Machine Learning Autoencoder Diagram Data Compression to Embedding Vector
 
 1. **The Encoder:** This part of the network takes the high-dimensional input data (like an image, or complex tabular data) and compresses it step-by-step into a smaller and smaller set of numbers.
-    
+    <br>
 2. **The Bottleneck (Latent Space):** This is the smallest layer in the middle of the network. It holds the "latent representation"—a low-dimensional, highly condensed summary of the original data's essential features. The number of neurons in this bottleneck determines the "latent dimension" (e.g., if there are 2 neurons, the data is compressed into a 2D space coordinate).
-    
+    <br>
 3. **The Decoder:** This network works in reverse. It takes the compressed, low-dimensional coordinates from the bottleneck and attempts to rebuild the original high-dimensional input data from scratch.
     
 
@@ -244,14 +244,14 @@ The network learns by minimizing the **reconstruction error**—the difference b
 The primary purpose of an autoencoder is **data dimensionality reduction** and finding meaningful underlying patterns in raw data.
 
 - **Latent Space Organization:** During successful training, the latent space naturally organizes itself. Similar items (like handwritten number 7s) group together to form clusters, while different items (like number 4s) form their own distinct clusters in a different area of the space.
-    
+    <br>
 - **Simplifying Complex Classification:** By converting incredibly complex data into an organized lower-dimensional space, classification algorithms can work much more effectively. For example, it is practically impossible for humans to determine a patient's gender just by looking at a raw brain MRI. However, an autoencoder can compress these MRIs into a latent representation where male and female brain structures naturally separate into distinct clusters, allowing for accurate classification.
     
 
 ### Advantages
 
 - **Unsupervised Feature Learning:** Autoencoders automatically learn what features are most important to compress data without needing humans to manually label or extract features.
-    
+    <br>
 - **Architectural Foundation:** The encoder-decoder structure is the backbone for powerful modern architectures like U-Net (used heavily in medical image segmentation) and forms the foundational logic for cutting-edge generative models like DALL-E and Midjourney.
     
 
@@ -260,9 +260,9 @@ The primary purpose of an autoencoder is **data dimensionality reduction** and f
 While foundational, basic autoencoders have significant limitations, mostly related to how unstructured and messy their latent space can become:
 
 - **Diffuse Clusters and Misclassification:** If the latent dimension is too small (e.g., 2D), there isn't enough room to separate the data. Clusters overlap heavily. A "4" might be encoded so close to a cluster of "9s" that the decoder gets confused and reconstructs it as a "9".
-    
+    <br>
 - **Poor Interpolation:** In a well-behaved latent space, if you pick a coordinate exactly halfway between a "0" and a "6", you would expect the decoder to output a mixture of the two. Instead, a basic autoencoder will often decode that midpoint into pure nonsense, or an entirely unrelated number like a "5", because the empty space between clusters is not smoothly mapped out.
-    
+    <br>
 - **Sensitivity to Noise:** Autoencoders tend to overfit to the exact training data. Adding even a tiny amount of random noise to an input image can completely break the encoder's logic, resulting in a wildly incorrect reconstruction.
     
 
@@ -285,9 +285,9 @@ Instead of flattening the image into a 1D array of numbers like a standard autoe
 The encoder acts as a contracting path. It uses standard convolutional layers and max-pooling to process the image.
 
 - As the image goes deeper into the encoder, its spatial dimensions (height and width) shrink drastically.
-    
+    <br>
 - However, the number of feature channels increases.
-    
+    <br>
 - By the time the image reaches the bottleneck, the network has a deep, rich mathematical understanding of _what_ objects are in the image, but it has almost entirely forgotten exactly _where_ they are located.
     
 
@@ -308,7 +308,7 @@ During the forward pass, before the encoder compresses a feature map, it saves a
 This combines the best of both worlds:
 
 - The **Decoder** provides the deep, semantic knowledge ("This blob is definitely a car").
-    
+    <br>
 - The **Encoder's Skip Connection** provides the high-resolution, shallow spatial coordinates ("Here are the exact sharp edges of the objects from the original image").
     
 

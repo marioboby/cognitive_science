@@ -31,6 +31,22 @@ In a CNN, that magnifying glass is the **filter** (or kernel).
     
 - As the network gets deeper, it stacks these layers. **Deeper CONV layers** combine those basic lines to look for complex concepts. A filter in layer 3 might specifically light up when it slides over a "wheel" or a "windshield."
     
+#### why is that ?
+
+**There is a small explanation why earlier layers detect low level and later layers detect high level or complex features.**
+
+Earlier layers are closest to the input data. They detect simple, low-level features such as edges, corners, textures, and basic shapes. These low-level features are fundamental building blocks that represent the most basic visual information. The reason these layers focus on these is that early layers have small receptive fields (i.e., they look at small portions of the input), making them ideal for capturing fine details.
+
+As the data progresses through the network, each subsequent layer combines the features detected by the previous layers. This results in the detection of increasingly complex and abstract features, such as parts of objects (like eyes or wheels) and eventually entire objects or scenes. The layers further along the network have larger receptive fields, meaning they consider larger and more integrated parts of the input, which is necessary for recognizing complex patterns.
+
+_The reason why later layers consider larger receptive fields is because of the combination of the features detected in subsequent layers and also as the image propagates through the network the size of the representation of the image(feature map) decreases along the height and width. So the layer gets larger receptive field to see the image._
+
+The network learns to abstract features layer by layer. Early layers focus on local patterns, and as these features are passed through the network, they are combined and transformed into more abstract representations. By the time the data reaches the deeper layers, the network is able to recognize complex structures that represent higher-level concepts.
+
+During training, the network naturally learns this hierarchical feature extraction because hierarchical feature extraction helps in optimizing its parameters to minimize the loss function.  
+The easiest patterns to learn are the simple, low-level features, which is why the early layers specialize in these. As the network continues to optimize, it builds on these simple features to recognize more complex structures, which emerge in the later layers.
+
+_Optimization of simple features at early stage helps to learn abstract and complex features at the end of the neural network._
 
 Every time the filter finds what it is looking for, it creates a "hotspot" on an **activation map**. So, an activation map is just a filtered version of the image that highlights where a specific feature exists.
 
