@@ -179,7 +179,9 @@ The problem explicitly asks to separate the "Number of Parameters (Weights)" fro
 
 **7. FC-3**
 
-- _Note: Before passing data to a Fully-Connected layer, the 3D output of the previous layer must be flattened into a 1D vector._ * **Flattened Size:** $28 \times 28 \times 64 = \mathbf{50,176}$ features.
+- _Note: Before passing data to a Fully-Connected layer, the 3D output of the previous layer must be flattened into a 1D vector._ 
+
+* **Flattened Size:** $28 \times 28 \times 64 = \mathbf{50,176}$ features.
     
 - **Dimension:** The output is simply a 1D array representing the 3 classes. $\rightarrow \mathbf{3}$
     

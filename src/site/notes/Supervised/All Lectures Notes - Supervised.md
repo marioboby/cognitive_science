@@ -48,3 +48,9 @@
 [[Supervised/Quiz Sol/Quiz 5 - PCA – Mean & Covariance Matrix\|Quiz 5 - PCA – Mean & Covariance Matrix]]
 [[Supervised/Quiz Sol/Quiz 6 - PCA – Eigenvalues & Eigenvectors\|Quiz 6 - PCA – Eigenvalues & Eigenvectors]]
 [[Supervised/Quiz Sol/Quiz 7 - Conv and Transfer Learning\|Quiz 7 - Conv and Transfer Learning]]
+
+---
+
+# Zatonas
+
+[[Supervised/Zatonas/زتونة المسائل\|زتونة المسائل]]
