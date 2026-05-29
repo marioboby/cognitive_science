@@ -98,4 +98,5 @@ Initially, we set `base_model.trainable = False`, which "freezes" the 14.7 milli
 
 **Reason:** The "top" of VGG16 refers to its final fully connected Dense layers, which are hardcoded to output probabilities for the 1,000 specific classes of the ImageNet dataset. By setting `include_top=False`, we discard this ImageNet-specific classification head but keep the convolutional base. This allows us to use VGG16 as a generalized feature extractor and attach our own custom "top" (like the `Dense(10)` layer) to classify images into our own specific categories.
 
-> The `GlobalAveragePooling2D` layer take the average of the **entire** feature map, turning the 7 * 7 * 512 3D block, into a 1D vector with 512 numbers, each is the average of its respective feature map
+> The `GlobalAveragePooling2D` layer take the average of the **entire** feature map, turning the 
+> `7 * 7 * 512` 3D block, into a 1D vector with 512 numbers, each is the average of its respective feature map
