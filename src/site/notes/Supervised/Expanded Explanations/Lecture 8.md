@@ -312,3 +312,63 @@ The term $\delta_{t+1} W_{aa}$ represents this second path. It is the error grad
     
 
 If you dropped the $\delta_{t+1} W_{aa}$ term, you would only be calculating the error for a single, isolated moment in time, essentially ignoring the "recurrent" part of the network entirely. BPTT (Backpropagation Through Time) requires adding this term so the network learns how its current actions affect future outcomes.
+
+## How it's calculated
+
+Now, let's break down exactly _how_ the math generates that specific term, $\delta_{t+1} W_{aa}$.
+
+To see exactly where it comes from, we just need to look at the **multivariate chain rule** applied directly to the RNN's forward pass equations.
+
+### 1. The Setup: The Forward Pass
+
+Let's look at what happens in the _next_ time step ($t+1$). The network calculates its raw, pre-activation value ($z_{t+1}$) using the current input and the _previous_ hidden state ($a_t$):
+
+$$z_{t+1} = W_{ax}x_{t+1} + W_{aa}a_t + b$$
+
+Notice that $a_t$ is sitting right there inside the equation for $z_{t+1}$. This is the explicit mathematical link between the past and the future.
+
+### 2. The Goal: The Backward Pass
+
+During Backpropagation Through Time (BPTT), we are standing at time step $t$, and we want to know: **"How much did my current activation $a_t$ contribute to the total error $E$ via the future?"**
+
+Mathematically, we are looking for the partial derivative of the Error with respect to $a_t$, but _only_ along the path that goes through the next time step. By the chain rule, this path looks like this:
+
+$$\text{Error from future} = \frac{\partial E}{\partial z_{t+1}} \times \frac{\partial z_{t+1}}{\partial a_t}$$
+
+Let's evaluate those two pieces exactly:
+
+### Piece 1: $\frac{\partial E}{\partial z_{t+1}}$ (The Future Blame)
+
+This term represents the accumulated error gradient at time step $t+1$. It essentially means "how much do we want to change the raw pre-activation at $t+1$ to reduce the total network error?"
+
+In deep learning notation, the derivative of the error with respect to a pre-activation $z$ is conventionally written as lowercase delta ($\delta$). Therefore:
+
+$$\frac{\partial E}{\partial z_{t+1}} = \delta_{t+1}$$
+
+### Piece 2: $\frac{\partial z_{t+1}}{\partial a_t}$ (The Bridge)
+
+This term asks: "If I change $a_t$ by a tiny amount, how much does $z_{t+1}$ change?"
+
+To find this, we just take the derivative of our forward pass equation with respect to $a_t$:
+
+$$z_{t+1} = W_{ax}x_{t+1} + W_{aa}a_t + b$$
+
+Since we are taking the partial derivative with respect to $a_t$, we treat everything else ($W_{ax}x_{t+1}$ and the bias $b$) as constants. The derivative of a constant is zero. The derivative of $W_{aa}a_t$ with respect to $a_t$ is simply $W_{aa}$.
+
+$$\frac{\partial z_{t+1}}{\partial a_t} = W_{aa}$$
+
+### 3. Putting It Together
+
+Now we just multiply our two pieces back together according to the chain rule:
+
+$$\text{Error from future} = (\delta_{t+1}) \times (W_{aa}) = \delta_{t+1} W_{aa}$$
+
+### The Intuitive Summary
+
+Think of it like a performance review at a company:
+
+- $\delta_{t+1}$ is the **complaint** from the next department down the assembly line. They are unhappy with the product they received.
+    
+- $W_{aa}$ is the **strength of the connection** between your desk and their department.
+    
+- If your connection $W_{aa}$ is very strong, a large chunk of their complaint ($\delta_{t+1}$) gets routed directly back to you. If your connection is weak (close to zero), you barely get blamed for their problems, even if their complaint is huge.

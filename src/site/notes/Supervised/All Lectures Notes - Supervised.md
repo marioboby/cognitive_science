@@ -36,3 +36,15 @@
 [[Supervised/Mids Sols/Sample Exam 1 Sol\|Sample Exam 1 Sol]]
 [[Supervised/Mids Sols/Sample Exam 2 Sol\|Sample Exam 2 Sol]]
 [[Supervised/Mids Sols/Mid 2026 Sol\|Mid 2026 Sol]]
+
+---
+
+# Quizzes Sol
+
+[[Supervised/Quiz Sol/Quiz 1 - KNN Classification\|Quiz 1 - KNN Classification]]
+[[Supervised/Quiz Sol/Quiz 2 - KNN Regression\|Quiz 2 - KNN Regression]]
+[[Supervised/Quiz Sol/Quiz 3 - Naive Bayes – Categorical Features\|Quiz 3 - Naive Bayes – Categorical Features]]
+[[Supervised/Quiz Sol/Quiz 4 - Naive Bayes – Numerical Features\|Quiz 4 - Naive Bayes – Numerical Features]]
+[[Supervised/Quiz Sol/Quiz 5 - PCA – Mean & Covariance Matrix\|Quiz 5 - PCA – Mean & Covariance Matrix]]
+[[Supervised/Quiz Sol/Quiz 6 - PCA – Eigenvalues & Eigenvectors\|Quiz 6 - PCA – Eigenvalues & Eigenvectors]]
+[[Supervised/Quiz Sol/Quiz 7 - Conv and Transfer Learning\|Quiz 7 - Conv and Transfer Learning]]
