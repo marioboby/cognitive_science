@@ -26,6 +26,7 @@
 
 [[Multiagent/Expanded Explanations/Lecture 1\|Lecture 1]]
 [[Multiagent/Expanded Explanations/Lecture 7\|Lecture 7]]
+[[Multiagent/Expanded Explanations/Lecture 8\|Lecture 8]]
 [[Multiagent/Expanded Explanations/Lecture 10\|Lecture 10]]
 
 ---
