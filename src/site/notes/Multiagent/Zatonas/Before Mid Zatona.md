@@ -235,7 +235,7 @@ An agent is fundamentally composed of two parts:
 
 - **Graph:** A mathematical structure used to model pairwise relations between distinctive entities, made up of vertices (nodes) connected by edges (links/arcs).
     
-- **Tree:** A directed, connected graph without cycles (acyclic) where any two vertices are connected by exactly one path, and nodes have a single parent.
+- **Tree:** A directed, connected graph without cycles (acyclic) where any two vertices are connected by exactly one path, and nodes have a single parent "In Graph Theory, it's ***Undirected***".
     
 - **State Space Graph:** A mathematical representation of a search problem where nodes are abstracted world configurations and arcs represent action results.
     

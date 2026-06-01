@@ -45,6 +45,88 @@ A Genetic Algorithm is a variant of stochastic beam search inspired by natural s
     
 - **Mutation:** Occasional random changes are applied to the offspring to maintain diversity in the population and prevent the algorithm from stagnating.
     
-
 ---
+## Code Example for Genetic Algo (8-Queen Problem)
+
+```python
+def create_gene():
+    gen = tuple([np.random.randint(1, 9) for i in range(8)])
+    return gen
+
+def calculate_fitness(gen):
+    fitness = 28
+
+    for i in range(8):
+        for j in range(i + 1, 8):
+            if gen[i] == gen[j] or abs(gen[i] - gen[j]) == abs(i - j):
+                fitness -= 1
+
+    return fitness
+
+def create_population(max_population : int):
+    populasi = {}
+    target_len = 8
+
+    for i in range(max_population):
+        gen = create_gene()
+        genFitness = calculate_fitness(gen)
+        populasi[gen] = genFitness
+    return populasi
+
+def selection(populasi : dict):
+    pop = dict(populasi)
+    parent = {}
+
+    for i in range(4):
+        gen = bestgen(pop)  
+        genfitness = pop[gen]
+        parent[gen] = genfitness
+        del pop[gen]  
+    return parent
+
+def crossover(parent : dict):
+    children = {}
+    cp = 4  
+    
+    for i in range(4):
+        gen = tuple(list(parent)[i][:cp] + list(parent)[3-i][cp:])
+        genfitness = calculate_fitness(gen)
+        children[gen] = genfitness
+
+    return children
+
+def mutation(children : dict, mutation_rate : float):
+    mutant = {}
+    
+    for i in range(len(children)):    
+        data = list(list(children)[i])
+
+        for j in range(len(data)):
+            if np.random.rand() <= mutation_rate:
+                data[j] = np.random.randint(1,9)  
+
+        gen = tuple(data)
+        genfitness = calculate_fitness(gen)
+        mutant[gen] = genfitness
+    return mutant
+
+def regeneration(mutant, populasi):
+    # Remove worst genes from population (equal to number of mutants)
+    for i in range(len(mutant)):
+        bad_gen = min(populasi, key=populasi.get)  
+        del populasi[bad_gen]
+        
+    populasi.update(mutant)
+    return populasi
+
+def bestgen(parent):
+    gen = max(parent, key=parent.get)
+    return gen
+
+def bestfitness(parent):
+    fitness = parent[bestgen(parent)]
+    return fitness
+```
+
+
 

@@ -11,6 +11,7 @@
     - **Percept Sequence:** The complete history of everything the agent has ever perceived.
     - **Agent Function:** A mathematical mapping that links any given percept sequence to an action ($f: P^* \rightarrow A$).
     - **Agent Program:** The internal software that runs on the physical **architecture** (hardware) to produce the agent function.
+    - agent = architecture + program
 <br>
 - **Examples of Agents:**
     - **Human Agent:** Uses eyes and ears as sensors; uses hands, legs, and mouth as actuators.
@@ -31,7 +32,9 @@
       <br>
     - **Rationality vs. Perfection:** Rationality maximizes the _expected_ outcome, while perfection maximizes the _actual_ outcome.
       <br>
-- **Autonomy:** An agent is autonomous if it can learn from its perceptions and act without human assistance. An ideal agent should have some autonomy and increase it through experience.
+- **Autonomy:** An agent is autonomous if it can learn from its perceptions and act without human assistance. An ideal rational agent should have some autonomy and increase it through experience.
+
+- **Need to learn**: To be rational agent, it is not only to gather information but also to learn as much as possible from what it perceives.
 
 ### **3. PEAS: Specifying the Task Environment**
 

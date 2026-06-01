@@ -11,6 +11,8 @@ For vacuum cleaner world: your agent is a vacuum cleaner robot, which is respons
 2. Consider the initial state is the corresponding figure a state (C’). Build a search tree with at least depth of 3 levels. 
 	1. Comment on expected depth of complete tree.
 
+3. Consider the use of one of the search techniques (such as depth-first, breadth first, A*,...etc). Explain and discuss the suitability of your choice for the given problem to achieve the goal state in terms of **completeness, optimality, time complexity, and space complexity.**
+
 ![Pasted image 20260406184304.png](/img/user/imgs/Pasted%20image%2020260406184304.png)
 
 # Sol: 
@@ -40,7 +42,7 @@ The state space is **Cyclic**. The agent can move back and forth between rooms i
     
 - **Bottom Row:** B (Clean), D (Dirty)
     
-- _Possible Moves:_ Up, Down, Left, Right (bounded by walls).
+- _Possible Moves:_ Up, Down, Left, Right (bounded by walls), Suck.
     
 
 **Initial State:** `C'` (Agent in C, C is dirty. Uncleaned rooms: A, C, D)
@@ -49,7 +51,9 @@ Here is the search tree expanded to 3 levels. To make the tree accurate to the g
 
 - **Level 0**
     
-    - **C'** * **Level 1** _(Actions from C')_
+    - **C'** 
+      
+* **Level 1** _(Actions from C')_
         
     - ├── **Suck** $\rightarrow$ **C** _(Rooms A, D remain dirty)_
         
@@ -115,5 +119,46 @@ Here is the search tree expanded to 3 levels. To make the tree accurate to the g
 - **Optimal Path Depth:** The expected depth to reach the goal state (all rooms clean) along the most efficient path is **6 levels**.
     
     - _Optimal Sequence:_ Suck at C (1) $\rightarrow$ Move Left to A (2) $\rightarrow$ Suck at A (3) $\rightarrow$ Move Down to B (4) $\rightarrow$ Move Right to D (5) $\rightarrow$ Suck at D (6).
-        
+        <br>
 - **Complete Tree Depth:** Because the state space is cyclic, the complete unpruned search tree has an **infinite depth**. The agent can wander forever without cleaning. If a search algorithm uses cycle-checking (tracking visited global states), the absolute maximum depth of the tree would be capped at 64.
+
+---
+
+# 3. Best Suitable search algorithm 
+
+For the vacuum cleaner world, **Breadth-First Graph Search (BFS)** is highly suitable and arguably the best uninformed search choice for this specific problem.
+
+It is crucial to specify **Graph Search** rather than _Tree Search_. Because the state space is cyclic (the agent can move back and forth indefinitely), the algorithm must keep a "closed list" (an explored set) to remember previously visited states and avoid infinite loops.
+
+### 1. Completeness
+
+- **Status:** **Complete**
+    
+- **Discussion:** Since the branching factor is finite "each state has at most 3 valid moves + suck", we are sure that BFS will find a solution in the shallowest depth.
+    
+
+### 2. Optimality
+
+- **Status:** **Optimal**
+    
+- **Discussion:** An algorithm is optimal if it finds the solution with the lowest path cost. In this vacuum world, every action (moving Up, Down, Left, Right, or Sucking) has a uniform step cost of 1. BFS inherently explores all nodes at depth $d$ before moving to depth $d+1$. Therefore, the first time it encounters the goal state, it is guaranteed to be along the shortest possible path (minimum number of actions).
+    
+
+### 3. Time Complexity
+
+- **Status:** $O(b^d)$
+    
+- **Discussion:** In the worst-case scenario for a standard tree, BFS time complexity is $O(b^d)$, where $b$ is the maximum branching factor (up to 4 actions: 3 movements + 1 clean) and $d$ is the depth of the shallowest solution (which we established is 6).
+
+### 4. Space Complexity
+
+- **Status:** $O(b^d)$
+    
+- **Discussion:** Space complexity is typically the main drawback of BFS, as it must keep all nodes of the current depth in memory (the frontier), yielding $O(b^d)$ in a tree search.
+    
+
+### Why not other algorithms?
+
+- **Depth-First Search (DFS):** If implemented as a Tree Search, DFS would fail completely by getting stuck in an infinite loop (e.g., Left, Right, Left, Right). Even as a Graph Search, DFS is **not optimal**; it might find a incredibly long, winding path to clean the rooms instead of the shortest one (basically the leftmost solution).
+    
+- **A* Search:** A* is an excellent, optimal, and complete algorithm, but it requires a heuristic (e.g., counting the number of dirty rooms left). While A* would technically explore fewer nodes than BFS, the overhead of calculating the heuristic is unnecessary for a state space this small. BFS is simpler to implement and just as effective here.

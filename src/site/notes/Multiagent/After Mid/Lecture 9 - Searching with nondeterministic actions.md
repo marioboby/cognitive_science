@@ -90,7 +90,8 @@ If we mapped out a plan, it would look like this:
 
 1. **[OR]** I will play Knight to f7.
     
-2. **[AND]** * _If_ the environment (opponent) plays Rook takes Knight $\rightarrow$ **[OR]** I will play Queen to e8 (Checkmate).
+2. **[AND]** 
+    * _If_ the environment (opponent) plays Rook takes Knight $\rightarrow$ **[OR]** I will play Queen to e8 (Checkmate).
     
     - _If_ the environment (opponent) plays King moves to g8 $\rightarrow$ **[OR]** I will play Knight to h6 (Checkmate).
         
@@ -114,7 +115,7 @@ Try to find the guaranteed winning strategy in the abstract widget below.
 
 ---
 
-To find the solution for the erratic vacuum cleaner, we have to trace the execution of the `AND-OR-GRAPH-SEARCH` algorithm provided in your lecture over the tree structure shown on Slide 15.
+To find the solution for the erratic vacuum cleaner, we have to trace the execution of the `AND-OR-GRAPH-SEARCH` algorithm provided in the lecture over the tree structure shown on Slide 15.
 
 Because the vacuum is erratic, an action like `Suck` in State 1 is nondeterministic—it might clean the dirt and transition to State 7, or it might fail and transition to State 5. Therefore, the algorithm cannot return a simple sequence of actions; it must return a **contingency plan** consisting of `if-then-else` rules.
 

@@ -436,3 +436,82 @@ It moves B to the Closed List and checks its neighbor G.
 At this point, B is safely in the Closed List, and we have mathematically guaranteed that its $g$-cost (3) is optimal.
 
 Consistency forces A* to behave like rising water. The water level ($f$-cost) starts at 4 and slowly rises to 5. It is physically impossible for the water to reach node B via the expensive path ($f=5$) before it floods through node A and reaches B via the cheap path ($f=4$).
+
+---
+
+# Then what about admissibility 
+
+To understand why admissibility is the only requirement for an optimal **Tree Search**, we first have to remember the key difference between Tree Search and Graph Search: **Tree Search has no Closed List.** Because there is no Closed List, Tree Search never permanently locks away a node. It relies entirely on the Frontier (Open List), constantly comparing the $f$-costs of all available paths.
+
+In this environment, an admissible (optimistic) heuristic guarantees optimality because _it prevents A from ever assuming the true optimal path is too expensive to explore._
+
+This is the step-by-step logical proof of how admissibility forces A* to find the optimal solution.
+
+### 1. The Setup
+
+Imagine you are running A* and it is currently deciding which node to expand next.
+
+- Let **$C^*$** be the true cost of the absolute best, optimal path to the goal.
+    
+- Let **$G_{bad}$** be a suboptimal goal node that A* has found on a different path. Because it is suboptimal, its true cost is strictly greater than the optimal cost: $g(G_{bad}) > C^*$.
+    
+- Let **$n$** be an unexplored node currently sitting on the Frontier that belongs to the true optimal path.
+    
+
+### 2. The $f$-cost of the Suboptimal Goal
+
+If A* is looking at $G_{bad}$, what is its $f$-cost?
+
+Because it is a goal node, it has a heuristic value of zero ($h(G_{bad}) = 0$). Therefore, its $f$-cost is exactly equal to its true cost:
+
+$$f(G_{bad}) = g(G_{bad}) + 0$$
+
+So, $f(G_{bad}) > C^*$.
+
+### 3. The $f$-cost of the Optimal Path Node
+
+Now, let's look at node $n$ (the stepping stone on the true optimal path). What is its $f$-cost?
+
+$$f(n) = g(n) + h(n)$$
+
+Because our heuristic is **admissible**, we mathematically know that $h(n)$ is less than or equal to the true remaining cost to the goal ($h^*(n)$).
+
+If we replace $h(n)$ with the true remaining cost, $g(n) + h^*(n)$ exactly equals the total optimal cost, $C^*$.
+
+Therefore:
+
+$$f(n) \le C^*$$
+
+### 4. The Guarantee
+
+A* always pulls the node with the absolute lowest $f$-cost from the Frontier.
+
+Let's compare our two options:
+
+- The optimal path node: **$f(n) \le C^*$**
+    
+- The suboptimal goal: **$f(G_{bad}) > C^*$**
+    
+
+Because $f(n)$ will always be less than $f(G_{bad})$, __A_ will never choose to expand the suboptimal goal._* It will always pause, look at node $n$, and say, _"Wait, my optimistic estimate says this path might be cheaper. I need to explore this first."_
+
+A* will continue to expand nodes along the optimal path until it reaches the true goal ($G_{optimal}$). At that point, $f(G_{optimal}) = C^*$, which will still beat $f(G_{bad})$, and A* will return the optimal solution.
+
+### What happens if we break Admissibility?
+
+If a heuristic overestimates the cost (is inadmissible), it breaks this guarantee.
+
+Imagine the true cost to the goal is $10$ ($C^* = 10$).
+
+- You find a suboptimal goal that costs $12$. So, $f(G_{bad}) = 12$.
+    
+- You have node $n$ on the Frontier, which is on the optimal path. Its true cost so far is $g(n) = 2$, and its true remaining cost is $8$.
+    
+- However, your broken, pessimistic heuristic estimates the remaining cost is $20$. So, $h(n) = 20$.
+    
+- $f(n) = 2 + 20 = \mathbf{22}$.
+    
+
+A* looks at the Frontier. It sees $G_{bad}$ with a score of $12$, and node $n$ with a score of $22$. Because the heuristic was pessimistic, A* is tricked into thinking the optimal path is terrible. It expands $G_{bad}$, the search ends, and you are left with a suboptimal path.
+
+**Summary:** Optimism (admissibility) keeps A* curious. It forces the algorithm to fully investigate any path that _could theoretically_ be cheaper than the best completed path it has found so far.
