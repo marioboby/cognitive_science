@@ -39,3 +39,4 @@
 ## Finals Sol
 
 [[Multiagent/Finals Sol/Final 2021 Sol\|Final 2021 Sol]]
+[[Multiagent/Finals Sol/Final 2025 Sol - AI\|Final 2025 Sol - AI]]
