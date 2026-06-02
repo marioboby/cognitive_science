@@ -120,6 +120,7 @@ Here is the search tree expanded to 3 levels. To make the tree accurate to the g
     
     - _Optimal Sequence:_ Suck at C (1) $\rightarrow$ Move Left to A (2) $\rightarrow$ Suck at A (3) $\rightarrow$ Move Down to B (4) $\rightarrow$ Move Right to D (5) $\rightarrow$ Suck at D (6).
         <br>
+- Complete Path Depth: Because the state space is cyclic, the complete unpruned search tree has an **infinite depth**. The agent can wander forever without cleaning. but in case of cycle detection:  
 ### The Reachable State Space
 
 Because the agent can never _add_ dirt, it can never enter a state where Room B is dirty. Room B is clean in the initial state, so it will remain clean forever. This immediately cuts the reachable state space in half.
