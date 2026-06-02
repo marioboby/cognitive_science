@@ -120,7 +120,75 @@ Here is the search tree expanded to 3 levels. To make the tree accurate to the g
     
     - _Optimal Sequence:_ Suck at C (1) $\rightarrow$ Move Left to A (2) $\rightarrow$ Suck at A (3) $\rightarrow$ Move Down to B (4) $\rightarrow$ Move Right to D (5) $\rightarrow$ Suck at D (6).
         <br>
-- **Complete Tree Depth:** Because the state space is cyclic, the complete unpruned search tree has an **infinite depth**. The agent can wander forever without cleaning. If a search algorithm uses cycle-checking (tracking visited global states), the absolute maximum depth of the tree would be capped at 64.
+### The Reachable State Space
+
+Because the agent can never _add_ dirt, it can never enter a state where Room B is dirty. Room B is clean in the initial state, so it will remain clean forever. This immediately cuts the reachable state space in half.
+
+From your initial state, there are only 3 possible rooms that can change from dirty to clean (A, C, and D).
+
+- The number of possible dirt combinations left is $2^3 = 8$ combinations.
+    
+- The agent can still be in any of the 4 rooms.
+    
+- **Total Reachable States:** $8 \times 4 = 32$ states.
+    
+
+The complete search tree for this specific problem is capped at exploring those 32 reachable states.
+
+### The True "Complete Tree" Depth for Your Problem
+
+If we force the algorithm to generate the absolute longest branch from your initial state without repeating any global state, the maximum depth of your complete tree is **16 nodes (or 15 actions)**.
+
+Here is how that exact worst-case branch unfolds from your starting position:
+
+**Phase 1: 3 Rooms Dirty (A, C, D are dirty)**
+
+1. **(C, 3 dirty)** - _Your Initial State_
+    
+2. **Move Down $\rightarrow$ (D, 3 dirty)**
+    
+3. **Move Left $\rightarrow$ (B, 3 dirty)**
+    
+4. **Move Up $\rightarrow$ (A, 3 dirty)**
+    
+    _(If it moves anywhere else, it cycles. It must Suck)._
+    
+
+**Phase 2: 2 Rooms Dirty (Suck at A; C and D remain dirty)**
+
+5. **Suck $\rightarrow$ (A, 2 dirty)**
+
+6. **Move Down $\rightarrow$ (B, 2 dirty)**
+
+7. **Move Right $\rightarrow$ (D, 2 dirty)**
+
+8. **Move Up $\rightarrow$ (C, 2 dirty)**
+
+_(Must Suck again)._
+
+**Phase 3: 1 Room Dirty (Suck at C; only D remains dirty)**
+
+9. **Suck $\rightarrow$ (C, 1 dirty)**
+
+10. **Move Left $\rightarrow$ (A, 1 dirty)**
+
+11. **Move Down $\rightarrow$ (B, 1 dirty)**
+
+12. **Move Right $\rightarrow$ (D, 1 dirty)**
+
+_(Must Suck again)._
+
+**Phase 4: 0 Rooms Dirty (The Goal State)**
+
+13. **Suck $\rightarrow$ (D, all clean)** 
+    
+14. **Move Left $\rightarrow$ (B, all clean)**
+
+15. **Move Up $\rightarrow$ (A, all clean)**
+
+16. **Move Right $\rightarrow$ (C, all clean)**
+
+At step 17, no matter what action the agent takes, it will hit a state it has already visited in "Phase 4." The cycle-checker terminates the branch.
 
 ---
 
