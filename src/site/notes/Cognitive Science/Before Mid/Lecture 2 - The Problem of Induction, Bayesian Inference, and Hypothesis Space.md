@@ -42,8 +42,10 @@ $$P(h|d) ∝ P(d|h)P(h)$$
 - Prior: We pick one at random. $P(h_{fair}) = 0.5$, $P(h_{biased}) = 0.5$.
 - Data (d): We flip the coin once and get Heads. Likelihoods: $P(Heads|h_{fair}) = 0.5$ $P(Heads|h_{biased}) = 0.9$
 
-1. Calculate Total Probability (Evidence) P(d): $$P(d) = P(d|hf)P(hf) + P(d|hb)P(hb)$$$$P(d) = (0.5×0.5)+(0.9×0.5) = 0.25+0.45 = 0.70$$
-2. Calculate Posterior for $h_{biased}$: $$P(hb|d) = \frac{Likelihood × Prior Total}  {Probability (Evidence)} = \frac{0.9 × 0.5}{ 0.70} = \frac{0.45} {0.70} ≈ 0.643$$
+1. Calculate Total Probability (Evidence) P(d): 
+   $$P(d) = P(d|hf)P(hf) + P(d|hb)P(hb)$$$$P(d) = (0.5×0.5)+(0.9×0.5) = 0.25+0.45 = 0.70$$
+2. Calculate Posterior for $h_{biased}$: 
+   $$P(hb|d) = \frac{Likelihood × Prior Total}  {Probability (Evidence)} = \frac{0.9 × 0.5}{ 0.70} = \frac{0.45} {0.70} ≈ 0.643$$
 3. After seeing one Head, our belief that the coin is biased increased from 50% to 64.3%
 4. Repeat the same 3 steps after getting a second head using 0.643 as the new prior, the prior will increase further more to 76.4%
 
@@ -53,7 +55,8 @@ When repeating the same steps, taking our 76.4% belief as the New Prior and obse
 - Likelihoods: 
 	- Biased: 0.9 × 0.9 × 0.1 = 0.081 
 	- Fair: 0.5 × 0.5 × 0.5 = 0.125
-- New Posterior: $$P(hbias|d) = \frac{0.081 × 0.764} {(0.081 × 0.764) + (0.125 × 0.236)} ≈ 0.677$$
+- New Posterior: 
+  $$P(hbias|d) = \frac{0.081 × 0.764} {(0.081 × 0.764) + (0.125 × 0.236)} ≈ 0.677$$
 The single ”Tail” significantly weakened our hypothesis that the coin is biased.
 # Part 3: Hypothesis Space
 
