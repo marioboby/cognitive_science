@@ -70,6 +70,7 @@ The single ”Tail” significantly weakened our hypothesis that the coin is bia
 - **Overfitting:** Happens when H is too complex. For example, using a 20th-degree polynomial for simple linear data. The model memorizes the noise instead of learning the actual signal.
 
 ### **The Matching Principle** 
+
 - A small dataset with a highly complex hypothesis leads to overfitting.
 - A huge dataset with a simple hypothesis leads to underfitting.
 - Successful learning requires matching the complexity of the Hypothesis Space to the volume and nature of the dataset.
@@ -77,16 +78,17 @@ The single ”Tail” significantly weakened our hypothesis that the coin is bia
 ### **Inductive Bias**
 Because of Hume's Problem, algorithms must use an "Inductive Bias" to prefer certain hypotheses over others.
 
-- A common bias is Occam's Razor, which states we should prefer the simplest hypothesis that successfully explains the data. In Bayesian terms, simpler hypotheses are assigned a higher Prior probability $P(h)$.
+- A common bias is **Occam's Razor**, which states we should prefer the simplest hypothesis that successfully explains the data. In Bayesian terms, simpler hypotheses are assigned a higher Prior probability $P(h)$.
 
 # Summary
 
-| Concept          | Role in Learning                                   |
-| ---------------- | -------------------------------------------------- |
-| Induction        | Generalizing from samples to populations.          |
-| Hume’s Problem   | Pure induction is logically impossible.            |
-| Bayes’ Theorem   | Provides a mathematical way to update beliefs.     |
-| Hypothesis Space | The ”search area” for the learning algorithm.      |
-| Priors           |    The ”initial guess” that solves Hume’s problem. |
+| Concept          | Role in Learning                                                      |
+| ---------------- | --------------------------------------------------------------------- |
+| Induction        | Generalizing from samples to populations.                             |
+| Hume’s Problem   | Pure induction is logically impossible.                               |
+| Bayes’ Theorem   | Provides a mathematical way to update beliefs.                        |
+| Hypothesis Space | The ”search area” for the learning algorithm.                         |
+| Priors           | The ”initial guess” that solves Hume’s problem.                       |
+| Occam's Razor    | Prefering the simplest hypothesis that successfully explains the data |
 
 
