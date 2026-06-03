@@ -26,7 +26,8 @@ The philosopher David Hume argued that induction cannot be rationally justified.
 
 Bayesian inference provides the mathematical framework to update our beliefs as we see new data.
 
-- The core formula is Bayes' Theorem: $$P(h|d)=\frac{P(d|h)P(h)}{P(d)}$$
+- The core formula is Bayes' Theorem: 
+  $$P(h|d)=\frac{P(d|h)P(h)}{P(d)}$$
 - **Prior $P(h)$:** Your initial belief in a hypothesis before seeing data.
 - **Likelihood $P(d|h)$:** The probability of seeing this specific data if your hypothesis were true.
 - **Evidence $P(d)$:** The total probability of seeing the data under all possible hypotheses.
