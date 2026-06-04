@@ -257,8 +257,6 @@ Finally, the robot wants to answer its core question: **Is it raining?** To find
 
 $$P(r_1 | u_1) = 0.259 + 0.438 = 0.697$$
 
-.
-
 ### The Conclusion
 
 At time $t=0$, the robot was certain it was not raining (0%). After the natural passage of time and observing an umbrella, the robot's belief in rain shifted to **69.7%**. A key takeaway from this DBN is that even though rain and wind naturally evolve completely independently of each other, the single observation of the umbrella immediately "couples" them together in the posterior calculation.

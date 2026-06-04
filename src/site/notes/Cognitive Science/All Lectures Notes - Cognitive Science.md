@@ -33,6 +33,7 @@
 [[Cognitive Science/Expanded Explanations/Lecture 5\|Lecture 5]]
 [[Cognitive Science/Expanded Explanations/Lecture 6\|Lecture 6]]
 [[Cognitive Science/Expanded Explanations/Lecture 7\|Lecture 7]]
+[[Cognitive Science/Expanded Explanations/Lecture 8\|Lecture 8]]
 [[Cognitive Science/Expanded Explanations/Lecture 9\|Lecture 9]]
 
 ---
@@ -41,3 +42,8 @@
 [[Cognitive Science/Sheets/Sheet 1\|Sheet 1]]
 [[Cognitive Science/Sheets/Random Sheet\|Random Sheet]]
 
+---
+
+# Zatonas
+
+[[Cognitive Science/Zatonas/زتونة المسائل\|زتونة المسائل]]

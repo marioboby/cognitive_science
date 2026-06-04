@@ -147,6 +147,8 @@ The chosen elimination order is $S, I, D, G$. Applying the principle of pushing 
 
 $$ P(L) = \sum_G \sum_D \sum_I \sum_S P(D)P(I)P(S|I)P(G|D,I)P(L|G) $$
 
+![Pasted image 20260604221935.png](/img/user/imgs/Pasted%20image%2020260604221935.png)
+
 ### 3. Step-by-Step Execution (Slides 16–19)
 
 **Step 1: Eliminating S (The Barren Node)**
@@ -167,11 +169,12 @@ $$ P(L) = \sum_G \sum_D \sum_I \sum_S P(D)P(I)P(S|I)P(G|D,I)P(L|G) $$
 - **Action:** Multiply the factors involving $I$: $\phi_I(I)$, $\phi_G(G,D,I)$, and our new factor of 1s from the previous step, then sum out $I$. This creates a new 2-variable factor $\tau_2(G,D)$.
     
 - **Math:** $\tau_2(G,D) = \sum_I \phi_I(I) \cdot \phi_G(G,D,I)$.
-    
-    - _Calculating for $G=1, D=0$:_ We use the prior probabilities for $I$ ($P(I=1)=0.7$, meaning $P(I=0)=0.3$). $\tau_2(G^1, D^0) = P(I^0)P(G^1|D^0,I^0) + P(I^1)P(G^1|D^0,I^1)$. $= (0.3)(0.3) + (0.7)(0.9) = 0.09 + 0.63 = 0.72$.
-        
-    - _Calculating for $G=1, D=1$:_ $\tau_2(G^1, D^1) = P(I^0)P(G^1|D^1,I^0) + P(I^1)P(G^1|D^1,I^1)$. $= (0.3)(0.05) + (0.7)(0.5) = 0.015 + 0.35 = 0.365$.
-        
+	    <br>
+    - _Calculating for $G=1, D=0$:_ We use the prior probabilities for $I$ ($P(I=1)=0.7$, meaning $P(I=0)=0.3$). 
+      $$\tau_2(G^1, D^0) = P(I^0) \ P(G^1|D^0,I^0) + P(I^1) \ P(G^1|D^0,I^1)$$$$= (0.3)(0.3) + (0.7)(0.9) = 0.09 + 0.63 = 0.72$$
+        <br>
+    - _Calculating for $G=1, D=1$:_ 
+      $$\tau_2(G^1, D^1) = P(I^0) \ P(G^1|D^1,I^0) + P(I^1) \ P(G^1|D^1,I^1)$$ $$= (0.3)(0.05) + (0.7)(0.5) = 0.015 + 0.35 = 0.365$$
         
 We only explicitly calculated the values for $G=1$ during the elimination of $I$ as a **mathematical shortcut**, not because $G=0$ doesn't exist.
 
@@ -203,11 +206,12 @@ In short, your instinct was completely correct: a full algorithmic execution _wo
 **Step 3: Eliminating D**
 
 - **Action:** Multiply the remaining factors involving $D$: $\phi_D(D)$ and our new $\tau_2(G,D)$, then sum out $D$. This creates a 1-variable factor $\tau_3(G)$.
-    
+    <br>
 - **Math:** $\tau_3(G) = \sum_D \phi_D(D) \cdot \tau_2(G,D)$.
-    
-    - _Calculating for $G=1$:_ We use the prior probabilities for $D$ ($P(D=1)=0.6$, meaning $P(D=0)=0.4$). $\tau_3(G^1) = P(D^0)\tau_2(G^1,D^0) + P(D^1)\tau_2(G^1,D^1)$. $= (0.4)(0.72) + (0.6)(0.365) = 0.288 + 0.219 = 0.507$.
-        
+    <br>
+    - _Calculating for $G=1$:_ We use the prior probabilities for $D$ ($P(D=1)=0.6$, meaning $P(D=0)=0.4$). 
+      $$\tau_3(G^1) = P(D^0)\tau_2(G^1,D^0) + P(D^1)\tau_2(G^1,D^1)$$ $$= (0.4)(0.72) + (0.6)(0.365) = 0.288 + 0.219 = 0.507$$
+        <br>
     - _Calculating for $G=0$:_ Because the total probabilities must sum to 1, $\tau_3(G^0) = 1 - 0.507 = 0.493$.
         
 
@@ -280,3 +284,30 @@ Because there was no evidence acting as a constraint in the lecture's scenario, 
 The calculation reveals that there is approximately a **50.6% chance** of the student receiving a good recommendation letter.
 
 As slide 20 summarizes, this specific elimination order was highly efficient. By eliminating the cheap leaf node $S$ first, and isolating operations, the algorithm never had to build the full 32-row joint distribution table ($2^5=32$). The largest intermediate table it ever constructed had only 8 rows ($2^3=8$), which occurred during the elimination of $I$ when factors $G$, $D$, and $I$ were briefly evaluated together.
+
+---
+
+### The General Rule of (Factor = Marginal Probability)
+
+How do you know if a factor created during Variable Elimination is equal to a true marginal probability (meaning its states will perfectly sum to 1, allowing for the shortcut)?
+
+A factor will only sum to 1 if it meets all three of these conditions:
+
+#### 1. The "Zero Evidence" Rule
+
+This is the most critical condition. If **any** evidence has been observed in the network (e.g., you are given that $A=1$), the resulting factors are no longer true marginal probabilities. They become unnormalized "slices" of a joint distribution, or weights. Once evidence is introduced, the sum of the remaining states will usually be less than 1, and you must calculate all rows and normalize them at the very end.
+
+#### 2. The "Complete Ancestor Elimination" Rule
+
+To get a true marginal probability for a node, you must have completely summed out **all of its parents, and its parents' parents**, all the way up to the root of the network.
+
+- When we got $\tau_1(B)$, it equaled $P(B)$ because we had eliminated $A$ (its only ancestor).
+    
+- When we got $\tau_3(G)$, it equaled $P(G)$ because we had eliminated both $I$ and $D$ (its ancestors).
+    
+    If you eliminate variables out of topological order (e.g., eliminating $B$ before $A$), the intermediate factors will not represent real-world probabilities and will not sum to 1.
+    
+
+#### 3. The "One-Dimensional" Rule
+
+The $1 - x$ shortcut only applies to a factor that represents a single, isolated variable. If your factor contains two or more variables (like the $\tau_2(G,D)$ factor in the lecture, which represented $P(G,D)$), you cannot just subtract a single row from 1 to find the next row, because the probability mass of 1 is split across $2^n$ combinations.
