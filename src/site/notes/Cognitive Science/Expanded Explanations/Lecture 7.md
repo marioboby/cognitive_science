@@ -2,6 +2,69 @@
 {"dg-publish":true,"permalink":"/cognitive-science/expanded-explanations/lecture-7/"}
 ---
 
+# Chain Rule and Markov Assumption
+
+### 1. The General Chain Rule (The Exhaustive Way)
+
+The first equation on the slide is the standard chain rule for probabilities:
+
+$$P(X^{(0:T)}) = P(X^{(0)}) \prod_{t=0}^{T-1} P(\mathbf{X}^{(t+1)} \mid \mathbf{X}^{(0:t)})$$
+
+This rule states that the probability of an entire sequence of events happening exactly in a specific order is the probability of the first event, multiplied by the probability of the second event _given the first_, multiplied by the probability of the third event _given the first two_, and so on.
+
+As the sequence gets longer, the conditional probabilities become massively complex because you have to account for the entire history up to time $t$ ($\mathbf{X}^{(0:t)}$). If you were tracking daily server statuses over a year, predicting day 365 would require knowing the exact permutation of the previous 364 days.
+
+### 2. The Markov Assumption (The "Amnesia" Shortcut)
+
+The second section introduces the **Markov Property**:
+
+$$P(\mathbf{X}^{(t+1)} \mid \mathbf{X}^{(0:t)}) = P(\mathbf{X}^{(t+1)} \mid \mathbf{X}^{(t)})$$
+
+This is a simplifying assumption that states: **the future is independent of the past, given the present.** Conceptually, this is very similar to how the final output of an RNN sequence depends solely on that final hidden state, rather than needing to recalculate the entire history of preceding hidden states for a single decision. All the relevant information from the past is assumed to be encoded in the _current_ state $\mathbf{X}^{(t)}$.
+
+### 3. The Simplified Chain Rule
+
+By substituting the Markov Assumption into the original chain rule, we get the third equation:
+
+$$P(X^{(0:T)}) = P(X^{(0)}) \prod_{t=0}^{T-1} P(\mathbf{X}^{(t+1)} \mid \mathbf{X}^{(t)})$$
+
+Now, instead of conditioning on the entire history, we only condition on the immediately preceding time step.
+
+### The Numerical Example: Weather Prediction
+
+Let's model the weather over 3 days (Day 0, Day 1, Day 2). The weather can either be **Sunny (S)** or **Rainy (R)**.
+
+First, we define our **Transition Probabilities** (the probability of tomorrow's weather given today's):
+
+- If it is Sunny today, tomorrow is: 80% Sunny ($0.8$), 20% Rainy ($0.2$).
+    
+- If it is Rainy today, tomorrow is: 40% Sunny ($0.4$), 60% Rainy ($0.6$).
+    
+
+Let's say we want to find the probability of this specific trajectory: **Day 0 is Sunny $\rightarrow$ Day 1 is Rainy $\rightarrow$ Day 2 is Rainy.**
+
+**Without the Markov Assumption:**
+
+You would need to know the historical probability $P(\text{Day 2 Rainy} \mid \text{Day 1 Rainy, Day 0 Sunny})$. You would need a massive lookup table for every possible historical sequence.
+
+**With the Markov Assumption:**
+
+We use the simplified chain rule.
+
+$$P(S^{(0)}, R^{(1)}, R^{(2)}) = P(S^{(0)}) \cdot P(R^{(1)} \mid S^{(0)}) \cdot P(R^{(2)} \mid R^{(1)})$$
+
+Assuming we _know_ Day 0 is Sunny (so $P(S^{(0)}) = 1.0$), we just plug in our transition probabilities:
+
+- $P(S^{(0)}) = 1.0$ (It is Sunny today)
+    
+- $P(R^{(1)} \mid S^{(0)}) = 0.2$ (Chance of rain tomorrow given sunny today)
+    
+- $P(R^{(2)} \mid R^{(1)}) = 0.6$ (Chance of rain the next day given rainy the day prior)
+    
+
+$$Probability = 1.0 \times 0.2 \times 0.6 = \mathbf{0.12}$$
+
+There is a **12% chance** of that exact 3-day trajectory occurring. By making the Markov assumption, we turned a complex historical query into simple, step-by-step matrix multiplication.
 
 # HMM Numerical Example 
 ### The Scenario Setup

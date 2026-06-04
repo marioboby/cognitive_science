@@ -12,6 +12,7 @@ The primary goal of temporal models is to represent how a system's state changes
     
 - **The Markov Assumption:** To simplify the math, these models assume that the future is independent of the past, given the present. This reduces the complex chain rule to $P(X^{(t+1)}|X^{(t)})$.
     
+more on it [[Cognitive Science/Expanded Explanations/Lecture 7#Chain Rule and Markov Assumption\|here]]
 
 ### 2. Hidden Markov Models (HMMs)
 

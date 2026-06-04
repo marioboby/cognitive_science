@@ -53,4 +53,4 @@
 
 # Zatonas
 
-[[Supervised/Zatonas/زتونة المسائل\|زتونة المسائل]]
+[[Supervised/Zatonas/زتونة المسائل\|Supervised/Zatonas/زتونة المسائل]]

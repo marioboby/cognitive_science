@@ -126,7 +126,7 @@ After normalizing this second round, the probability will spike drastically on D
 
 ### **Step 1: The Move Step (Prediction)**
 
-You asked what happens if the robot moves from Cell 1 to Cell 3. This is a movement of **2 steps to the right**. (0 index)
+What happens if the robot moves from Cell 1 to Cell 3. This is a movement of **2 steps to the right**. (0 index)
 
 Assuming perfect odometry (the wheels don't slip), we simply take the entire probability distribution and shift it 2 slots to the right. In a standard continuous loop, the probabilities falling off the right side wrap around to the left:
 

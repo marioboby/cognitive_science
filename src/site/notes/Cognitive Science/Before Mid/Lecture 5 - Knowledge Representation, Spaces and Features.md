@@ -37,7 +37,7 @@ More on "Stress" [[Cognitive Science/Expanded Explanations/Lecture 5#What is "St
 
 - Cognitive psychologist Amos Tversky pointed out that human perception frequently violates the strict rules of geometric axioms.
         <br>
-- **Violation 1 - Minimality:** Humans tend to rate complex objects as being more similar to themselves compared to simpler objects, which violates the geometric assumption that all identical objects have a distance of exactly zero.
+- **[[Cognitive Science/Expanded Explanations/Lecture 5#Violation of Minimality\|Violation 1 - Minimality]]:** Humans tend to rate complex objects as being more similar to themselves compared to simpler objects, which violates the geometric assumption that all identical objects have a distance of exactly zero.
         <br>
 - **Violation 2 - Asymmetry (The Prototype Effect):** Human similarity is directional, breaking the symmetry rule. We often focus on a prototype; for example, saying "North Korea is like China" feels more natural than the reverse, making $S(a,b)\ne S(b,a)$.
         <br>

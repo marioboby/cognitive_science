@@ -329,6 +329,8 @@ Slide 25 provides a concrete mathematical example of how to use a Markov Blanket
 
 To find the probability of the sprinkler being on given this Markov Blanket—written mathematically as $P(S=t|MB(S))$—we must calculate a "score" for both possible states of the sprinkler (ON and OFF).
 
+$$P(S | MB(S)) = \alpha \cdot P(S | Parents(S)) \prod P(Children(S) | Parents(Children(S)))$$
+
 **1. Calculating the Score for Sprinkler ON ($S=t$)** We multiply the probability of the sprinkler turning on when it is cloudy by the probability of the grass being wet when both the sprinkler is on and it is raining.
 
 - Score formula: $P(S=t|C=t) \times P(W=t|S=t, R=t)$.
