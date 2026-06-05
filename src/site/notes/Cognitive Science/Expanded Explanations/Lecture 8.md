@@ -56,13 +56,13 @@ The **Scalar** Kalman filter is used when you only care about a single 1D variab
 
 The logic is perfectly identical; the matrix version just uses linear algebra to handle multiple dimensions and their covariances (how changing $x$ impacts $v_x$).
 
-| **Step**    | **Concept**                              | **Scalar Form (1D)**                              | **Matrix Form (N-D)**                                                                                   |
-| ----------- | ---------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **Predict** | **State Estimate**<br>Where is it?       | $x_{p} = a \cdot x + b \cdot u$                   | $\mathbf{x}_{p} = \mathbf{F} \mathbf{x} + \mathbf{B} \mathbf{u}$                                        |
-| **Predict** | **Uncertainty**<br>How unsure am I?      | $$p_{p} = a^2 \cdot p + q$$                       | $$\mathbf{P}_{p} = \mathbf{F} \mathbf{P} \mathbf{F}^T + \mathbf{Q}$$                                    |
-| **Update**  | **Kalman Gain**<br>Who do I trust?       | $$k = \frac{p_{p} \cdot h}{h^2 \cdot p_{p} + r}$$ | $$\mathbf{K} = \mathbf{P}_{p} \mathbf{H}^T (\mathbf{H} \mathbf{P}_{p} \mathbf{H}^T + \mathbf{R})^{-1}$$ |
-| **Update**  | **New State**<br>Adjusted belief.        | $$x = x_{p} + k(z - h \cdot x_{p})$$              | $$\mathbf{x} = \mathbf{x}_{p} + \mathbf{K}(\mathbf{z} - \mathbf{H} \mathbf{x}_{p})$$                    |
-| **Update**  | **New Uncertainty**<br>Confidence rises. | $$p = (1 - k \cdot h)p_{p}$$                      | $$\mathbf{P} = (\mathbf{I} - \mathbf{K} \mathbf{H})\mathbf{P}_{p}$$                                     |
+| **Step**    | **Concept**                              | **Scalar Form (1D)**                            | **Matrix Form (N-D)**                                                                                 |
+| ----------- | ---------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Predict** | **State Estimate**<br>Where is it?       | $x_{p} = a \cdot x + b \cdot u$                 | $\mathbf{x}_{p} = \mathbf{F} \mathbf{x} + \mathbf{B} \mathbf{u}$                                      |
+| **Predict** | **Uncertainty**<br>How unsure am I?      | $p_{p} = a^2 \cdot p + q$                       | $\mathbf{P}_{p} = \mathbf{F} \mathbf{P} \mathbf{F}^T + \mathbf{Q}$                                    |
+| **Update**  | **Kalman Gain**<br>Who do I trust?       | $k = \frac{p_{p} \cdot h}{h^2 \cdot p_{p} + r}$ | $\mathbf{K} = \mathbf{P}_{p} \mathbf{H}^T (\mathbf{H} \mathbf{P}_{p} \mathbf{H}^T + \mathbf{R})^{-1}$ |
+| **Update**  | **New State**<br>Adjusted belief.        | $x = x_{p} + k(z - h \cdot x_{p})$              | $\mathbf{x} = \mathbf{x}_{p} + \mathbf{K}(\mathbf{z} - \mathbf{H} \mathbf{x}_{p})$                    |
+| **Update**  | **New Uncertainty**<br>Confidence rises. | $p = (1 - k \cdot h)p_{p}$                      | $\mathbf{P} = (\mathbf{I} - \mathbf{K} \mathbf{H})\mathbf{P}_{p}$                                     |
 
 **Key to Matrix Variables:**
 
