@@ -252,7 +252,47 @@ Local Semantics define the most basic rule of independence in a Bayesian Network
     
     If you _know_ there is a Traffic Jam (the parent), knowing whether there was a Storm (the grandparent) gives you absolutely no new or useful information about whether you will be Late for Work (the child). The parent shields the child from the ancestor.
     
+In Bayesian Networks, the difference between local and global semantics comes down to perspective: **Local semantics** focus on the rules for an individual node and its immediate neighbors to construct the network, while **global semantics** describe the properties of the entire network as a whole, allowing you to answer any arbitrary query.
 
+Here is the exact breakdown of how they differ mathematically and conceptually.
+
+### 1. Local Semantics (The Building Blocks)
+
+Local semantics define the network from the perspective of a single, individual node. They establish the minimal set of independence assumptions required to build the graph.
+
+- **The Core Rule:** A node $X$ is conditionally independent of all its non-descendants, given its parents.
+    
+- **Notation:** $X \perp\!\!\!\perp \text{NonDescendants}(X) \mid \text{Parents}(X)$
+    
+- **Purpose:** This is how you _construct_ the network. When you are drawing the directed acyclic graph (DAG) and defining the Conditional Probability Tables (CPTs), you rely on local semantics. You only need to calculate the probability of a node based on its direct parents, ignoring the rest of the graph.
+    
+
+If you look at the Sprinkler example from earlier, the local semantics state that the **Sprinkler** is conditionally independent of **Rain** (its non-descendant), given its parent, **Cloudy**.
+
+### 2. Global Semantics (The Big Picture)
+
+Global semantics define what the entire, completed network represents. They describe the full mathematical system that emerges from linking all those local rules together.
+
+- **The Core Rule (Joint Distribution):** The network defines a complete joint probability distribution over all variables, which is exactly the product of all the local conditional probabilities.
+    
+- **Notation:**
+    
+    $$P(X_1, X_2, \dots, X_n) = \prod_{i=1}^n P(X_i \mid \text{Parents}(X_i))$$
+    
+- **d-Separation:** Global semantics also dictate the conditional independence between _any_ arbitrary sets of nodes $A$ and $B$, given some evidence $E$. This is evaluated using the algorithm known as **d-separation** (directed separation).
+    
+- **Purpose:** This is how you _query_ the network. While local semantics tell you about a node and its parents, global semantics allow an algorithm to figure out if two nodes on completely opposite sides of a massive network influence each other given the current evidence.
+    
+
+### The Key Difference Summarized
+
+|**Feature**|**Local Semantics**|**Global Semantics**|
+|---|---|---|
+|**Scope**|Node-by-node (Microscopic)|The entire graph (Macroscopic)|
+|**What it defines**|Independence from non-descendants|The full Joint Probability Distribution & d-separation|
+|**Use Case**|**Building** the model (Defining CPTs)|**Querying/Inference** (Calculating probabilities across the network)|
+
+Ultimately, they are mathematically consistent with one another. If you construct a graph where every node obeys the **local semantics**, mathematical proofs guarantee that the entire graph will correctly satisfy the **global semantics**. Local semantics are the inputs; global semantics are the result.
 ## 2. The Markov Blanket (The "Complete Isolation" Zone)
 
 While Local Semantics only shields a node from its ancestors, the **Markov Blanket** is a stronger concept. It is the minimal set of surrounding nodes required to make a target node conditionally independent of **every other node in the entire network**.
