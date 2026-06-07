@@ -115,7 +115,7 @@ d) All are correct
 
 ## **11.** If $f(x, y)$ represents an input image, and $\nabla^2f(x,y)$ represents Laplacian, then if a high boost filtered image is given by:
 
-![Pasted image 20260607155036.png](/img/user/Pasted%20image%2020260607155036.png)
+![Pasted image 20260607155036.png](/img/user/imgs/Pasted%20image%2020260607155036.png)
 
 For what value of $A$ this high boost filtering becomes the standard Laplacian sharpening filter?
 
@@ -151,7 +151,7 @@ c) Salt-and-pepper noise
 
 ## **14.** Which of the following is the transfer function of a gray level slicing method?
 
-![Pasted image 20260607162947.png](/img/user/Pasted%20image%2020260607162947.png)
+![Pasted image 20260607162947.png](/img/user/imgs/Pasted%20image%2020260607162947.png)
 
 > Highlights a specific range of intensities $[A, B]$. Can either set all other pixels to black (binary mapping) or preserve their original values.
 > 
@@ -159,7 +159,7 @@ c) Salt-and-pepper noise
 
 ## **15.** Apply the Laplacian filter for the highlighted pixel in the below image. Use the Laplacian filter with size 3x3 and has 5 in the center. The resulting corresponding pixel value is ---------------
 
-![Pasted image 20260607163039.png](/img/user/Pasted%20image%2020260607163039.png)
+![Pasted image 20260607163039.png](/img/user/imgs/Pasted%20image%2020260607163039.png)
 
 a) 32
 
@@ -171,7 +171,7 @@ d) 33
 
 Using the composite kernel $\begin{bmatrix} 0 & -1 & 0 \\ -1 & 5 & -1 \\ 0 & -1 & 0 \end{bmatrix}$
 
-![Pasted image 20260607163123.png](/img/user/Pasted%20image%2020260607163123.png)
+![Pasted image 20260607163123.png](/img/user/imgs/Pasted%20image%2020260607163123.png)
 
 ## **16.** The resulting pixel in question 15 will be more --------------------- than the input pixel.
 
@@ -195,7 +195,7 @@ d) None of the above.
 
 ## **18.** Calculate the alpha trimmed mean filter of the following pixel values where $d=0$.
 
-![Pasted image 20260607163913.png](/img/user/Pasted%20image%2020260607163913.png)
+![Pasted image 20260607163913.png](/img/user/imgs/Pasted%20image%2020260607163913.png)
 
 ==a) ~ 351==
 
@@ -221,7 +221,7 @@ c) ~ 526
 
 ## **20.** Apply the midpoint filter for the highlighted pixel in the below sub image using a 3x3 window size. [Assume zero padding]. The resulting corresponding pixel value is ----------------.
 
-![Pasted image 20260607164839.png](/img/user/Pasted%20image%2020260607164839.png)
+![Pasted image 20260607164839.png](/img/user/imgs/Pasted%20image%2020260607164839.png)
 
 a) 0
 
@@ -263,7 +263,7 @@ b) Mean
 
 d) Discontinuity
 
-![Pasted image 20260607185527.png](/img/user/Pasted%20image%2020260607185527.png)
+![Pasted image 20260607185527.png](/img/user/imgs/Pasted%20image%2020260607185527.png)
 
 ## **24.** Main operation(s) of morphological operations are:
 
@@ -385,7 +385,7 @@ c) $(a*b)/2$
 
 ## **33.** For the following error matrix, find the overall accuracy:
 
-![Pasted image 20260607190004.png](/img/user/Pasted%20image%2020260607190004.png)
+![Pasted image 20260607190004.png](/img/user/imgs/Pasted%20image%2020260607190004.png)
 
 a) 22.1 %
 
@@ -395,7 +395,7 @@ c) 38.9 %
 
 d) 88.9 %
 
-![Pasted image 20260607190020.png](/img/user/Pasted%20image%2020260607190020.png)
+![Pasted image 20260607190020.png](/img/user/imgs/Pasted%20image%2020260607190020.png)
 
 ## **34.** For the error matrix in problem 33, find the F1-score for class Forest:
 
@@ -407,7 +407,7 @@ c) 0.40
 
 d) 0.83
 
-![Pasted image 20260607190040.png](/img/user/Pasted%20image%2020260607190040.png)
+![Pasted image 20260607190040.png](/img/user/imgs/Pasted%20image%2020260607190040.png)
 
 ## **35.** For the error matrix in problem 33, the precision of class water is........, while the recall is ...............
 
@@ -419,11 +419,11 @@ b) 0.36, 0.22
 
 d) 0.22, 0.36
 
-![Pasted image 20260607190059.png](/img/user/Pasted%20image%2020260607190059.png)
+![Pasted image 20260607190059.png](/img/user/imgs/Pasted%20image%2020260607190059.png)
 
 ## **36.** In the corresponding figure, the small squares have dimensions 10x10, the large square has dimensions 20x20, and a circle has a radius of $r=15$. The required operation to obtain Figure (b) from Figure (a) is:
 
-![Pasted image 20260607190409.png](/img/user/Pasted%20image%2020260607190409.png)
+![Pasted image 20260607190409.png](/img/user/imgs/Pasted%20image%2020260607190409.png)
 
 ==a) Opening Operation==
 
@@ -469,7 +469,7 @@ b) 12
 
 d) 0
 
-![Pasted image 20260607190315.png](/img/user/Pasted%20image%2020260607190315.png)
+![Pasted image 20260607190315.png](/img/user/imgs/Pasted%20image%2020260607190315.png)
 
 ## **39.** The extracted boundary using 8-connected SE of the corresponding object using morphological operation will be:
 
@@ -528,7 +528,7 @@ d)
 > 
 > During erosion, you slide this 3 x 3 grid over every pixel. The rule for erosion is strict: A pixel remains 1 ONLY IF its entire 3 x 3 neighborhood is completely filled with 1s. If even a single neighbor is 0 (or if the pixel is on the edge of the image and touches the "outside" boundaries), it turns into a 0.
 
-![Pasted image 20260607191917.png](/img/user/Pasted%20image%2020260607191917.png)
+![Pasted image 20260607191917.png](/img/user/imgs/Pasted%20image%2020260607191917.png)
 
 *only these 2 pixels will stay 1*
 
