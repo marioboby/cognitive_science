@@ -40,3 +40,4 @@
 [[Image Processing/Sheets/Sheet 1 Sol\|Sheet 1 Sol]]
 [[Image Processing/Finals Sol/Final 23 Sol\|Final 23 Sol]]
 [[Image Processing/Sheets/Morphological Operations Sheet Sol\|Morphological Operations Sheet Sol]]
+[[Image Processing/Sheets/Segmentation Sheet Sol\|Segmentation Sheet Sol]]
