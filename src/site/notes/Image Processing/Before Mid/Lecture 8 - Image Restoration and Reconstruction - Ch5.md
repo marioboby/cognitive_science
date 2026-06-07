@@ -11,7 +11,7 @@ First, it is crucial to understand the difference between these two concepts:
     <br>
 - **Image Restoration** is objective; it assumes the image was originally high-quality but was mathematically degraded by a specific process (like motion blur, camera misfocus, or sensor noise). The goal is to model that exact degradation and mathematically "undo" it to recover the original image.
     
-
+![Pasted image 20260607151108.png](/img/user/imgs/Pasted%20image%2020260607151108.png)
 ### **2. Understanding Noise Models**
 
 Noise in digital images usually occurs during acquisition (due to sensor temperature or lighting) or transmission (due to electrical interference). Because noise is a random fluctuation in pixel values, it is mathematically modeled using probability density functions (PDFs). Common models include Gaussian (the most common), Rayleigh, Erlang, Exponential, Uniform, and Impulse (Salt-and-Pepper) noise.
@@ -97,7 +97,7 @@ Unlike Gaussian noise which alters pixels by a random continuous amount, impulse
 
 ![Pasted image 20260402011441.png](/img/user/imgs/Pasted%20image%2020260402011441.png)
 
-example on how to apply noise models here
+example on how to apply noise models [[Image Processing/Expanded Explanations/Lecture 8\|here]]
 
 ---
 
