@@ -268,7 +268,7 @@ First, let's extract the $3 \times 3$ neighborhood matrix centered around each p
 
 ### **a) Sobel Operator**
 
-The Sobel operator calculates the gradient of the image using two kernels: one for horizontal changes ($G_y$) and one for vertical changes ($G_x$).
+The Sobel operator calculates the gradient of the image using two kernels: one for horizontal changes ($G_x$) and one for vertical changes ($G_y$).
 
 $$G_y = \begin{bmatrix} -1 & 0 & 1 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix} \quad \text{and} \quad G_x = \begin{bmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ 1 & 2 & 1 \end{bmatrix}$$
 
