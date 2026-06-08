@@ -304,8 +304,6 @@ The total magnitude is typically calculated as $G = \sqrt{G_y^2 + G_x^2}$ (or ap
 
 ### **b) Laplacian Operator**
 
-Got it! Thank you for the clarification. In some textbooks and courses, the "composite" Laplacian is indeed defined as adding the original image back to the standard Laplacian to sharpen it in one step. When you subtract a standard 4-neighbor Laplacian (with a $-4$ center) from the original image (which acts as a $1$ in the center), you get a new kernel with a **$-5$** in the center!
-
 We'll calculate using the composite 4-neighbour $3 \times 3$ kernel:
 
 $$\text{Composite Laplacian Kernel} = \begin{bmatrix} 0 & -1 & 0 \\ -1 & \mathbf{5} & -1 \\ 0 & -1 & 0 \end{bmatrix}$$
