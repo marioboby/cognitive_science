@@ -561,7 +561,7 @@ _(Hint: $\Theta = [0, \frac{\pi}{2}, \pi]$, $\rho = [0,1,2]$)_
 |1|1|0|
 |1|1|1|
 
-a)
+==a)==
 
 |**Θ**|**0**|**2π​**|**π**|
 |---|---|---|---|
@@ -585,7 +585,7 @@ c)
 |$\rho=1$|0|0|0|
 |$\rho=2$|0|0|0|
 
-==d)==
+d)
 
 |**Θ**|**0**|**2π​**|**π**|
 |---|---|---|---|
@@ -599,4 +599,4 @@ $$\rho = x \cos(\theta) + y \sin(\theta)$$
     
 - **For $\theta = \frac{\pi}{2}$:** $\rho = 1(0) + 1(1) = \mathbf{1}$. (This gets a vote at $\rho=1, \theta=\frac{\pi}{2}$)
     
-- **For $\theta = \pi$**: $\rho = 1(-1) + 1(0) = -1 \rightarrow \text{Take absolute value} \rightarrow \mathbf{1}$
+- **For $\theta = \pi$**: $\rho = 1(-1) + 1(0) = -1 \rightarrow \text{Clip to 0} \rightarrow \mathbf{0}$
