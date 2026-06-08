@@ -250,7 +250,7 @@ The standard Sobel masks used are:
 
 $$G_y = \begin{bmatrix} -1 & 0 & 1 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix} \quad \text{and} \quad G_x = \begin{bmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ 1 & 2 & 1 \end{bmatrix}$$
 
-_(Note: $G_x$ computes right-minus-left, and $G_y$ computes bottom-minus-top)._
+_(Note: $G_y$ computes right-minus-left, and $G_x$ computes bottom-minus-top)._
 
 ### **Step 1: Compute $G_x$ and $G_y$**
 
@@ -354,7 +354,7 @@ For the following image:-
 
 Compute the linear Hough transform of the result edge image using four quantization levels for the angles from 0 to π and five uniform quantization levels of the radial distance from 0 to the maximum distance , Use a threshold of 3 to detect strong lines in the image
 
-look [[Image Processing/After Mid/Lecture 10 - Image Segmentation - Ch10 - Part2#The Accumulator Algorithm\|chapter 10.2]]  
+look [[Image Processing/After Mid/Lecture 10 - Image Segmentation - Ch10 - Part2#The Accumulator Algorithm\|chapter 10.2]], this is the exact example from slides.
 
 ---
 
