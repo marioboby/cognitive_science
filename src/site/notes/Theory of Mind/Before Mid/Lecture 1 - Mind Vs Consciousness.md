@@ -9,7 +9,7 @@
     <br>
 - It provides a formal definition of the "Mind" (العقل) sourced from the American Psychological Association (APA).
     <br>
-- The mind is described as encompassing a==ll intellectual and psychological phenomena and processes of an organism==.
+- The mind is described as encompassing ==all intellectual and psychological phenomena and processes of an organism==.
     <br>
 - These processes are broken down into three main categories: 
   - "Cognition" (such as thinking and perceptual systems) , 

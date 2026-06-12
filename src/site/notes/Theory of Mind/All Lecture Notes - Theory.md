@@ -12,6 +12,9 @@
 
 # After Mid
 
+[[Theory of Mind/After Mid/Lecture 5 - Molecules, Membranes, and Protein Channels\|Lecture 5 - Molecules, Membranes, and Protein Channels]]
+[[Theory of Mind/After Mid/Lecture 6 - Affect, Attention, and Layers of thinking\|Lecture 6 - Affect, Attention, and Layers of thinking]]
+[[Theory of Mind/After Mid/Lecture 7 - Philosophy, Metaphysics, and Logic\|Lecture 7 - Philosophy, Metaphysics, and Logic]]
 
 # Expanded Explanations
 

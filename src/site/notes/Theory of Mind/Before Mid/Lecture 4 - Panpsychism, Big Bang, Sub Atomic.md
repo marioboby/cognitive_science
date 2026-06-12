@@ -58,13 +58,15 @@ Everything we can visibly see and study only makes up **5%** of the universe. Th
 
 The lecture brilliantly links physics back to computer science by explaining how atoms "compute" using an **Input-Processing-Output (IPO)** approach:
 
-- **Proton Computation:** * _Input:_ 2 Up Quarks (charge of +2/3 each) and 1 Down Quark (charge of -1/3).
+- **Proton Computation:** 
+	* _Input:_ 2 Up Quarks (charge of +2/3 each) and 1 Down Quark (charge of -1/3).
     
     - _Processing:_ 2/3 + 2/3 - 1/3 = +1.
         
     - _Output:_ 1 Proton with a +1 charge.
         
-- **Neutron Computation:** * _Input:_ 2 Down Quarks (-1/3 each) and 1 Up Quark (+2/3).
+- **Neutron Computation:** 
+	* _Input:_ 2 Down Quarks (-1/3 each) and 1 Up Quark (+2/3).
     
     - _Processing:_ -1/3 - 1/3 + 2/3 = 0.
         
@@ -113,7 +115,5 @@ https://verbumetecclesia.org.za/index.php/VE/article/view/2822
 ---
 
 # JUDAISM
-
-  
 
 Judaism emphasizes the sanctity of creation and humanity's role as stewards of the earth. The Hebrew Bible frequently refers to standing stones as sacred objects, often associated with divine communication. For example, Jacob anoints a stone pillar at Bethel, symbolizing a connection between the earthly and divine realms (Genesis 28:18) (Viljoen, 2023). This suggests that natural elements like rocks can serve as mediums of divine communication.
