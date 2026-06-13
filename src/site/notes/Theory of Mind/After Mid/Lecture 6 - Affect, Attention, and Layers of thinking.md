@@ -43,4 +43,4 @@ The brain categorizes mental control into three distinct levels:
     
 - **Unconscious Control:** Hard-wired, automatic processes that humans are born with, such as heart rate, respiratory rate, and the physical reflex of withdrawing a hand from a painful stimulus.
 
-![Pasted image 20260612220459.png](/img/user/Pasted%20image%2020260612220459.png)
+![Pasted image 20260612220459.png](/img/user/imgs/Pasted%20image%2020260612220459.png)

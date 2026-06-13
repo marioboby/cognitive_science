@@ -95,6 +95,8 @@
 	- [x] Lecture 2 - Perception
 	- [x] Lecture 3 - Epistemology & Human Learning vs AI Types
 	- [x] Lecture 4 - Panpsychism, Big Bang, Sub Atomic
-	- [ ] Lecture 5 - Molecules, Membranes, and Protein Channels 
-	- [ ] Lecture 6 - Affect, Attention, and Layers of thinking
-	- [ ] Lecture 7 - Philosophy, Metaphysics, and Logic
+	- [x] Lecture 5 - Molecules, Membranes, and Protein Channels 
+	- [x] Lecture 6 - Affect, Attention, and Layers of thinking
+	- [x] Lecture 7 - Philosophy, Metaphysics, and Logic
+	- [x] Lecture 8 - Bonds, Amino Acids, Protein Locks
+	- [x] Lecture 9 - Gated Channels, Pumps, RMP

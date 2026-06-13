@@ -57,7 +57,7 @@ A central metaphysical question is whether the "mind" (cognition, affect, and co
 
 The study of the mind strictly through observable actions. Some behaviorists believe the mind doesn't exist at all, while others believe it exists but is entirely unobservable, making behavior the only valid metric of study.
 
-![Pasted image 20260612224726.png](/img/user/Pasted%20image%2020260612224726.png)
+![Pasted image 20260612224726.png](/img/user/imgs/Pasted%20image%2020260612224726.png)
 ### 4. The "Hard Problem" of Consciousness
 
 Coined by philosopher David Chalmers in 1995, this highlights a major limitation in understanding the mind.
@@ -71,6 +71,8 @@ Coined by philosopher David Chalmers in 1995, this highlights a major limitation
 
 The final section uses the branch of **Logic** to ask if cognitive architecture projects can perfectly model the human mind using mathematical axioms.
 
+- **Axioms:** An axiom is a statement that everyone believes is true , such as: "the only constant is change.” Mathematicians use the word axiom to refer to an established proof. “Axioms” are the Building blocks of Math and Logic
+<br>
 - **Inconsistent Problems:** Logic frequently runs into infinite loops or "decidability problems," such as the Liar Paradox ("This statement is false"), Epimenides the Cretan claiming "All Cretans are liars," or a contradictory loop about who is a friend versus an enemy.
     <br>
 - **Gödel's Incompleteness Theorems:** Kurt Gödel proved that any complex system of logical axioms will inevitably contain statements that can neither be proved nor disproved by the system itself, meaning the system will always be incomplete.

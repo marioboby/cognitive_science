@@ -15,6 +15,8 @@
 [[Theory of Mind/After Mid/Lecture 5 - Molecules, Membranes, and Protein Channels\|Lecture 5 - Molecules, Membranes, and Protein Channels]]
 [[Theory of Mind/After Mid/Lecture 6 - Affect, Attention, and Layers of thinking\|Lecture 6 - Affect, Attention, and Layers of thinking]]
 [[Theory of Mind/After Mid/Lecture 7 - Philosophy, Metaphysics, and Logic\|Lecture 7 - Philosophy, Metaphysics, and Logic]]
+[[Theory of Mind/After Mid/Lecture 8 - Bonds, Amino Acids, Protein Locks\|Lecture 8 - Bonds, Amino Acids, Protein Locks]]
+[[Theory of Mind/After Mid/Lecture 9 - Gated Channels, Pumps, RMP\|Lecture 9 - Gated Channels, Pumps, RMP]]
 
 # Expanded Explanations
 
